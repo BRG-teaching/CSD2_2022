@@ -1,0 +1,6 @@
+name: csd2
+channels:
+    - conda-forge
+dependencies:
+    - python
+    - compas
