@@ -1,0 +1,101 @@
+<mxfile host="65bd71144e">
+    <diagram id="P4GVzNzSQrlSMBZr0G-c" name="Page-1">
+        <mxGraphModel dx="1112" dy="1025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Offset Mesh" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="580" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Mesh Shape&lt;br&gt;&lt;i&gt;json&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="500" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="4" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Shell Thickness&lt;br&gt;&lt;i&gt;int&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="580" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Shape&lt;br&gt;&lt;i&gt;dict&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="580" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Discretize" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="580" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="12" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="905" y="660"/>
+                            <mxPoint x="440" y="660"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="Panels&lt;br&gt;&lt;i&gt;dict&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="580" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="14" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Apply Interlocking Alterations" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="690" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="16" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Interlocking &lt;br&gt;Panels&lt;br&gt;&lt;i&gt;dict&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="690" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="18" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Interior Finish:&lt;br&gt;Roughing Effect?" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="690" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="20" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="905" y="770"/>
+                            <mxPoint x="440" y="770"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="Final&lt;br&gt;Panels&lt;br&gt;&lt;i&gt;dict&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="690" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="22" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Place Panel(s) on Material and determine routing paths" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="800" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="23" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Panel Material &lt;br&gt;Dimensions&lt;br&gt;&lt;i&gt;[l&lt;sub&gt;p&lt;/sub&gt;,w&lt;/i&gt;&lt;i&gt;&lt;sub&gt;p&lt;/sub&gt;&lt;/i&gt;&lt;i&gt;,h&lt;/i&gt;&lt;i&gt;&lt;sub&gt;p&lt;/sub&gt;&lt;/i&gt;&lt;i&gt;] &lt;br&gt;int&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="800" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="24" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Machine&lt;br&gt;Dimensions&lt;br&gt;&lt;i&gt;[l&lt;sub&gt;m&lt;/sub&gt;,w&lt;sub&gt;m&lt;/sub&gt;,h&lt;sub&gt;m&lt;/sub&gt;] &lt;br&gt;int&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="890" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Fabrication... etc.&lt;br&gt;&lt;i&gt;...&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="800" width="130" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
