@@ -21,7 +21,7 @@ conda install -c conda-forge jupyterlab
 1. Open Terminal
 2. change the current working directory `cd [directory]`
 3. change the environment `conda activate [env]`
-4. open jupyter notebook `jupyter notebook`
+4. open jupyter notebook `jupyter lab`
 
 Jupyter notebook will be opened in the browser. It’s being hosted and run on your local machine.
 
