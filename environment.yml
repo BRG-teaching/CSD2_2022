@@ -4,3 +4,4 @@ channels:
 dependencies:
     - python
     - compas
+    - compas_view2
