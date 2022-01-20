@@ -77,7 +77,7 @@
                 <mxCell id="29" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="22" target="28" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="Place Panel(s) on Material and determine routing paths" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="22" value="Orient Panel(s) on Material and generate routing paths" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="380" y="800" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="23" target="22" edge="1">
@@ -94,6 +94,12 @@
                 </mxCell>
                 <mxCell id="28" value="Fabrication... etc.&lt;br&gt;&lt;i&gt;...&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="530" y="800" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;dashed=1;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="490" width="500" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px&quot;&gt;Formfinding&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="450" width="190" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

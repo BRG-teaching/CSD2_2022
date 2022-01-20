@@ -4,4 +4,8 @@ channels:
 dependencies:
     - python
     - compas
+<<<<<<< HEAD
     - compas_view2
+=======
+    - jupyter
+>>>>>>> d6d4e03 (Updates to diagram and added jupyter notebook to yml file)
