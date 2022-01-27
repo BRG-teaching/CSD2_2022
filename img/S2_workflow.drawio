@@ -1,29 +1,68 @@
 <mxfile host="65bd71144e">
     <diagram name="Copy of Page-1" id="B0jSGmLQJlUtO1MtmYzu">
-        <mxGraphModel dx="993" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+        <mxGraphModel dx="975" dy="1288" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
             <root>
                 <mxCell id="SsHd-Mrtgwx3iUI8feTV-0"/>
                 <mxCell id="SsHd-Mrtgwx3iUI8feTV-1" parent="SsHd-Mrtgwx3iUI8feTV-0"/>
-                <mxCell id="SsHd-Mrtgwx3iUI8feTV-22" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="SsHd-Mrtgwx3iUI8feTV-1" source="SsHd-Mrtgwx3iUI8feTV-23" target="SsHd-Mrtgwx3iUI8feTV-28" edge="1">
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-4" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="SsHd-Mrtgwx3iUI8feTV-1" source="SsHd-Mrtgwx3iUI8feTV-23" target="5ticDcJNEE9dL7LYv-Ff-3">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="SsHd-Mrtgwx3iUI8feTV-23" value="Orient Panel(s) on Material and generate routing paths" style="rounded=0;whiteSpace=wrap;html=1;" parent="SsHd-Mrtgwx3iUI8feTV-1" vertex="1">
-                    <mxGeometry x="380" y="800" width="120" height="60" as="geometry"/>
+                <mxCell id="SsHd-Mrtgwx3iUI8feTV-23" value="Orient Block(s) on Panel, on Cutting Bed" style="rounded=0;whiteSpace=wrap;html=1;" parent="SsHd-Mrtgwx3iUI8feTV-1" vertex="1">
+                    <mxGeometry x="440" y="540" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="SsHd-Mrtgwx3iUI8feTV-24" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="SsHd-Mrtgwx3iUI8feTV-1" source="SsHd-Mrtgwx3iUI8feTV-25" target="SsHd-Mrtgwx3iUI8feTV-23" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="460" y="650" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="SsHd-Mrtgwx3iUI8feTV-25" value="Panel Material &lt;br&gt;Dimensions&lt;br&gt;&lt;i&gt;[l&lt;sub&gt;p&lt;/sub&gt;,w&lt;/i&gt;&lt;i&gt;&lt;sub&gt;p&lt;/sub&gt;&lt;/i&gt;&lt;i&gt;,h&lt;/i&gt;&lt;i&gt;&lt;sub&gt;p&lt;/sub&gt;&lt;/i&gt;&lt;i&gt;] &lt;br&gt;int&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="SsHd-Mrtgwx3iUI8feTV-1" vertex="1">
-                    <mxGeometry x="190" y="800" width="130" height="60" as="geometry"/>
+                    <mxGeometry x="270" y="620" width="130" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="SsHd-Mrtgwx3iUI8feTV-26" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="SsHd-Mrtgwx3iUI8feTV-1" source="SsHd-Mrtgwx3iUI8feTV-27" target="SsHd-Mrtgwx3iUI8feTV-23" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="460" y="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="SsHd-Mrtgwx3iUI8feTV-27" value="Cutting Bed&lt;br&gt;Dimensions&lt;br&gt;&lt;i&gt;[l&lt;sub&gt;m&lt;/sub&gt;,w&lt;sub&gt;m&lt;/sub&gt;,h&lt;sub&gt;m&lt;/sub&gt;] &lt;br&gt;int&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="SsHd-Mrtgwx3iUI8feTV-1" vertex="1">
+                    <mxGeometry x="270" y="700" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-1" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="SsHd-Mrtgwx3iUI8feTV-1" source="5ticDcJNEE9dL7LYv-Ff-0" target="SsHd-Mrtgwx3iUI8feTV-23">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="SsHd-Mrtgwx3iUI8feTV-27" value="Machine&lt;br&gt;Dimensions&lt;br&gt;&lt;i&gt;[l&lt;sub&gt;m&lt;/sub&gt;,w&lt;sub&gt;m&lt;/sub&gt;,h&lt;sub&gt;m&lt;/sub&gt;] &lt;br&gt;int&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="SsHd-Mrtgwx3iUI8feTV-1" vertex="1">
-                    <mxGeometry x="190" y="890" width="130" height="60" as="geometry"/>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-0" value="Final Blocks&lt;br&gt;&lt;i&gt;json&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" vertex="1" parent="SsHd-Mrtgwx3iUI8feTV-1">
+                    <mxGeometry x="270" y="540" width="130" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="SsHd-Mrtgwx3iUI8feTV-28" value="Fabrication... etc.&lt;br&gt;&lt;i&gt;...&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" parent="SsHd-Mrtgwx3iUI8feTV-1" vertex="1">
-                    <mxGeometry x="530" y="800" width="130" height="60" as="geometry"/>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-7" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="SsHd-Mrtgwx3iUI8feTV-1" source="5ticDcJNEE9dL7LYv-Ff-2" target="5ticDcJNEE9dL7LYv-Ff-5">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="710" y="810"/>
+                            <mxPoint x="710" y="570"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-2" value="Router Bit&lt;br&gt;&lt;i&gt;diam &amp;amp; length&lt;br&gt;&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" vertex="1" parent="SsHd-Mrtgwx3iUI8feTV-1">
+                    <mxGeometry x="270" y="780" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-6" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="SsHd-Mrtgwx3iUI8feTV-1" source="5ticDcJNEE9dL7LYv-Ff-3" target="5ticDcJNEE9dL7LYv-Ff-5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-3" value="Geometries&lt;br&gt;&lt;i&gt;json&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" vertex="1" parent="SsHd-Mrtgwx3iUI8feTV-1">
+                    <mxGeometry x="580" y="540" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-9" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="SsHd-Mrtgwx3iUI8feTV-1" source="5ticDcJNEE9dL7LYv-Ff-5" target="5ticDcJNEE9dL7LYv-Ff-8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-5" value="Generate paths for CNC to follow" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="SsHd-Mrtgwx3iUI8feTV-1">
+                    <mxGeometry x="730" y="540" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-12" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="SsHd-Mrtgwx3iUI8feTV-1" source="5ticDcJNEE9dL7LYv-Ff-8" target="5ticDcJNEE9dL7LYv-Ff-10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-8" value="Cutting Path&lt;br&gt;&lt;i&gt;?&lt;/i&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#000000;fontColor=#FFFFFF;" vertex="1" parent="SsHd-Mrtgwx3iUI8feTV-1">
+                    <mxGeometry x="870" y="540" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5ticDcJNEE9dL7LYv-Ff-10" value="Animation of CNC path" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="SsHd-Mrtgwx3iUI8feTV-1">
+                    <mxGeometry x="1020" y="540" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
