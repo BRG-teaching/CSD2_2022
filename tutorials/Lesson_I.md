@@ -1,4 +1,3 @@
-# Tutorial 2
 # Computational Structural Design II <br/> Intro to coding in Python and the Jupyter notebook I
 
 ### Learning Goal: 
