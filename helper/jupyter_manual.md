@@ -38,5 +38,9 @@ Jupyter notebook will be opened in the browser. It’s being hosted and run on y
 ##
 
 ## Output
+install https://github.com/jupyter/nbconvert
 
-`$ jupyter nbconvert <input notebook> --to <output format>` e.g. `$ jupyter nbconvert py_examples.ipynb --to pdf`
+`$ jupyter nbconvert <input notebook> --to <output format>` e.g. `$ jupyter nbconvert py_examples.ipynb --to markdown`
+
+## How to publish `.md` on Gitbook
+It will create a `.md` file in the same directory of you `.ipynb` file. Then copy the content to the corresponding gitbook page. 
