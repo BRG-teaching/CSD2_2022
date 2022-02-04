@@ -4,13 +4,5 @@ channels:
 dependencies:
     - python
     - compas
-<<<<<<< HEAD
-<<<<<<< HEAD
     - compas_view2
-=======
     - jupyter
->>>>>>> d6d4e03 (Updates to diagram and added jupyter notebook to yml file)
-=======
-    - jupyter
-    - compas_view2
->>>>>>> 88aa9d1 (Updates to subtractive jupyter and added DS_Store to gitignore)
