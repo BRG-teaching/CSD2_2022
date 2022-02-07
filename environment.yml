@@ -2,11 +2,8 @@ name: csd2
 channels:
     - conda-forge
 dependencies:
-    - python=3.8.5
-    - pip=21.0.1
-    - pip:
-      - PyOpenGL
-    - compas=1.0.0
+    - python
+    - compas
     - compas_view2
     - jupyter
     
