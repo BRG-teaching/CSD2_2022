@@ -3,9 +3,10 @@ channels:
     - conda-forge
 dependencies:
     - python
+    - pip:
+      - PyOpenGL
     - compas
     - compas_view2
     - jupyter
     - pip=21.0.1
-    - pip:
-      - PyOpenGL
+    
