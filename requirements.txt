@@ -1,4 +1,0 @@
-pyopengl
-# pyside2
-# pyopengl-accelerate
-# freetype-py
