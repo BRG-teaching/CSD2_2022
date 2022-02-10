@@ -4,7 +4,7 @@ channels:
     - defaults
 dependencies:
     - python
-    - mesa-libgl-cos6-x86_64
+    - pyopengl
     - compas
     - compas_view2
     - jupyter
