@@ -8,20 +8,30 @@ from compas.geometry import add_vectors
 #from compas.datastructures import subdivision as sd
 from compas.geometry import angle_vectors
 from compas.geometry import trimesh_remesh
-#from compas_cgal.meshing import trimesh_remesh
+
 
 #from compas_rhino import unload_modules
 #unload_modules('mysubdivision')
 
 HERE = os.path.dirname(__file__)
 
-FILE_I = os.path.join(HERE, 'data', 'form_catmullclark.json')
-FILE_O_1 = os.path.join(HERE, 'data', 'Frames_Mesh.json')
+FILE_I = os.path.join(HERE, 'data', 'form.json')
+FILE_O_1 = os.path.join(HERE, 'data', 'Ribs_Mesh.json')
 FILE_O_2 = os.path.join(HERE, 'data', 'Caps_Mesh.json')
 
 form = Mesh.from_json(FILE_I)
 form_cap = form.copy()
 form_cap.clear()
+
+
+def orientation(mesh):
+    for vkey in mesh.vertices():
+        print(vkey, mesh.vertex_normal(vkey))
+
+    artist = MeshArtist(mesh, layer="RV2::Normals")
+    artist.clear_layer()
+    artist.draw_edges()
+    artist.draw_vertexnormals(scale=1)
 
 
 def math_map_list(values, toMin=0, toMax=1):
@@ -41,7 +51,7 @@ def math_map_list(values, toMin=0, toMax=1):
     return newValues
 
 
-def frame_face(mesh, meshcap, fkey, ratio, keep_original, doCap=True):
+def ribs_mesh(mesh, meshcap, fkey, ratio, keep_original, doCap=True):
     
     centroid = mesh.face_centroid(fkey)
     centroid_vector = Vector(*centroid)
@@ -161,6 +171,11 @@ for z_pos, min_edge, max_edge in zip(z_positions, min_edges, max_edges):
 
 remaped_ratios = math_map_list(ratios, 0.4, 0.1)
 
+
+# show orientation of normals---------------------------------------------------------------
+normals_mesh = Mesh.from_json(FILE_I)
+orientation(normals_mesh)
+
 #-----------parametric subdivision----------------------------------------------------------
 
 #parametric subdivision based on the analyses
@@ -169,13 +184,12 @@ remaped_ratios = math_map_list(ratios, 0.4, 0.1)
 fkeys = list(form.faces())
 print (len(fkeys))
 
-#def frame_face(mesh, fkey, ratio=0.5, doCap=False, keep_original=False)
 
 for f, rat, keep in zip(fkeys, remaped_ratios, keep_orig):
-    new_ribs, new_caps =  frame_face(form, form_cap, f, rat, keep)
+    new_ribs, new_caps =  ribs_mesh(form, form_cap, f, rat, keep)
 
 
-artist = MeshArtist(form, layer="frames")
+artist = MeshArtist(form, layer="ribs")
 artist.clear_layer()
 artist.draw_faces(join_faces=True)
 
