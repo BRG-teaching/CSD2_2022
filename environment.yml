@@ -1,6 +1,7 @@
 name: csd2
 channels:
     - conda-forge
+    - defaults
 dependencies:
     - python
     - compas
