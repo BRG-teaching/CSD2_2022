@@ -3,18 +3,10 @@ from __future__ import absolute_import
 from __future__ import division
 
 import os
-from compas.datastructures import Mesh
-from compas_rhino.artists import MeshArtist
-
 import compas
-from compas_rv2.rhino import get_scene
-from compas_rv2.rhino import get_proxy
-from compas.geometry import add_vectors, scale_vector
-from compas_rv2.rhino import rv2_undo
-from compas_rv2.rhino import rv2_error
-
 from compas.datastructures import Mesh
 from compas_rhino.artists import MeshArtist
+from compas.geometry import add_vectors, scale_vector
 
 
 HERE = os.path.dirname(__file__)
@@ -29,7 +21,7 @@ FILE_O1 = os.path.join(HERE, 'data', 'Ribs_Blocks.json')
 FILE_O2 = os.path.join(HERE, 'data', 'Caps_Blocks.json')
 
 
-def materialisation(mesh, visualise_orientation=True, visualise_offsets=True):
+def materialisation(mesh, name ="", blocks_color = (255,255,0), visualise_orientation=True, visualise_offsets=True):
 
     # check normals' orientation
     # -----------------------------------------------
@@ -39,10 +31,11 @@ def materialisation(mesh, visualise_orientation=True, visualise_offsets=True):
     # visualise normals
     # -----------------------------------------------
     if visualise_orientation:
-        artist2 = MeshArtist(mesh, layer="RV2::Normals")
+        artist2 = MeshArtist(mesh, layer="RV2::Normals_{}".format(name))
         artist2.clear_layer()
         artist2.draw_edges()
         artist2.draw_vertexnormals(scale=1)
+        artist2.layer.IsVisible = False
 
     # make offsets
     # -----------------------------------------------
@@ -60,13 +53,15 @@ def materialisation(mesh, visualise_orientation=True, visualise_offsets=True):
     # -----------------------------------------------
     if visualise_offsets:
         
-        artist3 = MeshArtist(idos, layer="RV2::Edos")
+        artist3 = MeshArtist(idos, layer="RV2::Idos_{}".format(name))
         artist3.clear_layer()
         artist3.draw_faces(color=(255, 0, 0))
+        artist3.layer.IsVisible = False
 
-        artist4 = MeshArtist(edos, layer="RV2::Edos")
+        artist4 = MeshArtist(edos, layer="RV2::Edos_{}".format(name))
         artist4.clear_layer()
         artist4.draw_faces(color=(0, 0, 255))
+        artist4.layer.IsVisible = False
 
     # create blocks
     # -----------------------------------------------
@@ -89,39 +84,33 @@ def materialisation(mesh, visualise_orientation=True, visualise_offsets=True):
         block = Mesh.from_vertices_and_faces(bottom + top, faces)
         blocks.append(block)
     
+    for block in blocks:
+        artist5 = MeshArtist(block, layer="RV2::Blocks_{}".format(name))
+        artist5.mesh = block
+        artist5.draw_faces(color= blocks_color, join_faces=True)
+
     return blocks
+
 
 # --------------------------------------------------------------------------------------------------
 # materialisation of ribs blocks 
 # --------------------------------------------------------------------------------------------------
-ribs_blocks = materialisation(mesh_ribs, visualise_orientation=True, visualise_offsets=True)
-
-artist5 = MeshArtist(None, layer="RV2::Ribs_Blocks")
-artist5.clear_layer()
-
-for block in ribs_blocks:
-    artist5.mesh = block
-    artist5.draw_faces(color=(0, 255, 255), join_faces=True)
+ribs_color = (51,51,255)
+rib_blocks = materialisation(mesh_ribs, "Ribs", ribs_color, visualise_orientation=True, visualise_offsets=True)
 
 # export final ribs blocks in json file
 # -----------------------------------------------
-ribs_blocks.to_json(FILE_O1)
-compas.json_dump(ribs_blocks, FILE_O1)
+#ribs_blocks.to_json(FILE_O1)
+compas.json_dump(rib_blocks, FILE_O1)
 
 
 # --------------------------------------------------------------------------------------------------
 # materialisation of caps blocks 
 # --------------------------------------------------------------------------------------------------
-caps_blocks = materialisation(mesh_caps, visualise_orientation=True, visualise_offsets=True)
-
-artist6 = MeshArtist(None, layer="RV2::Caps_Blocks")
-artist6.clear_layer()
-
-for block in caps_blocks:
-    artist6.mesh = block
-    artist6.draw_faces(color=(255, 0, 255), join_faces=True)
+caps_color = (255,255,153)
+caps_blocks = materialisation(mesh_caps, "Caps", caps_color, visualise_orientation=True, visualise_offsets=True)
 
 # export final caps blocks in json file
 # -----------------------------------------------
-caps_blocks.to_json(FILE_O2)
+#caps_blocks.to_json(FILE_O2)
 compas.json_dump(caps_blocks, FILE_O2)
