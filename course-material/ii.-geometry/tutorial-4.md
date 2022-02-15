@@ -21,7 +21,7 @@ A point in 3D Cartesian coordinate system is represented by 3 numbers, which rep
 
 </br>
 <img src = "CSD2_2022/2_Geometry/Tutorial4/img/geo_pt_gh.png" width="500" style="margin-left:auto; margin-right:auto"/>
-<center>create a point in Rhinoceros Grasshopper 3D</center>
+<center>example of "Create Point" container in Rhinoceros Grasshopper 3D</center>
 </br>
 
 ## A2. Describe a Point by Python list
