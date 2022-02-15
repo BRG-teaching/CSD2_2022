@@ -20,7 +20,7 @@
 A point in 3D Cartesian coordinate system is represented by 3 numbers, which represents values along x, y and z axis. If you are familiar with Rhino and Grasshopper, a point can be created numerically by inputing 3 values. 
 
 </br>
-<img src = "img/geo_pt_gh.png" width="500" style="margin-left:auto; margin-right:auto"/>
+<img src = "CSD2_2022/2_Geometry/Tutorial4/img/geo_pt_gh.png" width="500" style="margin-left:auto; margin-right:auto"/>
 <center>create a point in Rhinoceros Grasshopper 3D</center>
 </br>
 
