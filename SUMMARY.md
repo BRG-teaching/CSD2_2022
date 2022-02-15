@@ -11,6 +11,7 @@
   * [Lecture 1](course-material/i.-form-finding/lecture-1.md)
   * [Tutorial 1](course-material/i.-form-finding/tutorial-1.md)
 * [II. Geometry](course-material/ii.-geometry/README.md)
+  * [Introduction](course-material/ii.-geometry/introduction.md)
   * [Tutorial 2](course-material/ii.-geometry/tutorial-2.md)
   * [Tutorial 3](course-material/ii.-geometry/tutorial-3.md)
   * [Tutorial 4](course-material/ii.-geometry/tutorial-4.md)
@@ -27,9 +28,9 @@
 
 ## Other
 
-* [csd2](other/readme.md)
-* [Introduction](other/gitbook/README.md)
-  * [Summary](other/gitbook/summary.md)
+* [csd2](other/csd2.md)
+* [Introduction](other/introduction/README.md)
+  * [Summary](other/introduction/summary.md)
 * [helper](other/helper/README.md)
-  * [NVM](other/helper/gitbook.md)
-  * [Jupyter Notebook](other/helper/jupyter\_manual.md)
+  * [NVM](other/helper/nvm.md)
+  * [Jupyter Notebook](other/helper/jupyter-notebook.md)
