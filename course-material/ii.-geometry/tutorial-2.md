@@ -58,9 +58,10 @@ Let's first break this problem down into smaller steps. Firstly, you could pick 
 
 #### A\_1. Draw Flowchart
 
-Firstly, we can draw many a [**flowchart**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#flowchart).
+Firstly, we can draw a [**flowchart**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#flowchart).
 ![](img/week1\_ex1.png)\
 
+![](CSD2_2022\2_Geometry\Tutorial2\img\week1_ex1.png)\
 
 #### A\_2. Write pseudocode
 
