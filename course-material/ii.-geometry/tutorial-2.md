@@ -29,13 +29,13 @@ Introduction to coding in Python         Jupyter notebook I
 
 * [Cablenet Cost II](tutorial-2.md#tut1\_ex)
 
-Gridshell Cost I\
+cablenet Cost I\
 
 
 
 ### Question:
 
-Suppose you have designed a gridshell made from steel struts. You are going to fabricate them. But before you do, you need to estimate the total cost. There are 2 different prices: for struts longer than 3 meters and shorter than 3 meters, 5 Fr and 3 Fr correspondingly. Now you need to count how many struts are longer than 3 meters and how many are shorter than 3 meters, to calculate the cost.
+Suppose you have designed a cablenet made from steel cables. You are going to fabricate them. But before you do, you need to estimate the total cost. There are 2 different prices: for cables longer than 3 meters and shorter than 3 meters, 5 Fr and 3 Fr correspondingly. Now you need to count how many cables are longer than 3 meters and how many are shorter than 3 meters, to calculate the cost.
 
 | Cable No. | Length (m) |
 | :-------: | :--------: |
@@ -54,14 +54,13 @@ Suppose you have designed a gridshell made from steel struts. You are going to f
 
 ### Part A: Check Length of One Cable
 
-Let's first break this problem down into smaller steps. Firstly, you could pick one strut and check whether its length is larger than 3 m. Secondly, you could repeat the first step to check all the struts, and then multiply the number of struts with the cost.
+Let's first break this problem down into smaller steps. Firstly, you could pick one cable and check whether its length is larger than 3 m. Secondly, you could repeat the first step to check all the cables, and then multiply the number of cables with the cost.
 
 #### A\_1. Draw Flowchart
 
 Firstly, we can draw many a [**flowchart**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#flowchart).
 ![](img/week1\_ex1.png)\
 
-![](CSD2_2022/2_Geometry/Tutorial2/img/week1_ex1_2.png)\
 
 #### A\_2. Write pseudocode
 
@@ -74,13 +73,13 @@ The pseudocode are written in Python [**comments**](https://www.w3schools.com/py
 <mark style="color:blue;">if length larger than 3:</mark>
 
 ```
-# long strut 
+# long cable 
 ```
 
 <mark style="color:blue;">else</mark>
 
 ```
-# short strut 
+# short cable 
 ```
 
 #### A\_3. Write your code
@@ -88,25 +87,25 @@ The pseudocode are written in Python [**comments**](https://www.w3schools.com/py
 We could turn the pseudocode line by line into code.
 
 ```python
-# pick one strut
-strut_length = 1.6
+# pick one cable
+cable_length = 1.6
 # if length bigger than 3?
-if strut_length > 3:
-    # long strut 
-    print("This is a long strut.")
+if cable_length > 3:
+    # long cable 
+    print("This is a long cable.")
 # else
 else:
-    # short strut
-    print("This is a short strut.")
+    # short cable
+    print("This is a short cable.")
 ```
 
 ```
-This is a short strut.
+This is a short cable.
 ```
 
 ### Part B: Check Length of All Cables
 
-Let's complete the script. You need to repeat the whole process of checking the strut length until you have classified all struts. You could use another condition in your flowchart for the repetition instructions. After you have checked all the cables in your grid-shell, you could count the amount of struts in the two length types and calculate the total cost.
+Let's complete the script. You need to repeat the whole process of checking the cable length until you have classified all cables. You could use another condition in your flowchart for the repetition instructions. After you have checked all the cables in your grid-shell, you could count the amount of cables in the two length types and calculate the total cost.
 
 #### B\_1. Draw Flowchart
 
@@ -115,29 +114,29 @@ Let's complete the script. You need to repeat the whole process of checking the 
 
 #### B\_2. Write pseudocode
 
-<mark style="color:blue;">pick one strut in the cable-net</mark>
+<mark style="color:blue;">pick one cable in the cable-net</mark>
 
 <mark style="color:blue;">if length larger than 3?</mark>
 
-<mark style="color:blue;">long strut amount + 1</mark>
+<mark style="color:blue;">long cable amount + 1</mark>
 
 <mark style="color:blue;">else</mark>
 
-<mark style="color:blue;">short strut amount + 1</mark>
+<mark style="color:blue;">short cable amount + 1</mark>
 
-<mark style="color:blue;">repeat until the all the strut are checked</mark>
+<mark style="color:blue;">repeat until the all the cable are checked</mark>
 
 <mark style="color:blue;">calculate total cost</mark>
 
 #### B\_3. Write the code
 
-Here we need to input all the lengths of our struts. Instead of multiple length variables, we could store them in a collection - a [**list**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#list). List items are ordered, or in other words, indexed, the first item has index `0`, the second item has index `1` etc.
+Here we need to input all the lengths of our cables. Instead of multiple length variables, we could store them in a collection - a [**list**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#list). List items are ordered, or in other words, indexed, the first item has index `0`, the second item has index `1` etc.
 
 ```python
-gridshell = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
-print(gridshell[0])  # 1.6
-print(gridshell[1])  # 3.6
-print(gridshell[-1])  # 2.6
+cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+print(cablenet[0])  # 1.6
+print(cablenet[1])  # 3.6
+print(cablenet[-1])  # 2.6
 ```
 
 ```
@@ -149,8 +148,8 @@ print(gridshell[-1])  # 2.6
 To iterate over a list, we could use a [**`for`**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#for-loop-and-while-loop) loop.
 
 ```python
-for strut in gridshell:
-    print(strut)
+for cable in cablenet:
+    print(cable)
 ```
 
 ```
@@ -169,29 +168,29 @@ for strut in gridshell:
 2.6
 ```
 
-Now we go through the list, check the strut length one by one, and count the number of the corresponding type. Thus, we need to initiate the counter of two types at the beginning of our code. Here, we create two new variables: `long_strut_count`, `short_strut_count`, and set their initial value to `0`.
+Now we go through the list, check the cable length one by one, and count the number of the corresponding type. Thus, we need to initiate the counter of two types at the beginning of our code. Here, we create two new variables: `long_cable_count`, `short_cable_count`, and set their initial value to `0`.
 
 ```python
 # Input
-gridshell = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
-long_strut_count = 0
-short_strut_count = 0
-long_strut_price = 5
-short_strut_price = 3
+cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+long_cable_count = 0
+short_cable_count = 0
+long_cable_price = 5
+short_cable_price = 3
 
-# pick one strut in the cable-net, check its length
-# repeat until the all the struts are checked
-for strut in gridshell:
+# pick one cable in the cable-net, check its length
+# repeat until the all the cables are checked
+for cable in cablenet:
     # if length bigger than 3?
-    if strut > 3:
+    if cable > 3:
         # long cable amount + 1
-        long_strut_count += 1
+        long_cable_count += 1
     # else
     else:
-        # short strut amount + 1
-        short_strut_count += 1
+        # short cable amount + 1
+        short_cable_count += 1
 # calculate total cost
-total_cost = long_strut_count * long_strut_price + short_strut_count * short_strut_price
+total_cost = long_cable_count * long_cable_price + short_cable_count * short_cable_price
 
 # Output
 print("Total cost is", total_cost, "Fr.")
@@ -203,9 +202,9 @@ Total cost is 49 Fr.
 
 ### Part C: Modify Cable Length
 
-Oooops... You realize that you have calculated the length of a struts wrongly. Don't worry. The strut length list we use as input can be modified because list items are changeable. You could also modify a value in the `gridshell` list by referring to the item's **index**. Note that the index always starts from **`0`**!
+Oooops... You realize that you have calculated the length of a cables wrongly. Don't worry. The cable length list we use as input can be modified because list items are changeable. You could also modify a value in the `cablenet` list by referring to the item's **index**. Note that the index always starts from **`0`**!
 
-| Strut No. | Index | Length (m) |
+| cable No. | Index | Length (m) |
 | :-------: | :---: | :--------: |
 |     1     |   0   |     1.6    |
 |     2     |   1   |     3.6    |
@@ -220,39 +219,39 @@ Oooops... You realize that you have calculated the length of a struts wrongly. D
 |     11    |   10  |     1.8    |
 |     12    |   11  |     2.6    |
 
-For example, we find out the **3rd** struts has the wrong length, whose corresponding index is `2` in the list. Find it, and change its value.
+For example, we find out the **3rd** cables has the wrong length, whose corresponding index is `2` in the list. Find it, and change its value.
 
 ```python
-gridshell[2] = 2.5
-print(gridshell)
+cablenet[2] = 2.5
+print(cablenet)
 ```
 
 ```
 [1.6, 3.6, 2.5, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
 ```
 
-If we realize that we have omitted one strut that is 4 m, we could use `append` to add it at the end of our list.
+If we realize that we have omitted one cable that is 4 m, we could use `append` to add it at the end of our list.
 
 ```python
-print("We have", len(gridshell), "struts.")
-print(gridshell)
-gridshell.append(4.0)
-print("After adding the new strut, we have", len(gridshell), "struts.")
-print(struts)
+print("We have", len(cablenet), "cables.")
+print(cablenet)
+cablenet.append(4.0)
+print("After adding the new cable, we have", len(cablenet), "cables.")
+print(cables)
 ```
 
 ```
-We have 15 struts.
+We have 15 cables.
 [1.6, 3.6, 2.5, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6, 4.0, 4.0]
-After adding the new strut, we have 16 struts.
+After adding the new cable, we have 16 cables.
 [1.6, 3.6, 2.5, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6, 4.0, 4.0, 4.0]
 ```
 
-If you need to delete a strut you could either delete it by its index. For example, we want to delete the 4th strut in the list, whose index is `3`.
+If you need to delete a cable you could either delete it by its index. For example, we want to delete the 4th cable in the list, whose index is `3`.
 
 ```python
-gridshell.pop(3)
-print(gridshell)
+cablenet.pop(3)
+print(cablenet)
 ```
 
 ```
@@ -262,25 +261,25 @@ print(gridshell)
 The cable can also be deleted by its value. If there are duplicated values, this method only removes the first matching element.
 
 ```python
-gridshell.remove(3.1)
-print(gridshell)
+cablenet.remove(3.1)
+print(cablenet)
 ```
 
 ```
 [1.6, 3.6, 2.5, 2.8, 3.7, 1.8, 1.8, 1.8, 2.6, 4.0, 4.0, 4.0]
 ```
 
-### Exercise: Struts of 3 different Lengths
+### Exercise: cables of 3 different Lengths
 
-Suppose there are three different prices for the struts: 2 Fr. for struts shorter than 2 m; 3 Fr. for struts between 2 m and 3 m; 5 Fr. for struts longer than 3 m. Could you modify your code and calculate the total cost?
+Suppose there are three different prices for the cables: 2 Fr. for cables shorter than 2 m; 3 Fr. for cables between 2 m and 3 m; 5 Fr. for cables longer than 3 m. Could you modify your code and calculate the total cost?
 
 Hint:\
-You need to classify 3 types of struts. When you run into a situation where you have several conditions, you can place as many **elif** conditions as necessary between the **if** condition and the **else** condition.
+You need to classify 3 types of cables. When you run into a situation where you have several conditions, you can place as many **elif** conditions as necessary between the **if** condition and the **else** condition.
 
 ```python
 # Input
-# strut length of the gridshell
-gridshell = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+# cable length of the cablenet
+cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
 
 # please write down your answer here
 ```
