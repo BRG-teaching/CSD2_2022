@@ -1,7 +1,5 @@
 # Introduction
 
-
-
 ## Introduction to Jupyter Notebook
 
 Some of you might be familiar with using an IPython shell to run the code line by line or creating custom Python Scripts in CAD applications. This is great, but for more elaborate use of coding in Architecture, and especially, for learning and sharing your coding knowlege we will introduce another tool: The Jupyter Notebook.
@@ -22,15 +20,23 @@ Before this class you have received a weblink to a Jupyter notebook that the CSD
 
 When you navigate to the link you received, you will see a dashboard. In this dashboard, you can see some important features that are labeled in red: you can see all the files in the current folder, show all the running notebooks, and create a new notebook or others such as text file, folder and a terminal. Now let us create a new Python notebook by selecting the Python 3, usually this is called Python kernel. We will use the Python kernel, therefore, choose Python 3 kernel.
 
+![](<../../.gitbook/assets/220206-jupyter\_dashboard-01\_ISB (1).png>)
+
 Alternatively, use the "Launcher" to create the file, as shown below:
+
+![](../../.gitbook/assets/220206-jupyter\_dashboard-02\_ISB.png)
 
 **Create a new notebook and give it the name "hello\_world.ipynb"**
 
 And open the new notebook.
 
+![](../../.gitbook/assets/220206-jupyter\_dashboard-04\_ISB.png)
+
 #### Use a Jupyter Notebook for interactive coding in Python
 
 After you create a new Jupyter Notebook, it will look like the following figure. The toolbar and menu is self-explanatory and you can explore that on your own. We will cover only basic information here, to get you started.
+
+![](../../.gitbook/assets/220206-jupyter\_dashboard-03\_ISB.png)
 
 See this [Markdownguide](https://www.markdownguide.org/basic-syntax/#links) for an indepth look at styling your Jupyter Notebook content
 
@@ -44,11 +50,13 @@ Now create a _code cell_ and type the following code:
 print ('Hello CSD2!!')
 ```
 
+Run the code by pressing the play sign left of the code cell. Doing this will create the following result:
+
 ```
 Hello CSD2!!
 ```
 
-Run the code by pressing the play sign left of the code cell. Doing this will create the following result:
+![](../../.gitbook/assets/220206-jupyter\_dashboard-05\_ISB.png)
 
 #### Saving your changes
 
