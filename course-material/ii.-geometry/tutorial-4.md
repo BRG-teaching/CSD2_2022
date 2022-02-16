@@ -1,8 +1,8 @@
 # Computational Structural Design II - Geometry, Data and Visualization
 
 ### Learning Goal: 
-- Geometries
-- data
+- Introduction to computational geometry in COMPAS
+- Data, Geometry and Class in COMPAS
 - visualization
 
 ### Content:
@@ -16,20 +16,18 @@
 <a id='GeometryData'></a>
 # A. Geometry Data
 
-## A1. Describe a point in Rhinoceros Grasshopper
-A point in 3D Cartesian coordinate system is represented by 3 numbers, which represents values along x, y and z axis. If you are familiar with Rhino and Grasshopper, a point can be created numerically by inputing 3 values. 
-
-"CSD2_2022/2_Geometry/Tutorial4/img/geo_pt_gh.png"
-
-
+## A1. Describe a point in CAD
+A point in a 3D Cartesian coordinate system can be represented by 3 numbers. Describing the values along x, y and z axes. For example, in Rhino and Grasshopper, a point can be created numerically by inputing 3 values in a "Create Point" container. 
 
 </br>
 <img src = "../../2_Geometry/Tutorial4/img/geo_pt_gh.png" width="500" style="margin-left:auto; margin-right:auto"/>
 <center>example of "Create Point" container in Rhinoceros Grasshopper 3D</center>
 </br>
 
+We will do the same, utilizing our Jupyter Notebook interface.
+
 ## A2. Describe a Point by Python list
-Similarly the point can be referred to as a list `[x, y, z]` in Python. The three numbers represent the xyz coordinates of the point. Since a point is described as a list, the value in the list can be retrieved, modified, and updated by accessing the corresponding index of the list. 
+Similarly a list `[x, y, z]` can describe a point in Python. The three numbers represent the xyz coordinates of the point. Since a point is described as a list, the value in the list can be retrieved, modified, and updated by accessing the corresponding index of the list. 
 Here we create a point `x=0, y=1, z=1` and change the coordinate `y=5`. 
 
 
@@ -49,7 +47,7 @@ print("xyz coordinates of my_point are", my_point)
 
 
 ## A3. Geometry Data Summary
-Besides point, basic geometry types - such as vector, line, plane - can be described numerically in Python by **lists of values**. The length of the list corresponds with the number of dimensions of the space the geometry resides in. In 3D space, the list contains 3 elements. The following table demonstrates the data used to describe 3D geometries numerically. 
+Besides point, basic geometry types - such as vector, line, plane - can be described numerically in Python by **lists of values**. The length of the list corresponds to the number of dimensions of the space the geometry resides in. In 3D space, the list contains 3 elements. The following table illustrates the data used to describe 3D geometries numerically. 
 
 
 <table style='float:center;'>
@@ -106,7 +104,7 @@ Besides point, basic geometry types - such as vector, line, plane - can be descr
 
 <a id='GeometryClass'></a>
 # B. Geometry Class
-A geometry type can be described by data. We can use a **Class** as a constructor, a template, or a "blueprint" to create **Objects** of a certain geometry type. An **Object** is an instance of a **Class** and it shares all attributes and the behavior of the Class. Classes are used frequently in Python scripting. A class can not only store data, but also define methods (a object-oriented programming term for functions) alongside the data that they operate on and produce. 
+A geometry type can be described by data. We can use a **Class** as a constructor, a template, or a "blueprint" to create **Objects** of a certain geometry type. An **Object** is an instance of a **Class** and it shares all **attributes** and the behavior of the Class. Classes are used frequently in Python scripting. A class can not only store data, but also define methods (an object-oriented programming term for functions) alongside the data that they operate on and produce. 
 
 In the following session, we will learn Python Class by creating our own **Point class**. Then we will use the class to create a **Point object**, which represents the point `x=0, y=1, z=1`. 
 
@@ -148,7 +146,7 @@ print("xyz coordinates are:", pt.x, pt.y, pt.z)
 
 
 ### B1_c. Object Method
-Now let's add a method to Point class to translate the point. It modifies the object attribute `self.x`, `self.y`, `self.z` by adding the translation distance along the corresponding axis.  
+Now let's add a method to Point class to translate the point. What we want is to move or "translate" the point. The method modifies the object attribute `self.x`, `self.y`, `self.z` by adding the translation distance along the corresponding axis.  
 
 
 ```python
@@ -291,11 +289,11 @@ plotter.show()
 ```
 
 
+</br>
+<img src = "week_4_files/week_4_17_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+<center>visualize a point</center>
+</br>
     
-![png](week_4_files/week_4_17_0.png)
-    
-
-
 
 ```python
 from compas.geometry import Point
@@ -372,12 +370,11 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-
+</br>
+<img src = "week_4_files/week_4_22_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+<center>visualize a point</center>
+</br>
     
-![png](week_4_files/week_4_22_0.png)
-    
-
-
 ## C3. Vector
 A vector is a geometric object that has magnitude and direction. In Python, it could be represented through a list of XYZ components. 
 ### C3_a. Vector Data
@@ -418,7 +415,7 @@ print(vector3)
 
 
 ### C3_c. Vector Class
-COMPAS Vector class which contains useful geometric properties and methods. Now let's create a Vector object and check its length. In Vector class, length is the attribute of the object.
+The COMPAS Vector class contains useful geometric properties and methods. Now let's create a Vector object and check its length. In Vector class, length is the attribute of the object.
 
 
 ```python
@@ -467,9 +464,10 @@ print(my_vector == Vector(1, 2, 0) * 2)
 ### C3_d: Exercise: Draw Vectors
 Question: Given three points: pointA: [0, 0, 0], pointB: [0, 1, 0], pointC: [3, 2, 0]. You need to draw three vectors as shown in the following picture. 
 
-<img src="img/vectors.jpg" width="500" style="margin-left:auto; margin-right:auto"/>
 </br>
-
+<img src = "../../2_Geometry/Tutorial4/img/vectors.jpg" width="500" style="margin-left:auto; margin-right:auto"/>
+<center>three vectors</center>
+</br>
 
 ```python
 from compas.geometry import Point
@@ -480,7 +478,7 @@ point1 = Point(0, 0, 0)
 point2 = Point(0, 1, 0)
 point3 = Point(3, 2, 0)
 
-# Plottor
+# Plotter
 plotter = Plotter(show_axes=True)
 
 plotter.add(point1)
@@ -492,12 +490,9 @@ plotter.show()
 
 ```
 
-
-    
-![png](week_4_files/week_4_37_0.png)
-    
-
-
+</br>
+<img src = "week_4_files/week_4_37_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
 
 ```python
 from compas.geometry import Point
@@ -512,7 +507,7 @@ vector1 = point2 - point1
 vector2 = point3 - point2
 vector3 = point3 - point1
 
-# Plottor 
+# Plotter
 plotter = Plotter(show_axes=True)
 
 plotter.add(point1)
@@ -534,11 +529,9 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-
-    
-![png](week_4_files/week_4_38_0.png)
-    
-
+</br>
+<img src = "week_4_files/week_4_38_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
 
 ## C4. Polygon
 A Polygon represents an ordered collection of points in space connected by straight line segments forming a closed boundary around the interior space. It has a closed boundary that separates its interior from the exterior. 
@@ -556,12 +549,9 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-
-    
-![png](week_4_files/week_4_40_0.png)
-    
-
-
+</br>
+<img src = "week_4_files/week_4_40_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
 
 ```python
 from compas.geometry import Polygon
@@ -576,9 +566,9 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-
-    
-![png](week_4_files/week_4_41_0.png)
+</br>
+<img src = "week_4_files/week_4_41_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
     
 
 
@@ -598,11 +588,9 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-
-    
-![png](week_4_files/week_4_43_0.png)
-    
-
+</br>
+<img src = "week_4_files/week_4_43_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
 
 ## C6. Circle
 
@@ -620,12 +608,10 @@ plotter.add(my_circle, edgecolor=(0, 0, 1), facecolor=(0, 1, 1), linewidth=3)
 plotter.zoom_extents()
 plotter.show()
 ```
-
-
     
-![png](week_4_files/week_4_45_0.png)
-    
-
+</br>
+<img src = "week_4_files/week_4_45_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
 
 ## C7. PointCloud
 
@@ -649,11 +635,10 @@ for point in pcl.points:
 plotter.zoom_extents()
 plotter.show()
 ```
-
-
     
-![png](week_4_files/week_4_47_0.png)
-    
+</br>
+<img src = "week_4_files/week_4_47_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
 
 
 <a id='Operations'></a>
@@ -662,7 +647,7 @@ plotter.show()
 # D. Geometry Operations
 
 ## D1. Transformation
-Transformation means changes in geometric shape, which is represented by a 4x4 transformation matrix. Here we will learn 3 typical transformations in COMPAS: translation, rotation and scale. 
+A Transformation is a change in geometric shape, which is represented by a 4x4 transformation matrix. Here we will learn 3 typical transformations in COMPAS: translation, rotation and scale. 
 A COMPAS geometry object can be transformed by calling the method .transform() or .transformed(). The former modifies the object in place, whereas the latter returns a new object.
 
 ### D1_a. Translation
@@ -699,7 +684,9 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_52_0.png)
+</br>
+<img src = "week_4_files/week_4_52_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
     
 
 
@@ -728,9 +715,9 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-
-    
-![png](week_4_files/week_4_54_0.png)
+</br>
+<img src = "week_4_files/week_4_54_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
     
 
 
@@ -758,7 +745,9 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_56_0.png)
+</br>
+<img src = "week_4_files/week_4_56_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
     
 
 
@@ -785,7 +774,9 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_58_0.png)
+</br>
+<img src = "week_4_files/week_4_58_0.png" width="500" style="margin-left:auto; margin-right:auto"/>
+</br>
     
 
 
