@@ -10,8 +10,8 @@ description: >-
 ## Week 2
 
 CSD 2\
-Introduction to coding in Python         Jupyter notebook I
------------------------------------------------------------
+Introduction to coding in Python Jupyter notebook I
+---------------------------------------------------
 
 #### Learning Goals:
 
@@ -29,9 +29,7 @@ Introduction to coding in Python         Jupyter notebook I
 
 * [Cablenet Cost II](tutorial-2.md#tut1\_ex)
 
-cablenet Cost I\
-
-
+cablenet Cost I\\
 
 ### Question:
 
@@ -59,9 +57,8 @@ Let's first break this problem down into smaller steps. Firstly, you could pick 
 #### A\_1. Draw Flowchart
 
 Firstly, we can draw a [**flowchart**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#flowchart).
-![](img/week1\_ex1.png)\
 
-![](CSD2_2022\2_Geometry\Tutorial2\img\week1_ex1.png)\
+![](../../.gitbook/assets/week1\_ex1.png)
 
 #### A\_2. Write pseudocode
 
@@ -110,8 +107,7 @@ Let's complete the script. You need to repeat the whole process of checking the 
 
 #### B\_1. Draw Flowchart
 
-![](img/week1\_ex1\_2.png)\
-
+![](../../.gitbook/assets/week1\_ex1\_2.png)
 
 #### B\_2. Write pseudocode
 
@@ -287,9 +283,7 @@ cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
 
 ***
 
-Check Voussoir Weight\
-
-
+Check Voussoir Weight\\
 
 ### Question A:
 
@@ -304,13 +298,11 @@ You have designed a freeform masonry vault and all the stone pieces are unique. 
 |       5      |      26     |
 |       6      |      18     |
 
-\
 
 
 #### A\_1. Draw Flowchart
 
-![](img/week1\_ex2.png)\
-
+![](../../.gitbook/assets/week1\_ex2.png)\\
 
 #### A\_2. Write pseudocode
 
@@ -372,22 +364,21 @@ Now you would optimize all the voussoirs that are too heavy by cutting them into
 
 We can continue from the last example. When the voussoir is too heavy, we need to first cut it in half, then check the weight of the half one. If the new weight is still too heavy, keep cutting. After cutting, we need to add the new cut stones back, so the sequence of the original voussoirs will not change.
 
-![](img/week1\_ex2\_2.png)\
-
+![](../../.gitbook/assets/week1\_ex2\_2.png)
 
 #### B\_2. Write pseudocode
 
-## pick one voussoir in the vault
+<mark style="color:blue;">pick one voussoir in the vault</mark>
 
-## if weight heavier than 25
+<mark style="color:blue;">if weight heavier than 25</mark>
 
-## cut it the voussoir in half until the weight is below 25
+<mark style="color:blue;">cut it the voussoir in half until the weight is below 25</mark>
 
-## replace the problematic voussoir with the new ones
+<mark style="color:blue;">replace the problematic voussoir with the new ones</mark>
 
-## repeat until all the voussoirs are checked
+<mark style="color:blue;">repeat until all the voussoirs are checked</mark>
 
-## output the problmatic voussoirs
+<mark style="color:blue;">output the problmatic voussoirs</mark>
 
 #### B\_3. Write your code
 
