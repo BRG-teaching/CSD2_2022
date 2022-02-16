@@ -11,17 +11,14 @@ from compas.geometry import add_vectors, scale_vector
 
 HERE = os.path.dirname(__file__)
 
-FILE_I1 = os.path.join(HERE, 'data', 'Ribs_Mesh.json')
-FILE_I2 = os.path.join(HERE, 'data', 'Caps_Mesh.json')
+FILE_I = os.path.join(HERE, 'data', 'form.json')
 
-mesh_ribs = Mesh.from_json(FILE_I1)
-mesh_caps = Mesh.from_json(FILE_I2)
+mesh = Mesh.from_json(FILE_I)
 
-FILE_O1 = os.path.join(HERE, 'data', 'Ribs_Blocks.json')
-FILE_O2 = os.path.join(HERE, 'data', 'Caps_Blocks.json')
+FILE_O = os.path.join(HERE, 'data', 'Mesh_Blocks.json')
 
 
-def materialisation(mesh, name ="", blocks_color = (255,255,0), thickness = 10, visualise_orientation=True, visualise_offsets=True):
+def materialisation(mesh, name ="", blocks_color = (255,255,0), visualise_orientation=True, visualise_offsets=True):
 
     # check normals' orientation
     # -----------------------------------------------
@@ -44,7 +41,7 @@ def materialisation(mesh, name ="", blocks_color = (255,255,0), thickness = 10, 
     for vertex in mesh.vertices():
         point = mesh.vertex_coordinates(vertex)
         normal = mesh.vertex_normal(vertex)
-        
+        thickness = 10
         idos.vertex_attributes(vertex, 'xyz', add_vectors(point, scale_vector(normal, +0.5 * thickness)))
         edos.vertex_attributes(vertex, 'xyz', add_vectors(point, scale_vector(normal, -0.5 * thickness)))
 
@@ -90,24 +87,13 @@ def materialisation(mesh, name ="", blocks_color = (255,255,0), thickness = 10, 
 
 
 # --------------------------------------------------------------------------------------------------
-# materialisation of ribs blocks 
+# materialisation of mesh blocks 
 # --------------------------------------------------------------------------------------------------
-ribs_color = (51,51,255)
-rib_blocks = materialisation(mesh_ribs, "Ribs", ribs_color, thickness = 100, visualise_orientation=True, visualise_offsets=True)
+mesh_color = (51,51,255)
+blocks = materialisation(mesh, "Form", mesh_color, visualise_orientation=True, visualise_offsets=True)
 
-# export final ribs blocks in json file
+# export final blocks in json file
 # -----------------------------------------------
-#ribs_blocks.to_json(FILE_O1)
-compas.json_dump(rib_blocks, FILE_O1)
 
+compas.json_dump(blocks, FILE_O)
 
-# --------------------------------------------------------------------------------------------------
-# materialisation of caps blocks 
-# --------------------------------------------------------------------------------------------------
-caps_color = (255,255,153)
-caps_blocks = materialisation(mesh_caps, "Caps", caps_color, thickness = 100, visualise_orientation=True, visualise_offsets=True)
-
-# export final caps blocks in json file
-# -----------------------------------------------
-#caps_blocks.to_json(FILE_O2)
-compas.json_dump(caps_blocks, FILE_O2)
