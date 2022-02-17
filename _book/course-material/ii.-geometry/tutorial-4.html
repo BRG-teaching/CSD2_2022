@@ -207,7 +207,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="tutorial-2.html">
+        <li class="chapter " data-level="2.2.1" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="tutorial-2.html">
             
                 <a href="tutorial-2.html">
             
@@ -220,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="tutorial-3.html">
+        <li class="chapter " data-level="2.2.3" data-path="tutorial-3.html">
             
                 <a href="tutorial-3.html">
             
@@ -233,7 +246,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.3" data-path="tutorial-4.html">
+        <li class="chapter active" data-level="2.2.4" data-path="tutorial-4.html">
             
                 <a href="tutorial-4.html">
             
@@ -395,103 +408,6 @@
     
 
     
-        
-        <li class="header">Other</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../../other/readme.html">
-            
-                <a href="../../other/readme.html">
-            
-                    
-                    csd2
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="../../other/gitbook/">
-            
-                <a href="../../other/gitbook/">
-            
-                    
-                    Introduction
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.2.1" data-path="../../other/gitbook/summary.html">
-            
-                <a href="../../other/gitbook/summary.html">
-            
-                    
-                    Summary
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="../../other/helper/">
-            
-                <a href="../../other/helper/">
-            
-                    
-                    helper
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.3.1" data-path="../../other/helper/gitbook.html">
-            
-                <a href="../../other/helper/gitbook.html">
-            
-                    
-                    NVM
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3.2" data-path="../../other/helper/jupyter/_manual.md">
-            
-                <span>
-            
-                    
-                    Jupyter Notebook
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
 
     <li class="divider"></li>
 
@@ -535,7 +451,638 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="tutorial-4">Tutorial 4</h1>
+                                <h1 id="computational-structural-design-ii---geometry-data-and-visualization">Computational Structural Design II - Geometry, Data and Visualization</h1>
+<h3 id="learning-goal">Learning Goal:</h3>
+<ul>
+<li>Geometries</li>
+<li>data</li>
+<li>visualization</li>
+</ul>
+<h3 id="content">Content:</h3>
+<ul>
+<li><a href="#GeometryData">A. Geometry Data</a></li>
+<li><a href="#GeometryClass">B. Geometry Class</a></li>
+<li><a href="#visualization">C. Geometry and Visualization</a></li>
+<li><a href="#Operations">D. Geometry Operations</a></li>
+</ul>
+<hr>
+<p><a id="GeometryData"></a></p>
+<h1 id="a-geometry-data">A. Geometry Data</h1>
+<h2 id="a1-describe-a-point-in-rhinoceros-grasshopper">A1. Describe a point in Rhinoceros Grasshopper</h2>
+<p>A point in 3D Cartesian coordinate system is represented by 3 numbers, which represents values along x, y and z axis. If you are familiar with Rhino and Grasshopper, a point can be created numerically by inputing 3 values. </p>
+<p>&lt;/br&gt;
+<img src="img/geo_pt_gh.png" width="500" style="margin-left:auto; margin-right:auto"></p>
+<p><center>create a point in Rhinoceros Grasshopper 3D</center>
+&lt;/br&gt;</p>
+<h2 id="a2-describe-a-point-by-python-list">A2. Describe a Point by Python list</h2>
+<p>Similarly the point can be referred to as a list <code>[x, y, z]</code> in Python. The three numbers represent the xyz coordinates of the point. Since a point is described as a list, the value in the list can be retrieved, modified, and updated by accessing the corresponding index of the list. 
+Here we create a point <code>x=0, y=1, z=1</code> and change the coordinate <code>y=5</code>. </p>
+<pre><code class="lang-python"><span class="hljs-comment"># xyz coordinates of the point</span>
+my_point = [<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>]  
+print(<span class="hljs-string">&quot;y coordinate of my_point is&quot;</span>, my_point[<span class="hljs-number">1</span>])
+
+<span class="hljs-comment"># re-assign the y coordinates 5</span>
+my_point[<span class="hljs-number">1</span>] = <span class="hljs-number">5</span>  
+print(<span class="hljs-string">&quot;xyz coordinates of my_point are&quot;</span>, my_point)
+</code></pre>
+<pre><code>y coordinate of my_point is 5
+xyz coordinates of my_point are [0, 5, 2]
+</code></pre><h2 id="a3-geometry-data-summary">A3. Geometry Data Summary</h2>
+<p>Besides point, basic geometry types - such as vector, line, plane - can be described numerically in Python by <strong>lists of values</strong>. The length of the list corresponds with the number of dimensions of the space the geometry resides in. In 3D space, the list contains 3 elements. The following table demonstrates the data used to describe 3D geometries numerically. </p>
+<table style="float:center;">
+    <tr>
+        <th style="text-align: center">Geometry</th>
+        <th style="text-align: center">Data</th>
+        <th style="text-align: center">Description</th>
+    </tr>
+    <tr>
+        <td style="text-align: center">point</td>
+        <td style="text-align: center">[x, y, z]</td>
+        <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+        <td style="text-align: center">vector</td>
+        <td style="text-align: center">[x, y, z]</td>
+        <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+        <td style="text-align: center">line</td>
+        <td style="text-align: center">([x<sub>1</sub>, y<sub>1</sub>, z<sub>1</sub>], [x<sub>2</sub>, y<sub>2</sub>, z<sub>2</sub>])</td>
+        <td style="text-align: center">(start point, end point)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">plane</td>
+        <td style="text-align: center">([x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>], [x<sub>n</sub>, y<sub>n</sub>, z<sub>n</sub>])</td>
+        <td style="text-align: center">(origin, normal)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">circle</td>
+        <td style="text-align: center">[([x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>], [x<sub>n</sub>, y<sub>n</sub>, z<sub>n</sub>]), r]</td>
+        <td style="text-align: center">[(origin, normal), radius]</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">polyline</td>
+        <td style="text-align: center">([x<sub>1</sub>, y<sub>1</sub>, z<sub>1</sub>], [x<sub>2</sub>, y<sub>2</sub>, z<sub>2</sub>], [x<sub>3</sub>, y<sub>3</sub>, z<sub>3</sub>, ...])</td>
+         <td style="text-align: center">collection of points</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">polygon</td>
+        <td style="text-align: center">([x<sub>1</sub>, y<sub>1</sub>, z<sub>1</sub>], [x<sub>2</sub>, y<sub>2</sub>, z<sub>2</sub>], [x<sub>3</sub>, y<sub>3</sub>, z<sub>3</sub>, ...])</td>
+         <td style="text-align: center">collection of points</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">frame</td>
+        <td style="text-align: center">([x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>], [x<sub>1</sub>, y<sub>1</sub>, z<sub>1</sub>], [x<sub>2</sub>, y<sub>2</sub>, z<sub>2</sub>])</td>
+         <td style="text-align: center">[origin, vector, vector]</td>
+    </tr>
+</table> 
+
+<p>&lt;/br&gt;</p>
+<hr>
+<p><a id="GeometryClass"></a></p>
+<h1 id="b-geometry-class">B. Geometry Class</h1>
+<p>A geometry type can be described by data. We can use a <strong>Class</strong> as a constructor, a template, or a &quot;blueprint&quot; to create <strong>Objects</strong> of a certain geometry type. An <strong>Object</strong> is an instance of a <strong>Class</strong> and it shares all attributes and the behavior of the Class. Classes are used frequently in Python scripting. A class can not only store data, but also define methods (a object-oriented programming term for functions) alongside the data that they operate on and produce. </p>
+<p>In the following session, we will learn Python Class by creating our own <strong>Point class</strong>. Then we will use the class to create a <strong>Point object</strong>, which represents the point <code>x=0, y=1, z=1</code>. </p>
+<h2 id="b1-point-class">B1. Point Class</h2>
+<h3 id="b1a-create-a-class">B1_a. Create a Class</h3>
+<p>Class definition cannot be empty. Put the <code>pass</code> statement to avoid getting an error. </p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; Point class&quot;&quot;&quot;</span>
+    <span class="hljs-keyword">pass</span>
+
+pt = Point()  <span class="hljs-comment"># instantiate an object of Point</span>
+print(pt) <span class="hljs-comment"># by default, print the name of the object&#x2019;s class and the address of the object.</span>
+</code></pre>
+<pre><code>&lt;__main__.Point object at 0x7fb6c808a0a0&gt;
+</code></pre><h3 id="b1b-init-function">B1<em>b. `<em>_init</em></em>()` function</h3>
+<p>All classes have a function called <code>__init__()</code>, which is always executed when the class is being initiated. We can pass some initial values to the class by calling the <code>__init__()</code> function. Before the parameters <code>x</code>, <code>y</code>, <code>z</code>, there is a <code>self</code>, which refers to the object itself. Then, we need to create new fields also called <code>x</code>, <code>y</code>, <code>z</code>. Notice <code>self.x</code> and <code>x</code> are two different variables even though they are both called <code>x</code>. You can view the dotted notation <code>self.x</code> as the attribute of your Point object, and the other x is a local variable. </p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; Point class&quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, x, y, z)</span>:</span>
+        self.x = x
+        self.y = y
+        self.z = z
+
+pt = Point(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>) <span class="hljs-comment"># create a point object</span>
+print(<span class="hljs-string">&quot;xyz coordinates are:&quot;</span>, pt.x, pt.y, pt.z)
+</code></pre>
+<pre><code>xyz coordinates are: 1 1 0
+</code></pre><h3 id="b1c-object-method">B1_c. Object Method</h3>
+<p>Now let&apos;s add a method to Point class to translate the point. It modifies the object attribute <code>self.x</code>, <code>self.y</code>, <code>self.z</code> by adding the translation distance along the corresponding axis.  </p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; Point class&quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, x, y, z)</span>:</span>
+        self.x = x
+        self.y = y
+        self.z = z
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">translate</span><span class="hljs-params">(self, vec_x, vec_y, vec_z)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Translate this point along a 3d vector&quot;&quot;&quot;</span>
+        self.x += vec_x
+        self.y += vec_y
+        self.z += vec_z
+
+pt = Point(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>) <span class="hljs-comment"># create a point object</span>
+print(<span class="hljs-string">&quot;xyz coordinates before translation are:&quot;</span>, pt.x, pt.y, pt.z) 
+pt.translate(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>) 
+print(<span class="hljs-string">&quot;xyz coordinates after translation are:&quot;</span>, pt.x, pt.y, pt.z)
+</code></pre>
+<pre><code>xyz coordinates before translation are: 1 1 0
+xyz coordinates after translation are: 2 4 1
+</code></pre><h3 id="b1d-modify-object-properties">B1_d. Modify Object Properties</h3>
+<p>Properties on objects can be modified.</p>
+<pre><code class="lang-python">pt.x = <span class="hljs-number">3</span>
+print(<span class="hljs-string">&quot;xyz coordinates after modification are:&quot;</span>, pt.x, pt.y, pt.z)
+</code></pre>
+<pre><code>xyz coordinates after modification are: 3 4 1
+</code></pre><h2 id="b2-use-the-point-class-from-compas">B2. Use the Point Class from COMPAS</h2>
+<p>COMPAS contains a <a href="https://compas.dev/compas/latest/api/generated/compas.geometry.Point.html?highlight=point#compas.geometry.Point" target="_blank">Point</a> class which is similar to the one we have created. However, it contains more object methods which have already been developed. In a COMPAS Point class, a Point has three parameters, <code>x</code>, <code>y</code>, <code>z</code>. They could be accessed through indexing as well as through <code>.x</code>, <code>.y</code>, and <code>.z</code> attributes. </p>
+<p><img src="https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M730QpQnbAMvz44bqhc%2F-MMzyUtFsDByqwGgOo8D%2F-MN-4caIa6sDF5e1YGok%2Fimage.png?alt=media&amp;token=2c8d3140-e57b-49a2-8f16-d89ba351319c" width="700" style="margin-left:auto; margin-right:auto"></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point
+
+my_point = Point(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)  <span class="hljs-comment"># create a point object</span>
+print(my_point.y)  <span class="hljs-comment"># attribute y of point</span>
+print(my_point[<span class="hljs-number">1</span>] == my_point.y)
+
+my_point.y = <span class="hljs-number">5</span>  <span class="hljs-comment"># reassign the attribute y</span>
+print(my_point) <span class="hljs-comment"># Point class contains a class function that prints the summary of the object</span>
+</code></pre>
+<pre><code>1.0
+True
+Point(0.000, 5.000, 1.000)
+</code></pre><h2 id="b3-geometry-classes-in-compas">B3. Geometry Classes in COMPAS</h2>
+<p>COMPAS provides a number of ready-to-use primitive objects. Available primitive objects include <code>Point</code>, <code>Vector</code>, <code>Line</code>, <code>Plane</code>, <code>Polyline</code>, <code>Polygon</code>, <code>Circle</code>, <code>Frame</code>, etc. All COMPAS primitives can be used interchangeably with native Python objects as input for geometry functions and object methods. 
+For a complete overview, you can visit the <a href="https://compas.dev/compas/latest/api/compas.geometry.html" target="_blank">API Reference</a>. </p>
+<p><br></p>
+<p><table style="float:center;">
+    <tr>
+        <th style="text-align: center">Geometry Object</th>
+        <th style="text-align: center">COMPAS Class</th>
+    </tr>
+    <tr>
+        <td style="text-align: center">point</td>
+        <td style="text-align: center">point = Point(x, y, z)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">vector</td>
+        <td style="text-align: center">vector = Vector(x, y, z)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">line</td>
+        <td style="text-align: center">line = Line(point, point)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">plane</td>
+        <td style="text-align: center">plane = Plane(point, vector)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">circle</td>
+        <td style="text-align: center">circle = Circle(plane, radius)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">polyline</td>
+        <td style="text-align: center">polyline = Polyline(points)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">polygon</td>
+        <td style="text-align: center">polygon = Polygon(points)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">frame</td>
+        <td style="text-align: center">frame = Frame(point, vector, vector)</td>
+    </tr>
+</table> 
+<br></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point, Line
+
+line_1 = Line([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>])
+line_2 = Line(Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), Point(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
+
+print(line_1 == line_2)
+</code></pre>
+<pre><code>True
+</code></pre><hr>
+<p><a id="visualization"></a></p>
+<h1 id="c-geometry-and-visualization">C. Geometry and Visualization</h1>
+<h2 id="c1-visualize-a-point">C1. Visualize a Point</h2>
+<p>The point we have created in the last session is a virtual object, now we will visualize it</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+my_point = Point(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># visualize the Point</span>
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_point)
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_17_0.png" alt="png"></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+<span class="hljs-keyword">from</span> compas_plotters.artists <span class="hljs-keyword">import</span> PointArtist
+
+my_point = Point(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
+pointartist = PointArtist(my_point)
+
+<span class="hljs-comment"># visualize the Point</span>
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_point, pointartist)
+plotter.show()
+</code></pre>
+<pre><code>---------------------------------------------------------------------------
+
+DataArtistNotRegistered                   Traceback (most recent call last)
+
+Input In [20], in &lt;module&gt;
+      3 from compas_plotters.artists import PointArtist
+      5 my_point = Point(1, 1, 0)
+----&gt; 6 pointartist = PointArtist(my_point)
+      8 # visualize the Point
+      9 plotter = Plotter(show_axes=True)
+
+
+File ~/opt/anaconda3/envs/brg/lib/python3.8/site-packages/compas/artists/artist.py:88, in Artist.__new__(cls, *args, **kwargs)
+     86     register_artists()
+     87     Artist.__ARTISTS_REGISTERED = True
+---&gt; 88 cls = _get_artist_cls(args[0], **kwargs)
+     89 PluginValidator.ensure_implementations(cls)
+     90 return super(Artist, cls).__new__(cls)
+
+
+File ~/opt/anaconda3/envs/brg/lib/python3.8/site-packages/compas/artists/artist.py:59, in _get_artist_cls(data, **kwargs)
+     56             break
+     58 if cls is None:
+---&gt; 59     raise DataArtistNotRegistered(&apos;No artist is registered for this data type: {} in this context: {}&apos;.format(dtype, Artist.CONTEXT))
+     61 return cls
+
+
+DataArtistNotRegistered: No artist is registered for this data type: &lt;class &apos;compas.geometry.primitives.point.Point&apos;&gt; in this context: None
+</code></pre><p>After we generate the geometry objects, we can use a visualization interface to translate the information into a visual context. Firstly, We need a &quot;drawing surface&quot; - a canvas in 2D, or a scene in 3D. A 2D canvas can contain a number of shapes, which contains not only the geometric data - such as the coordinates, but also graphics context. Graphics context means objects that provide mechanisms for displaying the geometry, such as color, width of the curve. </p>
+<h3 id="todo-add-diagram-about-data-artist-plotter">TODO: add diagram about data, artist, plotter...</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># from IPython.display import display</span>
+<span class="hljs-comment"># fig = plotter.figure</span>
+<span class="hljs-comment"># display(fig)</span>
+</code></pre>
+<h2 id="c2-line">C2. Line</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Line
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># create a line</span>
+my_line = Line([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>])
+
+<span class="hljs-comment"># visualize the line</span>
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_line, draw_points=<span class="hljs-keyword">False</span>, draw_as_segment=<span class="hljs-keyword">True</span>)
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_22_0.png" alt="png"></p>
+<h2 id="c3-vector">C3. Vector</h2>
+<p>A vector is a geometric object that has magnitude and direction. In Python, it could be represented through a list of XYZ components. </p>
+<h3 id="c3a-vector-data">C3_a. Vector Data</h3>
+<pre><code class="lang-python">my_vector = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>]  <span class="hljs-comment"># xyz coordinates of the vector</span>
+</code></pre>
+<p>A vector can be added, subtracted, multiplied by another vector. For example, here&apos;s the example to add two vectors in Python. </p>
+<pre><code class="lang-python">vector1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>]
+vector2 = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>]
+vector3 = [vector1[i] + vector2[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>)]
+print(vector3)
+</code></pre>
+<pre><code>[1, 3, 0]
+</code></pre><h3 id="c3b-geometric-operation-functions">C3_b. Geometric Operation Functions</h3>
+<p>compas.geometry provides geometric operation functions to simplify the use of basic Python operations. These functions always return native Python objects. The last example can be realized by using <code>compas.geometry.add_vectors</code>.</p>
+<h2 id="todo-add-cross-product">TODO: add cross product</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> add_vectors
+vector1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>]
+vector2 = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>]
+vector3 = add_vectors(vector1, vector2)
+print(vector3)
+</code></pre>
+<pre><code>[1, 3, 0]
+</code></pre><h3 id="c3c-vector-class">C3_c. Vector Class</h3>
+<p>COMPAS Vector class which contains useful geometric properties and methods. Now let&apos;s create a Vector object and check its length. In Vector class, length is the attribute of the object.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Vector
+my_vector = Vector(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>)
+print(my_vector)
+print(my_vector.length)
+</code></pre>
+<pre><code>Vector(1.000, 2.000, 0.000)
+2.23606797749979
+</code></pre><p>A vector could also be constructed from start and end points. COMPAS geometry types could be used interchangeably with native Python types. Both a COMPAS Point object or a list composed of 3 components could be used as input. </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point, Vector
+my_vector = Vector.from_start_end(Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>))
+<span class="hljs-comment"># my_vector = Vector.from_start_end([0, 0, 0], [1, 2, 0]</span>
+print(my_vector)
+print(my_vector == Vector(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>))
+</code></pre>
+<pre><code>Vector(1.000, 2.000, 0.000)
+True
+</code></pre><p>Operators such as + or <em> involving COMPAS geometry objects always return a new COMPAS geometry object. For example, scaling my_vector by 2 can use the class method Vector.scale(n) as well as </em> 2. </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Vector
+my_vector = Vector(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>)
+my_vector.scale(<span class="hljs-number">2</span>)
+print(my_vector)
+print(my_vector == Vector(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>))
+print(my_vector == Vector(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>) * <span class="hljs-number">2</span>)
+</code></pre>
+<pre><code>Vector(2.000, 4.000, 0.000)
+True
+True
+</code></pre><h3 id="c3d-exercise-draw-vectors">C3_d: Exercise: Draw Vectors</h3>
+<p>Question: Given three points: pointA: [0, 0, 0], pointB: [0, 1, 0], pointC: [3, 2, 0]. You need to draw three vectors as shown in the following picture. </p>
+<p><img src="img/vectors.jpg" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># Point Geometry</span>
+point1 = Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+point2 = Point(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
+point3 = Point(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># Plottor</span>
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+
+plotter.add(point1)
+plotter.add(point2)
+plotter.add(point3)
+
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_37_0.png" alt="png"></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># Point Geometry</span>
+point1 = Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+point2 = Point(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
+point3 = Point(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>)
+
+vector1 = point2 - point1
+vector2 = point3 - point2
+vector3 = point3 - point1
+
+<span class="hljs-comment"># Plottor </span>
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+
+plotter.add(point1)
+plotter.add(point2)
+plotter.add(point3)
+
+plotter.add(vector1, point=point1, color=(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
+plotter.add(vector2, point=point2, color=(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
+plotter.add(vector3, point=point1, color=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>))
+
+plotter.zoom_extents()
+
+<span class="hljs-comment"># # save image</span>
+<span class="hljs-comment"># import os</span>
+<span class="hljs-comment"># HERE = os.getcwd()</span>
+<span class="hljs-comment"># path = os.path.join(HERE, &apos;img/vectors.jpg&apos;)</span>
+<span class="hljs-comment"># plotter.save(path) # call save before plotter.show; after plotter.show() is called, a new figure is created. </span>
+
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_38_0.png" alt="png"></p>
+<h2 id="c4-polygon">C4. Polygon</h2>
+<p>A Polygon represents an ordered collection of points in space connected by straight line segments forming a closed boundary around the interior space. It has a closed boundary that separates its interior from the exterior. </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+my_polygon = Polygon([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>]])
+
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>), facecolor=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_40_0.png" alt="png"></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># Construct a regular polygon from a number of sides and a radius.</span>
+my_polygon = Polygon.from_sides_and_radius_xy(<span class="hljs-number">5</span>, <span class="hljs-number">2.0</span>) 
+
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>), facecolor=(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1.0</span>))
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_41_0.png" alt="png"></p>
+<h2 id="c5-polyline">C5. Polyline</h2>
+<p>A Polyline is a sequence of points connected by line segments. Different from a Polygon, a Polyline doesn&apos;t have an interior and an exterior. </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polyline
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+my_polyline = Polyline([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>]])
+
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_polyline, color=(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), linewidth=<span class="hljs-number">3</span>)
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_43_0.png" alt="png"></p>
+<h2 id="c6-circle">C6. Circle</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Plane, Circle
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+my_plane = Plane([<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>])  <span class="hljs-comment"># center and normal</span>
+my_circle = Circle(my_plane, <span class="hljs-number">2</span>)
+
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_circle, edgecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>), facecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>), linewidth=<span class="hljs-number">3</span>)
+
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_45_0.png" alt="png"></p>
+<h2 id="c7-pointcloud">C7. PointCloud</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> random
+
+<span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Pointcloud
+<span class="hljs-keyword">from</span> compas.utilities <span class="hljs-keyword">import</span> i_to_rgb
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># Pointcloud Geometry</span>
+pcl = Pointcloud.from_bounds(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>)
+
+<span class="hljs-comment"># Plotter</span>
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+
+<span class="hljs-keyword">for</span> point <span class="hljs-keyword">in</span> pcl.points:
+    plotter.add(point, facecolor=i_to_rgb(random(), normalize=<span class="hljs-keyword">True</span>))
+
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_47_0.png" alt="png"></p>
+<h2 id=""><a id="Operations"></a></h2>
+<h1 id="d-geometry-operations">D. Geometry Operations</h1>
+<h2 id="d1-transformation">D1. Transformation</h2>
+<p>Transformation means changes in geometric shape, which is represented by a 4x4 transformation matrix. Here we will learn 3 typical transformations in COMPAS: translation, rotation and scale. 
+A COMPAS geometry object can be transformed by calling the method .transform() or .transformed(). The former modifies the object in place, whereas the latter returns a new object.</p>
+<h3 id="d1a-translation">D1_a. Translation</h3>
+<p>Translation is to move the geometry, one of the most basic transformation types. The shape, size and orientation of the geometry remain the same.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Translation
+T = Translation.from_vector([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+print(T)
+</code></pre>
+<pre><code>[[    1.0000,    0.0000,    0.0000,    1.0000],
+ [    0.0000,    1.0000,    0.0000,    2.0000],
+ [    0.0000,    0.0000,    1.0000,    3.0000],
+ [    0.0000,    0.0000,    0.0000,    1.0000]]
+</code></pre><pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon, Translation
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># Construct a regular polygon from a number of sides and a radius.</span>
+my_polygon = Polygon.from_sides_and_radius_xy(<span class="hljs-number">5</span>, <span class="hljs-number">2.0</span>) 
+my_polygon.transform(T)
+
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>), facecolor=(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1.0</span>))
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_52_0.png" alt="png"></p>
+<p>.transformed() creates a new polygon. </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon, Translation
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># Construct a regular polygon from a number of sides and a radius.</span>
+my_polygon = Polygon.from_sides_and_radius_xy(<span class="hljs-number">5</span>, <span class="hljs-number">2.0</span>) 
+my_polygon.transform(T)
+
+my_polygon = Polygon.from_sides_and_radius_xy(<span class="hljs-number">5</span>, <span class="hljs-number">2.0</span>)
+T1 = Translation.from_vector([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>])
+T2 = Translation.from_vector([<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>])
+my_polygon.transform(T1)
+my_polygon2 = my_polygon.transformed(T2)
+
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>), facecolor=(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1.0</span>))
+plotter.add(my_polygon2, edgecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>), facecolor=(<span class="hljs-number">1.0</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1.0</span>))
+
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_54_0.png" alt="png"></p>
+<h3 id="d1b-rotation">D1_b. Rotation</h3>
+<p>Rotation is to rotate the geometry by a certain degree. </p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> m
+<span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon, Rotation
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># Construct a regular polygon from a number of sides and a radius.</span>
+my_polygon = Polygon.from_sides_and_radius_xy(<span class="hljs-number">5</span>, <span class="hljs-number">2.0</span>) 
+my_polygon.transform(T)
+
+R = Rotation.from_axis_and_angle([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>], m.radians(<span class="hljs-number">15</span>))
+my_polygon.transform(R)
+
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>), facecolor=(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1.0</span>))
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_56_0.png" alt="png"></p>
+<h3 id="d1c-scale">D1_c. Scale</h3>
+<p>Scale is to enlarge or shrink the geometry by a scale factor.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon, Scale
+<span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
+
+<span class="hljs-comment"># Construct a regular polygon from a number of sides and a radius.</span>
+my_polygon = Polygon.from_sides_and_radius_xy(<span class="hljs-number">5</span>, <span class="hljs-number">2.0</span>) 
+my_polygon.transform(T)
+
+S = Scale.from_factors([<span class="hljs-number">0.5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>])  <span class="hljs-comment"># scale factors along X, Y, Z</span>
+my_polygon.transform(S)
+
+plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
+plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>), facecolor=(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1.0</span>))
+plotter.zoom_extents()
+plotter.show()
+</code></pre>
+<p><img src="week_4_files/week_4_58_0.png" alt="png"></p>
+<h3 id="d1d-frame">D1_d. Frame</h3>
+<p>Frame plays an important role in transformation, especially in 3D. A frame defines a local coordinate system and transformation can be created between different coordinate systems represented by frames. 
+Note that Frame is different from a Plane. A frame is defined by an origin and two axes, while a plane is defined by an origin and a normal vector.  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Frame, Transformation
+f1 = Frame([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">0.68</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.27</span>], [<span class="hljs-number">-0.67</span>, <span class="hljs-number">0.73</span>, <span class="hljs-number">-0.15</span>])
+T = Transformation.from_frame(f1)
+print(T)
+</code></pre>
+<pre><code>[[    0.6808,   -0.6688,   -0.2988,    1.0000],
+ [    0.6808,    0.7282,   -0.0788,    1.0000],
+ [    0.2703,   -0.1498,    0.9511,    1.0000],
+ [    0.0000,    0.0000,    0.0000,    1.0000]]
+</code></pre><pre><code class="lang-python">f2 = Frame([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">0.68</span>, <span class="hljs-number">0.68</span>, <span class="hljs-number">0.27</span>], [<span class="hljs-number">-0.67</span>, <span class="hljs-number">0.73</span>, <span class="hljs-number">-0.15</span>])
+T = Transformation.from_frame_to_frame(f1, f2)
+f1.transform(T)
+print(f1 == f2)
+</code></pre>
+<pre><code>True
+</code></pre><h2 id="d2-intersections">D2. Intersections</h2>
+<p>To compute intersections between primitives and/or shapes, use the intersection functions.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> intersection_line_plane
+line = [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]
+plane = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
+intersection_line_plane(line, plane)
+</code></pre>
+<pre><code>[1.0, 1.0, 0.0]
+</code></pre><pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Plane, intersection_line_plane
+line = [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]
+plane = Plane.worldXY()
+intersection_line_plane(line, plane)
+</code></pre>
+<pre><code>[1.0, 1.0, 0.0]
+</code></pre><h2 id="d3-cross-product">D3. Cross Product</h2>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+<span class="hljs-comment"># plotter.zoom_extents()</span>
+<span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> display
+fig = plotter.figure
+display(fig)
+</code></pre>
+<p><img src="week_4_files/week_4_73_0.png" alt="png"></p>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
+<pre><code class="lang-python">
+
+</code></pre>
 
                                 
                                 </section>
@@ -579,7 +1126,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tutorial 4","level":"2.2.3","depth":2,"next":{"title":"III. Materialization","level":"2.3","depth":1,"path":"course-material/iii.-materialization/README.md","ref":"course-material/iii.-materialization/README.md","articles":[{"title":"Lecture 2","level":"2.3.1","depth":2,"path":"course-material/iii.-materialization/lecture-2.md","ref":"course-material/iii.-materialization/lecture-2.md","articles":[]},{"title":"Tutorial 5","level":"2.3.2","depth":2,"path":"course-material/iii.-materialization/tutorial-5.md","ref":"course-material/iii.-materialization/tutorial-5.md","articles":[]},{"title":"Tutorial 6","level":"2.3.3","depth":2,"path":"course-material/iii.-materialization/tutorial-6.md","ref":"course-material/iii.-materialization/tutorial-6.md","articles":[]},{"title":"Tutorial 7","level":"2.3.4","depth":2,"path":"course-material/iii.-materialization/tutorial-7.md","ref":"course-material/iii.-materialization/tutorial-7.md","articles":[]}]},"previous":{"title":"Tutorial 3","level":"2.2.2","depth":2,"path":"course-material/ii.-geometry/tutorial-3.md","ref":"course-material/ii.-geometry/tutorial-3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"course-material/ii.-geometry/tutorial-4.md","mtime":"2022-02-04T13:18:53.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-04T14:04:44.639Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tutorial 4","level":"2.2.4","depth":2,"next":{"title":"III. Materialization","level":"2.3","depth":1,"path":"course-material/iii.-materialization/README.md","ref":"course-material/iii.-materialization/README.md","articles":[{"title":"Lecture 2","level":"2.3.1","depth":2,"path":"course-material/iii.-materialization/lecture-2.md","ref":"course-material/iii.-materialization/lecture-2.md","articles":[]},{"title":"Tutorial 5","level":"2.3.2","depth":2,"path":"course-material/iii.-materialization/tutorial-5.md","ref":"course-material/iii.-materialization/tutorial-5.md","articles":[]},{"title":"Tutorial 6","level":"2.3.3","depth":2,"path":"course-material/iii.-materialization/tutorial-6.md","ref":"course-material/iii.-materialization/tutorial-6.md","articles":[]},{"title":"Tutorial 7","level":"2.3.4","depth":2,"path":"course-material/iii.-materialization/tutorial-7.md","ref":"course-material/iii.-materialization/tutorial-7.md","articles":[]}]},"previous":{"title":"Tutorial 3","level":"2.2.3","depth":2,"path":"course-material/ii.-geometry/tutorial-3.md","ref":"course-material/ii.-geometry/tutorial-3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"course-material/ii.-geometry/tutorial-4.md","mtime":"2022-02-15T13:16:08.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-15T14:35:35.307Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -587,6 +1134,10 @@
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

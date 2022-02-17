@@ -25,12 +25,3 @@
   * [Tutorial 8](course-material/iv.-fabrication/tutorial-8.md)
   * [Tutorial 9](course-material/iv.-fabrication/tutorial-9.md)
   * [Tutorial 10](course-material/iv.-fabrication/tutorial-10.md)
-
-## Other
-
-* [csd2](other/csd2.md)
-* [Introduction](other/introduction/README.md)
-  * [Summary](other/introduction/summary.md)
-* [helper](other/helper/README.md)
-  * [NVM](other/helper/nvm.md)
-  * [Jupyter Notebook](other/helper/jupyter-notebook.md)
