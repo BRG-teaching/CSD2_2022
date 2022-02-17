@@ -5,17 +5,12 @@ from compas.geometry._core.distance import distance_point_point
 from compas_rhino.artists import MeshArtist
 from compas.geometry import Vector
 from compas.geometry import add_vectors
-#from compas.datastructures import subdivision as sd
 from compas.geometry import angle_vectors
 from compas.geometry import trimesh_remesh
 
-
-#from compas_rhino import unload_modules
-#unload_modules('mysubdivision')
-
 HERE = os.path.dirname(__file__)
 
-FILE_I = os.path.join(HERE, 'data', 'form.json')
+FILE_I = os.path.join(HERE, 'data', 'scaled_form.json')
 FILE_O_1 = os.path.join(HERE, 'data', 'Ribs_Mesh.json')
 FILE_O_2 = os.path.join(HERE, 'data', 'Caps_Mesh.json')
 
@@ -93,28 +88,6 @@ def ribs_mesh(mesh, meshcap, fkey, ratio, keep_original, doCap=True):
     
     else:
         return fkey, []
-
-
-
-def tri_face(mesh, fkey):
-    centroid = mesh.face_centroid(fkey)
-    centroid_vector = Vector(*centroid)
-    normal = mesh.face_normal(fkey)
-    normal_vector = Vector(*normal)
-    new_vertex = centroid_vector
-    #new_keys = mesh.insert_vertex(fkey, xyz=new_vertex, return_fkeys=True)[1]
-
-    face_verts = mesh.face_vertices(fkey)
-
-    new_keys = []
-    for i, v in enumerate(face_verts):
-        next_v = face_verts[(i+1) % len(face_verts)]
-        new_v = new_vertex
-        new_face_key = mesh.add_face([v, next_v, new_v])
-        new_keys.append(new_face_key)
-
-    mesh.delete_face(fkey)
-    return new_keys
 
 
 #-----------z positions----------------------------------------------------------
