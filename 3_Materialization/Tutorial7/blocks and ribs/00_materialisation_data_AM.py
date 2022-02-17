@@ -15,7 +15,7 @@ session = compas.json_load(FILE_I)
 
 mesh = Mesh.from_data(session['data']['form'])
 
-#------------to delete extra faces(less than 4 edges) if subdivided with catmulclark or other weird subdivision that connects the mesh with the ground------------
+#------------to delete extra faces(more than 4 edges) if subdivided with catmulclark or other weird subdivision that connects the mesh with the ground------------
 delete_faces =[]
 
 for fkey in mesh.faces():
