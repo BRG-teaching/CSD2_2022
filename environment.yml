@@ -4,3 +4,5 @@ channels:
 dependencies:
     - python
     - compas
+    - pythreejs
+    - traitlets==4.3.3
