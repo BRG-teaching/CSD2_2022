@@ -3,6 +3,7 @@
 * [About](README.md)
 * [Syllabus](syllabus.md)
 * [Tools](tools.md)
+* [Support](support.md)
 * [Cite](cite.md)
 
 ## Course Material
