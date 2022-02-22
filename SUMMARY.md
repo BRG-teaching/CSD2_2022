@@ -2,6 +2,7 @@
 
 * [About](README.md)
 * [Syllabus](syllabus.md)
+* [Instructors](instructors.md)
 * [Tools](tools.md)
 * [Support](support.md)
 * [Cite](cite.md)
