@@ -30,3 +30,9 @@ After successfully completing the course, the students will be able to:
 
 ## 6. Support
 
+If you have any issues or questions, you can reach us by:&#x20;
+
+* Office hours: HIB E, BRG corner (with appointments)
+* Create an issue here: [https://github.com/BlockResearchGroup/CSD2\_2022/issues](https://github.com/BlockResearchGroup/CSD2\_2022/issues)
+* Email instructors
+
