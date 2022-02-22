@@ -6,13 +6,9 @@ This course teaches structurally-informed computational design, materialisation,
 
 The students will first learn about Thrust Network Analysis (TNA), a form-finding method for compression-only shell structures. Using [compas-RV2](https://blockresearchgroup.gitbook.io/rv2/) (RhinoVAULT 2), an interactive implementation of TNA for Rhinoceros software, the students will learn how to design and analyse their own funicular shell structures.&#x20;
 
-After being introduced to the basics of Python programming using Jupyter Notebook, the students will learn how to use the [COMPAS](https://compas.dev) framework for processing computational geometry to develop various materialisation strategies. Students will also learn about the mesh datastructure, and how to use various features of COMPAS to understand, extract and process topological information within the datastructure.
+After being introduced to the basics of Python programming using Jupyter Notebook, the students will learn how to use the [COMPAS](https://compas.dev) framework for processing computational geometry to develop various materialisation strategies. Students will also learn about the mesh datastructure, and how to use various features of COMPAS to understand, extract and process topological information stored in the datastructure.
 
-Finally, using the form-found geometry using RV2 and the computational&#x20;
-
-
-
-
+Finally, using the form-found geometry using RV2 and the computational skills learned in class, the students will learn the basic principles of digital-design-to fabrication setup and workflow, and  develop a subtractive fabrication pipeline for wirecutting and CNC milling of discretised block geometries of the compression-only structure.
 
 ### General information
 
