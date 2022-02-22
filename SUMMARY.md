@@ -4,8 +4,8 @@
 * [Syllabus](syllabus.md)
 * [Instructors](instructors.md)
 * [Tools](tools.md)
-  * [compas-RV2](tools/compas-rv2.md)
-  * [Page 2](tools/page-2.md)
+  * [compas-RV2](tools/rv2.md)
+  * [Jupyter Notebook](tools/jupyter-notebook.md)
 * [Support](support.md)
 * [Cite](cite.md)
 

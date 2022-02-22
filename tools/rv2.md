@@ -1,4 +1,4 @@
-# RV2
+# compas-RV2
 
 ![](../.gitbook/assets/plugin\_title\_slides\_compas\_rv2.jpg)
 
