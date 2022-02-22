@@ -1,6 +1,6 @@
 # RV2
 
-![](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M730KDE62BF09cHS0D1%2F-MN2qMWii9sHYctQjfg3%2F-MN2qUg1HkQN9bvBCDRU%2Fimage.png?alt=media\&token=bae3e258-8a94-40b6-8ed6-d2bb8a8454ac)
+![](../.gitbook/assets/plugin\_title\_slides\_compas\_rv2.jpg)
 
 The Rhinoceros® plug-in RhinoVAULT, developed by Dr. Matthias Rippmann at the Block Research Group at ETH Zurich, emerged from research on structural form finding using the Thrust Network Analysis (TNA) approach to intuitively create and explore compression-only structures.
 
