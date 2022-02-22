@@ -5,8 +5,7 @@
 * [Instructors](instructors.md)
 * [Tools](tools.md)
   * [compas-RV2](tools/rv2.md)
-  * [Jupyter Notebook](tools/jupyter-notebook.md)
-* [Support](support.md)
+  * [Jupyter Notebook](tools/page-2.md)
 * [Cite](cite.md)
 
 ## Course Material
