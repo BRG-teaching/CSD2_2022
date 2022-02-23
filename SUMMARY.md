@@ -19,6 +19,7 @@
   * [Tutorial 3](course-material/ii.-geometry/tutorial-3.md)
   * [Tutorial 4](course-material/ii.-geometry/tutorial-4.md)
 * [Assignment 1](course-material/assignment-1.md)
+* [Assignment 2](course-material/assignment-2.md)
 * [III. Materialization](course-material/iii.-materialization/README.md)
   * [Lecture 2](course-material/iii.-materialization/lecture-2.md)
   * [Tutorial 5](course-material/iii.-materialization/tutorial-5.md)
