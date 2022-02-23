@@ -1,6 +1,6 @@
 # About
 
-![](.gitbook/assets/CSD2\_2022\_cover-01.png)
+![](<.gitbook/assets/CSD2\_2022\_cover-01 (1).png>)
 
 ### Welcome to Computational Structural Design II: Structurally-informed Materialisation!
 
