@@ -30,11 +30,17 @@ The course is divided into 4 modules, each with specific objectives and learning
 
 ### Tools
 
+For this course, we will be using [**Rhino**](https://www.rhino3d.com) 6+ for Windows. Although the tutorials and exercises can be completed using Rhino Mac, all the features of compas-RV2 will not be available for Mac (most importantly, the toolbar). Therefore, if you have an Apple computer, following the course content using Windows with a virtual machine is highly recommended.
 
+For module I, we will use compas-RV2 to learn how to design compression-only shell structures in Rhino.
 
+For modules II, III, and IV, we will use Jupyter Notebook to learn how to code with the Python programming language, how to use various features of the COMPAS framework, and develop a pipeline for a subtractive manufacturing process.&#x20;
 
+Detailed information on these tools can be found here:
 
-
+{% content-ref url="tools.md" %}
+[tools.md](tools.md)
+{% endcontent-ref %}
 
 ## 3. Class structure
 
