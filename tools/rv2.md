@@ -10,7 +10,7 @@ RhinoVAULT 2 (RV2) is an open-source research and development platform for funic
 
 RV2 is a Rhino plugin that replaces RhinoVAULT for Rhino versions 6 and above. Unlike RhinoVAULT, RV2 no longer relies on Rhino for its computational implementation. Instead, it is built entirely with open source packages from the COMPAS ecosystem and will, therefore, be available not only for Rhino and Grasshopper, but also for Blender and other tools with a Python scripting interface, and ultimately even in the browser.
 
-For more information about RV2, please visit the [RV2 documentation](https://blockresearchgroup.gitbook.io/rv2/).
+For more information about RV2, please visit the [**RV2 documentation**](https://blockresearchgroup.gitbook.io/rv2/).
 
 ## Download
 
@@ -18,4 +18,4 @@ For more information about RV2, please visit the [RV2 documentation](https://blo
 
 ## Installation instructions
 
-Detailed instructions on how to install compas-RV2 are available [here](https://blockresearchgroup.gitbook.io/rv2/quick-start/windows-install).
+Detailed instructions on how to install compas-RV2 are available [**here**](https://blockresearchgroup.gitbook.io/rv2/quick-start/windows-install).
