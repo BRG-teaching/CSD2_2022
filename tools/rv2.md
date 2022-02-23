@@ -14,7 +14,7 @@ For more information about RV2, please visit the [**RV2 documentation**](https:/
 
 ## Download
 
-
+compas-RV2 can be downloaded here.
 
 ## Installation instructions
 
