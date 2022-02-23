@@ -1,5 +1,7 @@
 # About
 
+![](.gitbook/assets/CSD2\_2022\_cover-01.png)
+
 ### Welcome to Computational Structural Design II: Structurally-informed Materialisation!
 
 This course teaches structurally-informed computational design, materialisation, and subtractive fabrication methods for compression-only shell structures. The course is an introduction to coding using the Python programming language within the context of computational structural design.
