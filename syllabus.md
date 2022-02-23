@@ -1,5 +1,10 @@
 # Syllabus
 
+{% hint style="danger" %}
+* The course will be livestreamed [here](https://video.ethz.ch/live/lectures/hoenggerberg/hil/hil-e-8.html), and the recording of each class will be posted [here](https://video.ethz.ch/lectures/d-arch/2022/spring.html).
+* Due to the interactive, hands-on nature of the course, the students are highly encouraged to attend the tutorials and work sessions in person to maximise interactions with the instructors and get the most out of the course.&#x20;
+{% endhint %}
+
 ## 1. Learning goals
 
 After successfully completing the course, the students will be able to:
