@@ -15,7 +15,7 @@
   * [Tutorial 1](course-material/i.-form-finding/tutorial-1.md)
 * [II. Geometry](course-material/ii.-geometry/README.md)
   * [Introduction](course-material/ii.-geometry/IntroductionToJupyterNotebook.md)
-  * [Tutorial 2](course-material/ii.-geometry/tutorial-2.md)
+  * [Tutorial 2](course-material/ii.-geometry/tutorial2a.md)
   * [Tutorial 3](course-material/ii.-geometry/tutorial-3.md)
   * [Tutorial 4](course-material/ii.-geometry/tutorial-4.md)
 * [III. Materialization](course-material/iii.-materialization/README.md)
