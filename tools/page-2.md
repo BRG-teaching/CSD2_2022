@@ -18,7 +18,7 @@ Next, open the notebook Jupyter\_Notebook\_Markdown\_Guide.ipynb, which has alre
 
 ![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/20676eaf165a73675433f284799f874a45835718/2\_Geometry/Introduction/Files/Introduction/IntroToJupyterNB\_Slide2.png?raw=true)
 
-Let's look at the existing cells.
+letr us look at the existing cells
 
 ![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/20676eaf165a73675433f284799f874a45835718/2\_Geometry/Introduction/Files/Introduction/IntroToJupyterNB\_Slide4.png?raw=true)
 
@@ -30,11 +30,11 @@ Let us run the existing cells.
 
 See this [Markdownguide](https://www.markdownguide.org/basic-syntax/#links) for an indepth look at styling your Jupyter Notebook content
 
-The most important thing to know is that Jupyter notebook uses _cells_ and the different types. The _cell_ is a place where you can write your code or text. Cells can be run one at a time. You will be practicing this way of running and testing your code throughout the course. Two important cell types are _code_ and _markdown_. The _code cell_ is where we type or paste our code and can run the code in it. The _markdown cell_ is a place you can type descriptions such as _pseudocode_(we will get to that later) in rich text format, see the following figure as an example. You can search for _‘Markdown cheatsheet’_ to get a quick start with markdown.
+The most important things to know is that Jupyter notebook uses _cells_ and the different types. The _cell_ is a place where you can write your code or text. Cells can be run one at a time. You will be pacticing this way of running and testing your code throughout the course. Two important cell types are _code_ and _markdown_. The _code cell_ is where we type or paste our code and can run the code in it. The _markdown cell_ is a place you can type descriptions such as _pseudocode_(we will get to that later) in rich text format, see the following figure as an example. You can search for _‘Markdown cheatsheet’_ to get a quick start with markdown.
 
 #### Create a new notebook and give it the name "hello\_world.ipynb"
 
-Let us create a new Jupyter Notebook and practice creating cells.
+Let us create a new jupyter Notebook and practice creating cells.
 
 And open the new notebook.
 
