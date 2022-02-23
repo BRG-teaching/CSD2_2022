@@ -24,6 +24,14 @@ After successfully completing the course, the students will be able to:
 
 
 
+
+
+
+
+
+
+![](.gitbook/assets/2022\_CSD2\_syllabus-01.png)
+
 ## 5. Evaluation
 
 
