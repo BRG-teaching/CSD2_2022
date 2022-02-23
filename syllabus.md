@@ -65,37 +65,58 @@ Each module consists of three parts: a lecture, tutorials and work sessions.
 
 ## 4. Schedule
 
-
-
-
-
-
-
-
-
-![](.gitbook/assets/2022\_CSD2\_syllabus-01.png)
+![](<.gitbook/assets/2022\_CSD2\_syllabus-01 (1).png>)
 
 ## 5. Evaluation
 
 ### Grading
 
+The students will be evaluated based on the completion of:
 
+* Assignment 1 (individual)
+* Assignment 2 (individual)
+* Assignment 3 + presentation (in groups)
 
+There is no final exam or design project. Each assignment will be assigned at the beginning of each module and will be due at the beginning of the next module. The final grade for the course will be cumulative.
 
+{% hint style="danger" %}
+**Late submission will NOT be accepted.**
 
+In case of medical or family emergencies, please inform the instructors in advance.
+{% endhint %}
 
+Each assignment will be evaluated based on two criteria:
+
+**1. Completeness of the tasks** - **** For each task of the assignment, completed files and specified deliverables should be submitted. &#x20;
+
+**2. Communicating the process and results with clarity** - In computational research, communicating one's abstract ideas, technical procedures/approach and results are just as important as the research itself. For each assignment, the files mentioned above should be accompanied by a document (using the template provided, for each assignment), which answers the questions of the assignment and include any additional comments or remarks. The questions need to be answered with clear writing and supported by images, screenshots, hand sketches, or any other additional material.&#x20;
 
 ### Submissions
 
+For each assignment, the students will be asked to submit a zipped folder that contains:
+
+1. Completed files and deliverables
+2. a PDF summarising and presenting the results of the assignment&#x20;
+
+{% hint style="info" %}
+#### File naming convention
+
+assignment-number\_item-number\_lastname-firstname.extension
 
 
 
+**exercise-1\_jane\_smith.zip**
+
+* exercise-1\_task-1\_smith-jane.xxx
+* ...
+* exercise-1\_smith-jane.pdf
+{% endhint %}
 
 ## 6. Communication
 
 ### Slack
 
-Due to the hands-on, technical nature of the course's tutorial and exercises, [Slack](https://slack.com/intl/en-ch/) will be used to provide real-time technical support, communication, and feedback. You can join the dedicated Slack workspace for the course [**here**](https://join.slack.com/t/csd12021/shared\_invite/zt-w7so4l0k-qo3pGvce6Tiaj8FwVimLwA).
+Due to the hands-on, technical nature of the course's tutorial and exercises, [Slack](https://slack.com/intl/en-ch/) will be used to provide real-time technical support, communication, and feedback. You can join the dedicated Slack workspace for the course [**here**](https://join.slack.com/t/csd22022/shared\_invite/zt-145lzu0lv-QKuFGwgYvwBXDn1q34SAOA).
 
 ### Email
 
