@@ -44,19 +44,33 @@ Detailed information on these tools can be found here:
 
 ## 3. Class structure
 
-Each module consists of three parts: a lecture, a tutorial, and a work session.
+Each module consists of three parts: a lecture, tutorials and work sessions.
 
 ### Lecture
 
-Lectures will be 30-45 minute presentations given by one of the lecturers. It will introduce the main topic of the module, as well as the key concepts, theoretical background, and relevant examples and case studies. The lectures will be given in [HIL](https://ethz.ch/services/en/service/rooms-and-buildings/orientierung/gebaeude.html?args0=HIL) [E8](https://ethz.ch/content/dam/ethz/associates/services/Service/raeume-und-gebaeude/orientierung/plan/HIL/HIL\_E\_VF\_20210301.pdf) and livestreamed. The lecture will be recorded and posted online after the lecture. For those attending the lectures remotely, questions can be posted in the Slack channel **#1\_lectures**.
+
 
 ### Tutorial
 
-Tutorials are interactive, "follow-along" sessions that are intended to teach specific computational methods and tools, and the relevant technical knowledge. Each tutorial session (45 mins or 2x 45mins) will be led by one of the instructors, and the students are expected to follow along step by step and ask any questions as needed. The tutorials will take place in [HIL](https://ethz.ch/services/en/service/rooms-and-buildings/orientierung/gebaeude.html?args0=HIL) [E8](https://ethz.ch/content/dam/ethz/associates/services/Service/raeume-und-gebaeude/orientierung/plan/HIL/HIL\_E\_VF\_20210301.pdf) and livestreamed. The tutorials will be recorded and posted online after the tutorial. For those following the tutorials remotely, questions can be posted in the Slack channel **#2\_tutorials**.
+
 
 ### Work session
 
-The exercises are short problems that the student will be asked to work on during the work sessions. These exercises are intended for students to practice using the skills learned during the tutorials. The work sessions provide an opportunity for the students to start working on the exercises during class hours. All doctoral instructors will be present during the work sessions to provide technical support or consultations. Students are expected to be present during the work sessions and are strongly encouraged to work on the exercises and engage with the instructors and other students. The work sessions will take place in [HIL](https://ethz.ch/services/en/service/rooms-and-buildings/orientierung/gebaeude.html?args0=HIL) [E8](https://ethz.ch/content/dam/ethz/associates/services/Service/raeume-und-gebaeude/orientierung/plan/HIL/HIL\_E\_VF\_20210301.pdf). For those following the tutorials remotely, questions can be posted in the Slack channel **#3\_exercises**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 4. Schedule
 
