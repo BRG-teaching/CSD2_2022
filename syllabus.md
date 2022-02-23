@@ -19,9 +19,47 @@ After successfully completing the course, the students will be able to:
 
 ## 2. Course overview
 
+Modules
+
+
+
+
+
+Tools
+
+
+
+
+
 
 
 ## 3. Class structure
+
+Each module consists of three parts: a lecture, tutorials and work sessions.
+
+### Lecture
+
+
+
+### Tutorial
+
+
+
+### Work session
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -39,13 +77,34 @@ After successfully completing the course, the students will be able to:
 
 ## 5. Evaluation
 
+### Grading
 
 
-## 6. Support
 
-If you have any issues or questions, you can reach us by:&#x20;
 
-* Office hours: HIB E, BRG corner (with appointments)
-* Create an issue here: [https://github.com/BlockResearchGroup/CSD2\_2022/issues](https://github.com/BlockResearchGroup/CSD2\_2022/issues)
-* Email instructors
 
+
+
+### Submissions
+
+
+
+
+
+## 6. Communication
+
+### Slack
+
+Due to the hands-on, technical nature of the course's tutorial and exercises, [Slack](https://slack.com/intl/en-ch/) will be used to provide real-time technical support, communication, and feedback. You can join the dedicated Slack workspace for the course [**here**](https://join.slack.com/t/csd12021/shared\_invite/zt-w7so4l0k-qo3pGvce6Tiaj8FwVimLwA).
+
+### Email
+
+In addition to Slack, directly emailing the lecturers or doctoral student instructors is, of course, also possible. The email addresses of the instructors can be found in the section [**Instructors**](instructors.md).
+
+### Office hours
+
+If you would like to get direct, in-person help or consultation, you can also contact one of the instructors to set up an appointment in the BRG corner of HIB E.  &#x20;
+
+### GitHub issue tracker
+
+You can also submit a formal request, question, feedback or comments using the dedicated issue tracker for the course: [https://github.com/BlockResearchGroup/CSD2\_2022/issues](https://github.com/BlockResearchGroup/CSD2\_2022/issues)
