@@ -19,13 +19,16 @@ After successfully completing the course, the students will be able to:
 
 ## 2. Course overview
 
-Modules
+### Modules
 
+The course is divided into 4 modules, each with specific objectives and learning goals.
 
+* **Module 1** - "Form Finding"
+* **Module 2** - "Geometry"
+* **Module 3** - "Materialisation"
+* **Module 4** - "Fabrication"
 
-
-
-Tools
+### Tools
 
 
 
