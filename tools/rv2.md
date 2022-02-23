@@ -6,11 +6,11 @@ The Rhinoceros® plug-in RhinoVAULT, developed by Dr. Matthias Rippmann at the B
 
 Using reciprocal diagrams, RhinoVAULT provides an intuitive, fast funicular form-finding method, adopting the same advantages of techniques such as Graphic Statics, but offering a viable extension to three-dimensional problems. Our goal is to share a transparent setup to let you not only create beautiful shapes but also to give you an understanding of the underlying structural principles.
 
-RhinoVAULT 2 (RV2) is an open-source research and development platform for funicular form-finding built with [COMPAS](https://compas-dev.github.io), a Python-based framework for computational research and collaboration in Architecture, Engineering, and Digital Fabrication.
+compas-RV2 (RhinoVAULT 2) is an open-source research and development platform for funicular form-finding built with [**COMPAS**](https://compas-dev.github.io), a Python-based framework for computational research and collaboration in Architecture, Engineering, and Digital Fabrication.
 
-RV2 is a Rhino plugin that replaces RhinoVAULT for Rhino versions 6 and above. Unlike RhinoVAULT, RV2 no longer relies on Rhino for its computational implementation. Instead, it is built entirely with open source packages from the COMPAS ecosystem and will, therefore, be available not only for Rhino and Grasshopper, but also for Blender and other tools with a Python scripting interface, and ultimately even in the browser.
+compas-RV2 is a Rhino plugin that replaces RhinoVAULT for Rhino versions 6 and above. Unlike RhinoVAULT, compas-RV2 no longer relies on Rhino for its computational implementation. Instead, it is built entirely with open source packages from the COMPAS ecosystem and will, therefore, be available not only for Rhino and Grasshopper, but also for Blender and other tools with a Python scripting interface, and ultimately even in the browser.
 
-For more information about RV2, please visit the [**RV2 documentation**](https://blockresearchgroup.gitbook.io/rv2/).
+For more information about compas-RV2, please visit the [**compas-RV2 documentation**](https://blockresearchgroup.gitbook.io/rv2/).
 
 ## Download
 
