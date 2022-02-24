@@ -16,6 +16,7 @@ In tutorial 1, we will learn the basics of compas-RV2 and workflow for designing
 * compas-RV2 [**homepage**](https://blockresearchgroup.gitbook.io/rv2/)****
 * comaps-RV2 [**workflow & UI**](https://blockresearchgroup.gitbook.io/rv2/quick-start/workflow) - An overview of the compas-RV2 workflow and a detailed explanation of the user interface (UI).
 * compas-RV2 [**user manual**](https://blockresearchgroup.gitbook.io/rv2/documentation/user-manual) - Detailed descriptions of all the features of compas-RV2
+* additional examples (basic, case studies and advanced) can be found on the navigation bar&#x20;
 
 n case you have issues related to RV2, three different sources are available to help you.
 
