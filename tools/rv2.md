@@ -16,6 +16,10 @@ For more information about compas-RV2, please visit the [**compas-RV2 documentat
 
 For this course, we will be using **compas-RV2** version **1.4.7**, which can be downloaded [**here**](https://github.com/BlockResearchGroup/compas-RV2/releases/tag/v1.4.7).
 
+{% hint style="danger" %}
+In this class, we will be using **compas-RV2 in WINDOWS!** If you have a Mac, please set up a virtual machine with Windows using software like Parallels or VMware.
+{% endhint %}
+
 ## Installation instructions
 
 Detailed instructions on how to install compas-RV2 are available [**here**](https://blockresearchgroup.gitbook.io/rv2/quick-start/windows-install).
