@@ -27,5 +27,5 @@ VMware is offered for free by ETH (also Window and Rhinoceros), which is availab
 
 
 
-If you must use Mac, you will need to install compas-RV2 manually, by following the instructions carefully [**here**](https://blockresearchgroup.gitbook.io/rv2/documentation/dev-installs/manual-install).
+If you must use Mac... you will need to install compas-RV2 manually, by following the instructions carefully [**here**](https://blockresearchgroup.gitbook.io/rv2/documentation/dev-installs/manual-install).
 {% endhint %}
