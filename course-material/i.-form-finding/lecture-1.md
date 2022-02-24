@@ -1,6 +1,6 @@
 # Lecture 1
 
-
+![](../../.gitbook/assets/CSD2\_2022\_lecture-1\_cover.jpg)
 
 In this lecture, the participants will learn about:‌
 
