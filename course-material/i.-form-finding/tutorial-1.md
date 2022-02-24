@@ -4,6 +4,10 @@
 
 In tutorial 1, we will learn the basics of compas-RV2 and workflow for designing compression-only shell structures in Rhino. If you have not done so already, please install compas-RV2 following the instructions [**here**](../../tools/rv2.md).
 
+For this tutorial, we will be using the following Rhino file:
+
+{% file src="../../.gitbook/assets/CSD2_2022_compas-RV2_tutorial.3dm" %}
+
 ## Learning goals
 
 1. From 2D to 2.5D: **Thrust Network Analysis**.
