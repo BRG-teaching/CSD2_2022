@@ -36,3 +36,7 @@ In case you have issues related to RV2, three different sources are available to
 And the issue tracker page of the compas-RV2 GitHub repository, where you can even open a new issue in case you do not find a solution to your problem:
 
 {% embed url="https://github.com/BlockResearchGroup/compas-RV2/issues" %}
+
+### Slack
+
+You can always use the Slack workspace for any technical problems or questions you may have. Please always share as much information as possible so that we can help you as effectively as possible. Screenshots of errors are very helpful.
