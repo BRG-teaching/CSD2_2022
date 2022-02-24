@@ -17,7 +17,9 @@ For more information about compas-RV2, please visit the [**compas-RV2 documentat
 For this course, we will be using **compas-RV2** version **1.4.7**, which can be downloaded [**here**](https://github.com/BlockResearchGroup/compas-RV2/releases/tag/v1.4.7).
 
 {% hint style="danger" %}
-In this class, we will be using **compas-RV2 in WINDOWS!** If you have a Mac, please set up a virtual machine with Windows using software like Parallels or VMware.
+In this class, we will be using **compas-RV2 in WINDOWS!** If you have a Mac, please set up a virtual machine with Windows using software like VMware.
+
+VMware is offered for free by ETH (also Window and Rhinoceros), which is available through the [**ETH IT Shop**](https://itshop.ethz.ch/EndUser/Items/Home).
 {% endhint %}
 
 ## Installation instructions
