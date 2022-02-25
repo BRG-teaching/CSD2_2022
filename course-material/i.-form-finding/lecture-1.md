@@ -1,6 +1,6 @@
 # Lecture 1
 
-
+![](<../../.gitbook/assets/CSD2\_2022\_lecture-1\_cover (1).jpg>)
 
 In this lecture, the participants will learn about:‌
 
@@ -8,6 +8,4 @@ In this lecture, the participants will learn about:‌
 * basic theory, concept and procedure of Thrust Network Analysis (TNA)
 * introduction to compas-RV2 (RhinoVAULT 2)
 
-{% hint style="info" %}
-Lecture slides will be uploaded here.
-{% endhint %}
+{% file src="../../.gitbook/assets/CSD2_2022_lecture-1_sml.pdf" %}
