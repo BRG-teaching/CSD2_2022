@@ -24,8 +24,10 @@
 A point in a 3D Cartesian coordinate system can be represented by 3 numbers. Describing the values along x, y and z axes. For example, in Rhino and Grasshopper, a point can be created numerically by inputing 3 values in a "Create Point" container.
 
 \
-![](../../2\_Geometry/Tutorial4/img/geo\_pt\_gh.png)example of "Create Point" container in Rhinoceros Grasshopper 3D\
+example of "Create Point" container in Rhinoceros Grasshopper 3D\
 
+
+![](../../2\_Geometry/Tutorial4/img/geo\_pt\_gh.png)
 
 We will do the same, utilizing our Jupyter Notebook interface.
 
@@ -235,8 +237,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_17\_0.png)visualize a point\
+visualize a point\
 
+
+![](week\_4\_files/week\_4\_17\_0.png)
 
 ```python
 from compas.geometry import Point
@@ -310,8 +314,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_22\_0.png)visualize a point\
+visualize a point\
 
+
+![](week\_4\_files/week\_4\_22\_0.png)
 
 ### C3. Vector
 
@@ -407,8 +413,10 @@ True
 Question: Given three points: pointA: \[0, 0, 0], pointB: \[0, 1, 0], pointC: \[3, 2, 0]. You need to draw three vectors as shown in the following picture.
 
 \
-![](../../2\_Geometry/Tutorial4/img/vectors.jpg)three vectors\
+three vectors\
 
+
+![](../../2\_Geometry/Tutorial4/img/vectors.jpg)
 
 ```python
 from compas.geometry import Point
@@ -470,8 +478,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_38\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_38\_0.png)
 
 ### C4. Polygon
 
@@ -490,8 +500,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_40\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_40\_0.png)
 
 ```python
 from compas.geometry import Polygon
@@ -507,8 +519,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_41\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_41\_0.png)
 
 ### C5. Polyline
 
@@ -527,8 +541,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_43\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_43\_0.png)
 
 ### C6. Circle
 
@@ -547,8 +563,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_45\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_45\_0.png)
 
 ### C7. PointCloud
 
@@ -573,8 +591,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_47\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_47\_0.png)
 
 ### &#x20;<a href="#operations" id="operations"></a>
 
@@ -616,8 +636,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_52\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_52\_0.png)
 
 .transformed() creates a new polygon.
 
@@ -644,8 +666,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_54\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_54\_0.png)
 
 #### D1\_b. Rotation
 
@@ -670,8 +694,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_56\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_56\_0.png)
 
 #### D1\_c. Scale
 
@@ -695,8 +721,10 @@ plotter.show()
 ```
 
 \
-![](week\_4\_files/week\_4\_58\_0.png)\
+\
 
+
+![](week\_4\_files/week\_4\_58\_0.png)
 
 #### D1\_d. Frame
 
@@ -749,54 +777,4 @@ plane = Plane.worldXY()
 intersection_line_plane(line, plane)
 ```
 
-```
-[1.0, 1.0, 0.0]
-```
-
-### D3. Cross Product
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-
-# plotter.zoom_extents()
-from IPython.display import display
-fig = plotter.figure
-display(fig)
-```
-
 ![png](week\_4\_files/week\_4\_73\_0.png)
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
