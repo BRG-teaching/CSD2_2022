@@ -14,7 +14,7 @@ Intro to coding in Python and the Jupyter notebook II
 
 #### Content:
 
-* A. Strut Length
+* A. bar Length
   * A1. Find the Longest Cable
   * A2. Sort the cables
 * B. Data Management
@@ -25,7 +25,7 @@ Intro to coding in Python and the Jupyter notebook II
 
 * Calculate Voussoir Weight
 
-A. Strut Length\
+A. bar Length\
 
 
 
@@ -33,7 +33,7 @@ A. Strut Length\
 
 #### Question:
 
-You are still working on your grid shell. You want to find the longest strut in your grid shell. How can you find it?
+You are still working on your grid shell. You want to find the longest bar in your grid shell. How can you find it?
 
 #### Answer:
 
