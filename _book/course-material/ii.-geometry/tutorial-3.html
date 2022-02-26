@@ -463,12 +463,12 @@
 <h4 id="content">Content:</h4>
 <ul>
 <li>A. bar Length<ul>
-<li>A1. Find the Longest Cable</li>
-<li>A2. Sort the cables</li>
+<li>A1. Find the Longest bar</li>
+<li>A2. Sort the bars</li>
 </ul>
 </li>
 <li>B. Data Management<ul>
-<li>B1. Cable-net Data</li>
+<li>B1. bar-net Data</li>
 <li>B2. Calculate Voussoir Volume</li>
 </ul>
 </li>
@@ -477,44 +477,44 @@
 <ul>
 <li>Calculate Voussoir Weight</li>
 </ul>
-<p>A. bar Length\</p>
+<p>A. Strut Length\</p>
 <h3 id="a1-find-the-longest-cable">A1. Find the Longest Cable</h3>
 <h4 id="question">Question:</h4>
 <p>You are still working on your grid shell. You want to find the longest bar in your grid shell. How can you find it?</p>
 <h4 id="answer">Answer:</h4>
-<p>You can pick one cable, and suppose it is the longest cable. Then, pick the second one. If it is longer than the first one, then the longest one is the second one. Keep repeating this process until you have compared all the cables. Then you will find the longest cable.</p>
+<p>You can pick one bar, and suppose it is the longest bar. Then, pick the second one. If it is longer than the first one, then the longest one is the second one. Keep repeating this process until you have compared all the bars. Then you will find the longest bar.</p>
 <h4 id="a1a-flowchart">A1_a. Flowchart</h4>
 <p><img src="https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M730QpQnbAMvz44bqhc%2F-MMRUovKxE5lvzBXWGn6%2F-MMRYft9oXZpioSHn49-%2Fweek1\_dia%20\(2\" alt="">.png?alt=media\&amp;token=0e484961-4ab7-4f24-855d-abb21916f9b2)</p>
 <h4 id="a1b-code">A1_b. Code</h4>
 <pre><code class="lang-python"><span class="hljs-comment"># Input</span>
-<span class="hljs-comment"># cable length of the cable-net</span>
-cablenet = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
+<span class="hljs-comment"># bar length of the bar-net</span>
+barnet = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
 
-<span class="hljs-comment"># initiate longest cable, suppose the first cable is the longest</span>
-longest = cablenet[<span class="hljs-number">0</span>]  
+<span class="hljs-comment"># initiate longest bar, suppose the first bar is the longest</span>
+longest = barnet[<span class="hljs-number">0</span>]  
 index = <span class="hljs-number">0</span>  
 
-<span class="hljs-comment"># Compare Cable Length</span>
-<span class="hljs-comment"># if the cable is longer than the longest cable</span>
-<span class="hljs-comment"># assign the longest cable the new cable length</span>
-<span class="hljs-keyword">for</span> i, cable <span class="hljs-keyword">in</span> enumerate(cablenet):
-    <span class="hljs-keyword">if</span> cable &gt;= longest:
-        longest = cable
+<span class="hljs-comment"># Compare bar Length</span>
+<span class="hljs-comment"># if the bar is longer than the longest bar</span>
+<span class="hljs-comment"># assign the longest bar the new bar length</span>
+<span class="hljs-keyword">for</span> i, bar <span class="hljs-keyword">in</span> enumerate(barnet):
+    <span class="hljs-keyword">if</span> bar &gt;= longest:
+        longest = bar
         index = i
 
 <span class="hljs-comment"># Output</span>
-print(<span class="hljs-string">&quot;The longest cable is cable&quot;</span>, index + <span class="hljs-number">1</span>, <span class="hljs-string">&quot;and its length is&quot;</span>, longest, <span class="hljs-string">&quot;m.&quot;</span>)
+print(<span class="hljs-string">&quot;The longest bar is bar&quot;</span>, index + <span class="hljs-number">1</span>, <span class="hljs-string">&quot;and its length is&quot;</span>, longest, <span class="hljs-string">&quot;m.&quot;</span>)
 </code></pre>
-<pre><code>The longest cable is cable 9 and its length is 3.7 m.
-</code></pre><h3 id="a2-sort-the-cables">A2. Sort the cables</h3>
+<pre><code>The longest bar is bar 9 and its length is 3.7 m.
+</code></pre><h3 id="a2-sort-the-bars">A2. Sort the bars</h3>
 <h4 id="question">Question:</h4>
-<p>Now you want to sort the cables from the longest to the shortest. How can you do it?</p>
+<p>Now you want to sort the bars from the longest to the shortest. How can you do it?</p>
 <h4 id="answer">Answer:</h4>
-<p>One way to solve this problem is to go through all the cables, and find the longest one. Add the longest one to a new list.</p>
+<p>One way to solve this problem is to go through all the bars, and find the longest one. Add the longest one to a new list.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Sorted Cables</th>
+<th style="text-align:center">Sorted bars</th>
 <th style="text-align:center">Length (m)</th>
 </tr>
 </thead>
@@ -525,11 +525,11 @@ print(<span class="hljs-string">&quot;The longest cable is cable&quot;</span>, i
 </tr>
 </tbody>
 </table>
-<p>Then do it again and find the next-longest cable.</p>
+<p>Then do it again and find the next-longest bar.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Sorted Cables</th>
+<th style="text-align:center">Sorted bars</th>
 <th style="text-align:center">Length (m)</th>
 </tr>
 </thead>
@@ -544,118 +544,118 @@ print(<span class="hljs-string">&quot;The longest cable is cable&quot;</span>, i
 </tr>
 </tbody>
 </table>
-<p>Keep doing and you would get the sorted cables from longest to shortest.</p>
+<p>Keep doing and you would get the sorted bars from longest to shortest.</p>
 <h4 id="a2a-flowchart">A2_a. Flowchart</h4>
 <p><img src="https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M730QpQnbAMvz44bqhc%2F-MMRwMy-a-u\_usu0jZWc%2F-MMSbXFPpSLZty5V4M-r%2Fweek1\_dia%20\(3\" alt="">.png?alt=media\&amp;token=f1cd130f-cecd-40ae-846a-ddc96deb26d5)</p>
 <h4 id="a2b-write-the-function">A2_b. Write the Function</h4>
-<p>To find one element in the sorted cable list, we need to find the longest cable in the remaining cable list. We could turn this part of the statements into a function, which we could reuse when needed. When we write a function, it&apos;s suggested to write a short doc describing the function.</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_longest_cable</span><span class="hljs-params">(cablenet)</span>:</span>
+<p>To find one element in the sorted bar list, we need to find the longest bar in the remaining bar list. We could turn this part of the statements into a function, which we could reuse when needed. When we write a function, it&apos;s suggested to write a short doc describing the function.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_longest_bar</span><span class="hljs-params">(barnet)</span>:</span>
     <span class="hljs-string">&quot;&quot;&quot;
-    to find the longest cable in the cable list
+    to find the longest bar in the bar list
     Parameters
     ----------
-    cables : list
-        A list containing the cable length of the cable-net
+    bars : list
+        A list containing the bar length of the bar-net
 
     Returns
     -------
     index: int
-        Index of the longest cable in the cable list
+        Index of the longest bar in the bar list
     longest: float
-        Length of the longest cable in the cable list
+        Length of the longest bar in the bar list
     &quot;&quot;&quot;</span>
 
     <span class="hljs-comment"># check the list is not empty</span>
-    <span class="hljs-keyword">if</span> cablenet == []:
+    <span class="hljs-keyword">if</span> barnet == []:
         <span class="hljs-keyword">return</span>
 
-    <span class="hljs-comment"># initiate longest cable, suppose the first cable is the longest</span>
-    longest = cablenet[<span class="hljs-number">0</span>]  
+    <span class="hljs-comment"># initiate longest bar, suppose the first bar is the longest</span>
+    longest = barnet[<span class="hljs-number">0</span>]  
     index = <span class="hljs-number">0</span>  
 
-    <span class="hljs-comment"># compare every cable with the longest cable</span>
-    <span class="hljs-keyword">for</span> i, cable <span class="hljs-keyword">in</span> enumerate(cablenet):
-        <span class="hljs-keyword">if</span> cable &gt;= longest:
-            longest = cable
+    <span class="hljs-comment"># compare every bar with the longest bar</span>
+    <span class="hljs-keyword">for</span> i, bar <span class="hljs-keyword">in</span> enumerate(barnet):
+        <span class="hljs-keyword">if</span> bar &gt;= longest:
+            longest = bar
             index = i
 
     <span class="hljs-keyword">return</span> index, longest
 </code></pre>
 <h4 id="a2c-call-the-function">A2_c. Call the Function</h4>
-<p>Now we could use <code>find_longest_cable</code> function to sort our cables from longest to shortest. Every time we find the longest cable, we will delete it from the cablenet list and add it to the sorted_cables list.</p>
+<p>Now we could use <code>find_longest_bar</code> function to sort our bars from longest to shortest. Every time we find the longest bar, we will delete it from the barnet list and add it to the sorted_bars list.</p>
 <pre><code class="lang-python"><span class="hljs-comment"># Input</span>
-<span class="hljs-comment"># cable length of the cable-net</span>
-cablenet = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
-<span class="hljs-comment"># create empty cable list</span>
-sorted_cables = []
+<span class="hljs-comment"># bar length of the bar-net</span>
+barnet = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
+<span class="hljs-comment"># create empty bar list</span>
+sorted_bars = []
 
 <span class="hljs-comment"># Program</span>
-<span class="hljs-keyword">while</span> cablenet != []:
-    <span class="hljs-comment"># find the longest cable in the remaining of the cable list</span>
-    i, longest = find_longest_cable(cablenet)
-    <span class="hljs-comment"># remove the longest item from the cable list</span>
-    cablenet.pop(i)
-    <span class="hljs-comment"># add the longest item to the sorted cable list</span>
-    sorted_cables.append(longest)
+<span class="hljs-keyword">while</span> barnet != []:
+    <span class="hljs-comment"># find the longest bar in the remaining of the bar list</span>
+    i, longest = find_longest_bar(barnet)
+    <span class="hljs-comment"># remove the longest item from the bar list</span>
+    barnet.pop(i)
+    <span class="hljs-comment"># add the longest item to the sorted bar list</span>
+    sorted_bars.append(longest)
 
 <span class="hljs-comment"># Output</span>
-print(<span class="hljs-string">&quot;The sorted cable list is&quot;</span>, sorted_cables)
+print(<span class="hljs-string">&quot;The sorted bar list is&quot;</span>, sorted_bars)
 </code></pre>
-<pre><code>The sorted cable list is [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
+<pre><code>The sorted bar list is [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
 </code></pre><h4 id="a2d-turn-sorting-into-a-function">A2_d. Turn Sorting into a Function</h4>
 <p>We could also turn the sorting into a function. We can call a function in another function. This sorting method is also called <code>selecting sorting</code> algorithm.</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sort_cable_length</span><span class="hljs-params">(cables)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sort_bar_length</span><span class="hljs-params">(bars)</span>:</span>
     <span class="hljs-string">&quot;&quot;&quot;
-    sort the cables in descending order
+    sort the bars in descending order
 
     Parameters
     ----------
-    cables: list
-        A list containing the cable length of the cable-net
+    bars: list
+        A list containing the bar length of the bar-net
 
     Returns
     -------
-    sorted_cables: list
-        A list containing the cable length of the cable-net in descending order
+    sorted_bars: list
+        A list containing the bar length of the bar-net in descending order
 
     &quot;&quot;&quot;</span>
-    <span class="hljs-comment"># create empty cable list</span>
-    sorted_cables = []
+    <span class="hljs-comment"># create empty bar list</span>
+    sorted_bars = []
 
-    <span class="hljs-keyword">while</span> cables != []:
-        <span class="hljs-comment"># find the longest cable in the remaining of the cable list</span>
-        i, longest = find_longest_cable(cables)
-        <span class="hljs-comment"># remove the longest item from the cable list</span>
-        cables.pop(i)
-        <span class="hljs-comment"># add the longest item to the sorted cable list</span>
-        sorted_cables.append(longest)
+    <span class="hljs-keyword">while</span> bars != []:
+        <span class="hljs-comment"># find the longest bar in the remaining of the bar list</span>
+        i, longest = find_longest_bar(bars)
+        <span class="hljs-comment"># remove the longest item from the bar list</span>
+        bars.pop(i)
+        <span class="hljs-comment"># add the longest item to the sorted bar list</span>
+        sorted_bars.append(longest)
 
-    <span class="hljs-keyword">return</span> sorted_cables
+    <span class="hljs-keyword">return</span> sorted_bars
 </code></pre>
 <h4 id="a2d-python-list-functions">A2_d. Python List Functions</h4>
 <p>Python has built-in method <code>sorted()</code> that could sort a list easily. <code>max()</code> and <code>min()</code> would find the largest and smallest item in the list.</p>
-<pre><code class="lang-python">cablenet = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
+<pre><code class="lang-python">barnet = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
 
-print(<span class="hljs-string">&quot;Longest cable is&quot;</span>, max(cablenet), <span class="hljs-string">&quot;m.&quot;</span>)
-print(<span class="hljs-string">&quot;Shortest cable is&quot;</span>, min(cablenet), <span class="hljs-string">&quot;m.&quot;</span>)
-print(<span class="hljs-string">&quot;Cables in ascending order:&quot;</span>, sorted(cablenet))
-print(<span class="hljs-string">&quot;Cables in descending order:&quot;</span>, sorted(cablenet, reverse=<span class="hljs-keyword">True</span>))
-print(<span class="hljs-string">&quot;Total cable length is&quot;</span>, sum(cablenet), <span class="hljs-string">&quot;m.&quot;</span>)
+print(<span class="hljs-string">&quot;Longest bar is&quot;</span>, max(barnet), <span class="hljs-string">&quot;m.&quot;</span>)
+print(<span class="hljs-string">&quot;Shortest bar is&quot;</span>, min(barnet), <span class="hljs-string">&quot;m.&quot;</span>)
+print(<span class="hljs-string">&quot;bars in ascending order:&quot;</span>, sorted(barnet))
+print(<span class="hljs-string">&quot;bars in descending order:&quot;</span>, sorted(barnet, reverse=<span class="hljs-keyword">True</span>))
+print(<span class="hljs-string">&quot;Total bar length is&quot;</span>, sum(barnet), <span class="hljs-string">&quot;m.&quot;</span>)
 </code></pre>
-<pre><code>Longest cable is 3.7 m.
-Shortest cable is 1.6 m.
-Cables in ascending order: [1.6, 1.8, 1.8, 1.8, 2.4, 2.6, 2.7, 2.8, 3.1, 3.3, 3.4, 3.6, 3.7]
-Cables in descending order: [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
-Total cable length is 34.6 m.
+<pre><code>Longest bar is 3.7 m.
+Shortest bar is 1.6 m.
+bars in ascending order: [1.6, 1.8, 1.8, 1.8, 2.4, 2.6, 2.7, 2.8, 3.1, 3.3, 3.4, 3.6, 3.7]
+bars in descending order: [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
+Total bar length is 34.6 m.
 </code></pre><hr>
 <p>B. Data Management\</p>
-<h3 id="b1-cable-net-data">B1. Cable-net Data</h3>
+<h3 id="b1-bar-net-data">B1. bar-net Data</h3>
 <h4 id="question">Question:</h4>
-<p>While digging deep into the design and fabrication, you start to accumulating information about the cables, including the length, dimension, cable stress, etc. How would you hold your information?</p>
+<p>While digging deep into the design and fabrication, you start to accumulating information about the bars, including the length, dimension, bar stress, etc. How would you hold your information?</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Cable No.</th>
+<th style="text-align:center">bar No.</th>
 <th style="text-align:center">Length (m)</th>
 <th style="text-align:center">Dimension (mm)</th>
 <th style="text-align:center">Stress (N/mm2)</th>
@@ -739,50 +739,50 @@ Total cable length is 34.6 m.
 <h4 id="answer">Answer:</h4>
 <p>In this case, we can create three lists, containing information of length, dimension, and stress respectively. However, this solution is not so efficient and clear, especially when our data set is big. Here we would introduce a new collection type - <code>dictionary</code>.</p>
 <h4 id="b1a-create-a-dictionary">B1_a. Create a Dictionary</h4>
-<p>First, let&apos;s create a dictionary to save all the lengths of the cables. The key is the index of the cable, and the item is the length.</p>
-<pre><code class="lang-python">cable_length_list = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
+<p>First, let&apos;s create a dictionary to save all the lengths of the bars. The key is the index of the bar, and the item is the length.</p>
+<pre><code class="lang-python">bar_length_list = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
 
 <span class="hljs-comment"># create an empty dictionary</span>
-cables_dict = {}
+bars_dict = {}
 
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(cable_length_list)):
-    cables_dict[i] = cable_length_list[i]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(bar_length_list)):
+    bars_dict[i] = bar_length_list[i]
 
-print(cables_dict)
+print(bars_dict)
 </code></pre>
 <pre><code>{0: 1.6, 1: 3.6, 2: 2.4, 3: 3.4, 4: 2.7, 5: 2.8, 6: 3.3, 7: 3.1, 8: 3.7, 9: 1.8, 10: 1.8, 11: 2.6}
 </code></pre><h4 id="b1b-add-values-to-dictionary">B1_b. Add Values to Dictionary</h4>
 <p>Now let&apos;s save more information.</p>
-<pre><code class="lang-python">cable_length_list = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
-cable_stress_list = [<span class="hljs-number">275</span>, <span class="hljs-number">185</span>, <span class="hljs-number">105</span>, <span class="hljs-number">134</span>, <span class="hljs-number">155</span>, <span class="hljs-number">265</span>, <span class="hljs-number">150</span>, <span class="hljs-number">185</span>, <span class="hljs-number">124</span>, <span class="hljs-number">234</span>, <span class="hljs-number">259</span>, <span class="hljs-number">201</span>]
+<pre><code class="lang-python">bar_length_list = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
+bar_stress_list = [<span class="hljs-number">275</span>, <span class="hljs-number">185</span>, <span class="hljs-number">105</span>, <span class="hljs-number">134</span>, <span class="hljs-number">155</span>, <span class="hljs-number">265</span>, <span class="hljs-number">150</span>, <span class="hljs-number">185</span>, <span class="hljs-number">124</span>, <span class="hljs-number">234</span>, <span class="hljs-number">259</span>, <span class="hljs-number">201</span>]
 
 <span class="hljs-comment"># create an empty dictionary</span>
-<span class="hljs-comment"># key is index of the cable, item is infomation of the cable</span>
-cables_dict = {}
+<span class="hljs-comment"># key is index of the bar, item is infomation of the bar</span>
+bars_dict = {}
 
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(cable_length_list)):
-    <span class="hljs-comment"># for each cable, we create another dictionary</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(bar_length_list)):
+    <span class="hljs-comment"># for each bar, we create another dictionary</span>
     <span class="hljs-comment"># key: category, item: value of the category</span>
-    cables_dict[i] = {}
-    cables_dict[i][<span class="hljs-string">&quot;length&quot;</span>] = cable_length_list[i]
-    cables_dict[i][<span class="hljs-string">&quot;dimension&quot;</span>] = <span class="hljs-number">2</span>
-    cables_dict[i][<span class="hljs-string">&quot;stress&quot;</span>] = cable_stress_list[i]
+    bars_dict[i] = {}
+    bars_dict[i][<span class="hljs-string">&quot;length&quot;</span>] = bar_length_list[i]
+    bars_dict[i][<span class="hljs-string">&quot;dimension&quot;</span>] = <span class="hljs-number">2</span>
+    bars_dict[i][<span class="hljs-string">&quot;stress&quot;</span>] = bar_stress_list[i]
 
-print(cables_dict)
+print(bars_dict)
 </code></pre>
 <pre><code>{0: {&apos;length&apos;: 1.6, &apos;dimension&apos;: 2, &apos;stress&apos;: 275}, 1: {&apos;length&apos;: 3.6, &apos;dimension&apos;: 2, &apos;stress&apos;: 185}, 2: {&apos;length&apos;: 2.4, &apos;dimension&apos;: 2, &apos;stress&apos;: 105}, 3: {&apos;length&apos;: 3.4, &apos;dimension&apos;: 2, &apos;stress&apos;: 134}, 4: {&apos;length&apos;: 2.7, &apos;dimension&apos;: 2, &apos;stress&apos;: 155}, 5: {&apos;length&apos;: 2.8, &apos;dimension&apos;: 2, &apos;stress&apos;: 265}, 6: {&apos;length&apos;: 3.3, &apos;dimension&apos;: 2, &apos;stress&apos;: 150}, 7: {&apos;length&apos;: 3.1, &apos;dimension&apos;: 2, &apos;stress&apos;: 185}, 8: {&apos;length&apos;: 3.7, &apos;dimension&apos;: 2, &apos;stress&apos;: 124}, 9: {&apos;length&apos;: 1.8, &apos;dimension&apos;: 2, &apos;stress&apos;: 234}, 10: {&apos;length&apos;: 1.8, &apos;dimension&apos;: 2, &apos;stress&apos;: 259}, 11: {&apos;length&apos;: 2.6, &apos;dimension&apos;: 2, &apos;stress&apos;: 201}}
 </code></pre><h4 id="b1c-access-a-dictionary">B1_c. Access a Dictionary</h4>
-<p>We could easily find the information on a specific cable. For example, let&apos;s find the information on cable <code>3</code>.</p>
+<p>We could easily find the information on a specific bar. For example, let&apos;s find the information on bar <code>3</code>.</p>
 <pre><code class="lang-python">index = <span class="hljs-number">3</span>
-print(<span class="hljs-string">&quot;cable&quot;</span>, index, <span class="hljs-string">&quot;information&quot;</span>, cables_dict[index])
+print(<span class="hljs-string">&quot;bar&quot;</span>, index, <span class="hljs-string">&quot;information&quot;</span>, bars_dict[index])
 </code></pre>
-<pre><code>cable 3 information {&apos;length&apos;: 3.4, &apos;dimension&apos;: 2, &apos;stress&apos;: 134}
+<pre><code>bar 3 information {&apos;length&apos;: 3.4, &apos;dimension&apos;: 2, &apos;stress&apos;: 134}
 </code></pre><h4 id="b1d-modify-a-dictionary">B1_d. Modify a Dictionary</h4>
-<p>Similar to the list, we can modify information in the dictionary. If we find the stress of cable 3 is incorrect, we could modify it.</p>
-<pre><code class="lang-python">cables_dict[index][<span class="hljs-string">&quot;stress&quot;</span>] = <span class="hljs-number">154</span>
-print(<span class="hljs-string">&quot;cable&quot;</span>, index, <span class="hljs-string">&quot;information&quot;</span>, cables_dict[index])
+<p>Similar to the list, we can modify information in the dictionary. If we find the stress of bar 3 is incorrect, we could modify it.</p>
+<pre><code class="lang-python">bars_dict[index][<span class="hljs-string">&quot;stress&quot;</span>] = <span class="hljs-number">154</span>
+print(<span class="hljs-string">&quot;bar&quot;</span>, index, <span class="hljs-string">&quot;information&quot;</span>, bars_dict[index])
 </code></pre>
-<pre><code>cable 3 information {&apos;length&apos;: 3.4, &apos;dimension&apos;: 2, &apos;stress&apos;: 154}
+<pre><code>bar 3 information {&apos;length&apos;: 3.4, &apos;dimension&apos;: 2, &apos;stress&apos;: 154}
 </code></pre><h3 id="b2-calculate-voussoir-volume">B2. Calculate Voussoir Volume</h3>
 <h4 id="question">Question:</h4>
 <p>You have a dictionary containing the surface area and thickness of the voussoir. Now you want to calculate the volume of each piece, and add the number to the dictionary.</p>

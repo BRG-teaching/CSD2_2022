@@ -433,7 +433,7 @@ print(new_voussoir_weights)
 In computer programming, a function is a named section of a code that performs a specific task. This typically involves taking some input, manipulating the input and returning an output. Next, we will define a simple python function and use it to extract some information from our fabrication data on the gridshell.
 
 ```python
-def visualize_cable_lengths(bars):
+def visualize_bar_lengths(bars):
     """
     visulalizes the list of bars
 
@@ -458,7 +458,7 @@ def visualize_cable_lengths(bars):
 gridshell = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
 voussoir_weight_list = [15, 20, 54, 18, 26, 18]
 
-visualization = visualize_cable_lengths(voussoir_weight_list)
+visualization = visualize_bar_lengths(voussoir_weight_list)
 ```
 
 ***
