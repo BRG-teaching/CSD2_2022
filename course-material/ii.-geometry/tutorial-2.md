@@ -22,20 +22,20 @@ Introduction to coding in Python Jupyter notebook I
 
 #### Content:
 
-* [Cablenet Cost I](tutorial-2.md#ex1)
+* [barnet Cost I](tutorial-2.md#ex1)
 * [Voussoir Weight](tutorial-2.md#ex2)
 
 #### Exercise:
 
-* [Cablenet Cost II](tutorial-2.md#tut1\_ex)
+* [barnet Cost II](tutorial-2.md#tut1\_ex)
 
-cablenet Cost I\\
+barnet Cost I\\
 
 ### Question:
 
-Suppose you have designed a cablenet made from steel cables. You are going to fabricate them. But before you do, you need to estimate the total cost. There are 2 different prices: for cables longer than 3 meters and shorter than 3 meters, 5 Fr and 3 Fr correspondingly. Now you need to count how many cables are longer than 3 meters and how many are shorter than 3 meters, to calculate the cost.
+Suppose you have designed a barnet made from steel bars. You are going to fabricate them. But before you do, you need to estimate the total cost. There are 2 different prices: for bars longer than 3 meters and shorter than 3 meters, 5 Fr and 3 Fr correspondingly. Now you need to count how many bars are longer than 3 meters and how many are shorter than 3 meters, to calculate the cost.
 
-| Cable No. | Length (m) |
+| bar No. | Length (m) |
 | :-------: | :--------: |
 |     1     |     1.6    |
 |     2     |     3.6    |
@@ -50,9 +50,9 @@ Suppose you have designed a cablenet made from steel cables. You are going to fa
 |     11    |     1.8    |
 |     12    |     2.6    |
 
-### Part A: Check Length of One Cable
+### Part A: Check Length of One bar
 
-Let's first break this problem down into smaller steps. Firstly, you could pick one cable and check whether its length is larger than 3 m. Secondly, you could repeat the first step to check all the cables, and then multiply the number of cables with the cost.
+Let's first break this problem down into smaller steps. Firstly, you could pick one bar and check whether its length is larger than 3 m. Secondly, you could repeat the first step to check all the bars, and then multiply the number of bars with the cost.
 
 #### A\_1. Draw Flowchart
 
@@ -66,18 +66,18 @@ Firstly, we could convert our flowchart to [**pseudocode**](https://en.wikipedia
 
 The pseudocode are written in Python [**comments**](https://www.w3schools.com/python/python\_comments.asp), which starts with a `#` and will not be excuated when we run the code. Comments help us to organize the logic when we start to write code, as well as in the future to keep track of and to understand the code. You can type `#` in front of the line you want to comment out. If you want to comment several lines, you can select the lines that need to be commented out, and press `ctrl + /`.
 
-<mark style="color:blue;">pick one cable</mark>
+<mark style="color:blue;">pick one bar</mark>
 
 <mark style="color:blue;">if length larger than 3:</mark>
 
 ```
-# long cable 
+# long bar 
 ```
 
 <mark style="color:blue;">else</mark>
 
 ```
-# short cable 
+# short bar 
 ```
 
 #### A\_3. Write your code
@@ -85,25 +85,25 @@ The pseudocode are written in Python [**comments**](https://www.w3schools.com/py
 We could turn the pseudocode line by line into code.
 
 ```python
-# pick one cable
-cable_length = 1.6
+# pick one bar
+bar_length = 1.6
 # if length bigger than 3?
-if cable_length > 3:
-    # long cable 
-    print("This is a long cable.")
+if bar_length > 3:
+    # long bar 
+    print("This is a long bar.")
 # else
 else:
-    # short cable
-    print("This is a short cable.")
+    # short bar
+    print("This is a short bar.")
 ```
 
 ```
-This is a short cable.
+This is a short bar.
 ```
 
-### Part B: Check Length of All Cables
+### Part B: Check Length of All bars
 
-Let's complete the script. You need to repeat the whole process of checking the cable length until you have classified all cables. You could use another condition in your flowchart for the repetition instructions. After you have checked all the cables in your grid-shell, you could count the amount of cables in the two length types and calculate the total cost.
+Let's complete the script. You need to repeat the whole process of checking the bar length until you have classified all bars. You could use another condition in your flowchart for the repetition instructions. After you have checked all the bars in your grid-shell, you could count the amount of bars in the two length types and calculate the total cost.
 
 #### B\_1. Draw Flowchart
 
@@ -111,29 +111,29 @@ Let's complete the script. You need to repeat the whole process of checking the 
 
 #### B\_2. Write pseudocode
 
-<mark style="color:blue;">pick one cable in the cable-net</mark>
+<mark style="color:blue;">pick one bar in the bar-net</mark>
 
 <mark style="color:blue;">if length larger than 3?</mark>
 
-<mark style="color:blue;">long cable amount + 1</mark>
+<mark style="color:blue;">long bar amount + 1</mark>
 
 <mark style="color:blue;">else</mark>
 
-<mark style="color:blue;">short cable amount + 1</mark>
+<mark style="color:blue;">short bar amount + 1</mark>
 
-<mark style="color:blue;">repeat until the all the cable are checked</mark>
+<mark style="color:blue;">repeat until the all the bar are checked</mark>
 
 <mark style="color:blue;">calculate total cost</mark>
 
 #### B\_3. Write the code
 
-Here we need to input all the lengths of our cables. Instead of multiple length variables, we could store them in a collection - a [**list**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#list). List items are ordered, or in other words, indexed, the first item has index `0`, the second item has index `1` etc.
+Here we need to input all the lengths of our bars. Instead of multiple length variables, we could store them in a collection - a [**list**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#list). List items are ordered, or in other words, indexed, the first item has index `0`, the second item has index `1` etc.
 
 ```python
-cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
-print(cablenet[0])  # 1.6
-print(cablenet[1])  # 3.6
-print(cablenet[-1])  # 2.6
+barnet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+print(barnet[0])  # 1.6
+print(barnet[1])  # 3.6
+print(barnet[-1])  # 2.6
 ```
 
 ```
@@ -145,8 +145,8 @@ print(cablenet[-1])  # 2.6
 To iterate over a list, we could use a [**`for`**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#for-loop-and-while-loop) loop.
 
 ```python
-for cable in cablenet:
-    print(cable)
+for bar in barnet:
+    print(bar)
 ```
 
 ```
@@ -165,29 +165,29 @@ for cable in cablenet:
 2.6
 ```
 
-Now we go through the list, check the cable length one by one, and count the number of the corresponding type. Thus, we need to initiate the counter of two types at the beginning of our code. Here, we create two new variables: `long_cable_count`, `short_cable_count`, and set their initial value to `0`.
+Now we go through the list, check the bar length one by one, and count the number of the corresponding type. Thus, we need to initiate the counter of two types at the beginning of our code. Here, we create two new variables: `long_bar_count`, `short_bar_count`, and set their initial value to `0`.
 
 ```python
 # Input
-cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
-long_cable_count = 0
-short_cable_count = 0
-long_cable_price = 5
-short_cable_price = 3
+barnet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+long_bar_count = 0
+short_bar_count = 0
+long_bar_price = 5
+short_bar_price = 3
 
-# pick one cable in the cable-net, check its length
-# repeat until the all the cables are checked
-for cable in cablenet:
+# pick one bar in the bar-net, check its length
+# repeat until the all the bars are checked
+for bar in barnet:
     # if length bigger than 3?
-    if cable > 3:
-        # long cable amount + 1
-        long_cable_count += 1
+    if bar > 3:
+        # long bar amount + 1
+        long_bar_count += 1
     # else
     else:
-        # short cable amount + 1
-        short_cable_count += 1
+        # short bar amount + 1
+        short_bar_count += 1
 # calculate total cost
-total_cost = long_cable_count * long_cable_price + short_cable_count * short_cable_price
+total_cost = long_bar_count * long_bar_price + short_bar_count * short_bar_price
 
 # Output
 print("Total cost is", total_cost, "Fr.")
@@ -197,11 +197,11 @@ print("Total cost is", total_cost, "Fr.")
 Total cost is 49 Fr.
 ```
 
-### Part C: Modify Cable Length
+### Part C: Modify bar Length
 
-Oooops... You realize that you have calculated the length of a cables wrongly. Don't worry. The cable length list we use as input can be modified because list items are changeable. You could also modify a value in the `cablenet` list by referring to the item's **index**. Note that the index always starts from **`0`**!
+Oooops... You realize that you have calculated the length of a bars wrongly. Don't worry. The bar length list we use as input can be modified because list items are changeable. You could also modify a value in the `barnet` list by referring to the item's **index**. Note that the index always starts from **`0`**!
 
-| cable No. | Index | Length (m) |
+| bar No. | Index | Length (m) |
 | :-------: | :---: | :--------: |
 |     1     |   0   |     1.6    |
 |     2     |   1   |     3.6    |
@@ -216,67 +216,67 @@ Oooops... You realize that you have calculated the length of a cables wrongly. D
 |     11    |   10  |     1.8    |
 |     12    |   11  |     2.6    |
 
-For example, we find out the **3rd** cables has the wrong length, whose corresponding index is `2` in the list. Find it, and change its value.
+For example, we find out the **3rd** bars has the wrong length, whose corresponding index is `2` in the list. Find it, and change its value.
 
 ```python
-cablenet[2] = 2.5
-print(cablenet)
+barnet[2] = 2.5
+print(barnet)
 ```
 
 ```
 [1.6, 3.6, 2.5, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
 ```
 
-If we realize that we have omitted one cable that is 4 m, we could use `append` to add it at the end of our list.
+If we realize that we have omitted one bar that is 4 m, we could use `append` to add it at the end of our list.
 
 ```python
-print("We have", len(cablenet), "cables.")
-print(cablenet)
-cablenet.append(4.0)
-print("After adding the new cable, we have", len(cablenet), "cables.")
-print(cables)
+print("We have", len(barnet), "bars.")
+print(barnet)
+barnet.append(4.0)
+print("After adding the new bar, we have", len(barnet), "bars.")
+print(bars)
 ```
 
 ```
-We have 15 cables.
+We have 15 bars.
 [1.6, 3.6, 2.5, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6, 4.0, 4.0]
-After adding the new cable, we have 16 cables.
+After adding the new bar, we have 16 bars.
 [1.6, 3.6, 2.5, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6, 4.0, 4.0, 4.0]
 ```
 
-If you need to delete a cable you could either delete it by its index. For example, we want to delete the 4th cable in the list, whose index is `3`.
+If you need to delete a bar you could either delete it by its index. For example, we want to delete the 4th bar in the list, whose index is `3`.
 
 ```python
-cablenet.pop(3)
-print(cablenet)
+barnet.pop(3)
+print(barnet)
 ```
 
 ```
 [1.6, 3.6, 2.5, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6, 4.0, 4.0, 4.0]
 ```
 
-The cable can also be deleted by its value. If there are duplicated values, this method only removes the first matching element.
+The bar can also be deleted by its value. If there are duplicated values, this method only removes the first matching element.
 
 ```python
-cablenet.remove(3.1)
-print(cablenet)
+barnet.remove(3.1)
+print(barnet)
 ```
 
 ```
 [1.6, 3.6, 2.5, 2.8, 3.7, 1.8, 1.8, 1.8, 2.6, 4.0, 4.0, 4.0]
 ```
 
-### Exercise: cables of 3 different Lengths
+### Exercise: bars of 3 different Lengths
 
-Suppose there are three different prices for the cables: 2 Fr. for cables shorter than 2 m; 3 Fr. for cables between 2 m and 3 m; 5 Fr. for cables longer than 3 m. Could you modify your code and calculate the total cost?
+Suppose there are three different prices for the bars: 2 Fr. for bars shorter than 2 m; 3 Fr. for bars between 2 m and 3 m; 5 Fr. for bars longer than 3 m. Could you modify your code and calculate the total cost?
 
 Hint:\
-You need to classify 3 types of cables. When you run into a situation where you have several conditions, you can place as many **elif** conditions as necessary between the **if** condition and the **else** condition.
+You need to classify 3 types of bars. When you run into a situation where you have several conditions, you can place as many **elif** conditions as necessary between the **if** condition and the **else** condition.
 
 ```python
 # Input
-# cable length of the cablenet
-cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+# bar length of the barnet
+barnet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
 
 # please write down your answer here
 ```
@@ -428,36 +428,36 @@ print(new_voussoir_weights)
 
 ***
 
-### Answer to Cable Cost Exercise:
+### Answer to bar Cost Exercise:
 
 ```python
 # Input
-# cable length of the cable-net
-cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+# bar length of the bar-net
+barnet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
 
 
-# initiate the cable class amount
-long_cable_amount = 0
-mid_cable_amount = 0
-short_cable_amount = 0
+# initiate the bar class amount
+long_bar_amount = 0
+mid_bar_amount = 0
+short_bar_amount = 0
 
-# price of cable
-short_cable_price = 2
-mid_cable_price = 3
-long_cable_price = 5
+# price of bar
+short_bar_price = 2
+mid_bar_price = 3
+long_bar_price = 5
 
 
-# check length of the cable
-for cable in cablenet:
-    if cable < 2:
-        short_cable_amount += 1
-    elif 2 <= cable <= 3:
-        mid_cable_amount += 1
+# check length of the bar
+for bar in barnet:
+    if bar < 2:
+        short_bar_amount += 1
+    elif 2 <= bar <= 3:
+        mid_bar_amount += 1
     else:
-        long_cable_amount += 1
+        long_bar_amount += 1
 
 # calculate total cost
-total_cost = long_cable_amount * long_cable_price + mid_cable_amount * mid_cable_price + short_cable_amount * short_cable_price
+total_cost = long_bar_amount * long_bar_price + mid_bar_amount * mid_bar_price + short_bar_amount * short_bar_price
 
 # Output
 print("Total cost is", total_cost, "Fr.")

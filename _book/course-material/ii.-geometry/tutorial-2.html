@@ -454,7 +454,7 @@
                                 <h1 id="tutorial-2">Tutorial 2</h1>
 <h2 id="week-2">Week 2</h2>
 <p>CSD 2\</p>
-<h2 id="introduction-to-coding-in-python---------jupyter-notebook-i">Introduction to coding in Python         Jupyter notebook I</h2>
+<h2 id="introduction-to-coding-in-python-jupyter-notebook-i">Introduction to coding in Python Jupyter notebook I</h2>
 <h4 id="learning-goals">Learning Goals:</h4>
 <ul>
 <li>develop your procedural thinking</li>
@@ -464,20 +464,20 @@
 </ul>
 <h4 id="content">Content:</h4>
 <ul>
-<li><a href="tutorial-2.html#ex1">Cablenet Cost I</a></li>
+<li><a href="tutorial-2.html#ex1">barnet Cost I</a></li>
 <li><a href="tutorial-2.html#ex2">Voussoir Weight</a></li>
 </ul>
 <h4 id="exercise">Exercise:</h4>
 <ul>
-<li><a href="tutorial-2.html#tut1%5C_ex">Cablenet Cost II</a></li>
+<li><a href="tutorial-2.html#tut1%5C_ex">barnet Cost II</a></li>
 </ul>
-<p>Gridshell Cost I\</p>
+<p>cablenet Cost I\</p>
 <h3 id="question">Question:</h3>
-<p>Suppose you have designed a gridshell made from steel struts. You are going to fabricate them. But before you do, you need to estimate the total cost. There are 2 different prices: for struts longer than 3 meters and shorter than 3 meters, 5 Fr and 3 Fr correspondingly. Now you need to count how many struts are longer than 3 meters and how many are shorter than 3 meters, to calculate the cost.</p>
+<p>Suppose you have designed a gridshell made from steel bars. You are going to fabricate them. But before you do, you need to estimate the total cost. There are 2 different prices: for bars longer than 3 meters and shorter than 3 meters, 5 Fr and 3 Fr correspondingly. Now you need to count how many bars are longer than 3 meters and how many are shorter than 3 meters, to calculate the cost.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Cable No.</th>
+<th style="text-align:center">bar No.</th>
 <th style="text-align:center">Length (m)</th>
 </tr>
 </thead>
@@ -536,11 +536,11 @@
 <p>Let&apos;s first break this problem down into smaller steps. Firstly, you could pick one strut and check whether its length is larger than 3 m. Secondly, you could repeat the first step to check all the struts, and then multiply the number of struts with the cost.</p>
 <h4 id="a1-draw-flowchart">A_1. Draw Flowchart</h4>
 <p>Firstly, we can draw a <a href="https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#flowchart" target="_blank"><strong>flowchart</strong></a>.</p>
-<p><img src="img/week1/_ex1.png" alt="">\</p>
+<p><img src="../../.gitbook/assets/week1/_ex1.png" alt=""></p>
 <h4 id="a2-write-pseudocode">A_2. Write pseudocode</h4>
 <p>Firstly, we could convert our flowchart to <a href="https://en.wikipedia.org/wiki/Pseudocode#:\~:text=In%20computer%20science%2C%20pseudocode%20is,reading%20rather%20than%20machine%20reading." target="_blank"><strong>pseudocode</strong></a>, which is a plain-English version of the flowchart.</p>
 <p>The pseudocode are written in Python <a href="https://www.w3schools.com/python/python\_comments.asp" target="_blank"><strong>comments</strong></a>, which starts with a <code>#</code> and will not be excuated when we run the code. Comments help us to organize the logic when we start to write code, as well as in the future to keep track of and to understand the code. You can type <code>#</code> in front of the line you want to comment out. If you want to comment several lines, you can select the lines that need to be commented out, and press <code>ctrl + /</code>.</p>
-<p><mark style="color:blue;">pick one cable</mark></p>
+<p><mark style="color:blue;">pick one bar</mark></p>
 <p><mark style="color:blue;">if length larger than 3:</mark></p>
 <pre><code># long strut
 </code></pre><p><mark style="color:blue;">else</mark></p>
@@ -562,7 +562,7 @@ strut_length = <span class="hljs-number">1.6</span>
 </code></pre><h3 id="part-b-check-length-of-all-cables">Part B: Check Length of All Cables</h3>
 <p>Let&apos;s complete the script. You need to repeat the whole process of checking the strut length until you have classified all struts. You could use another condition in your flowchart for the repetition instructions. After you have checked all the cables in your grid-shell, you could count the amount of struts in the two length types and calculate the total cost.</p>
 <h4 id="b1-draw-flowchart">B_1. Draw Flowchart</h4>
-<p><img src="img/week1/_ex1/_2.png" alt="">\</p>
+<p><img src="../../.gitbook/assets/week1/_ex1/_2.png" alt=""></p>
 <h4 id="b2-write-pseudocode">B_2. Write pseudocode</h4>
 <p><mark style="color:blue;">pick one strut in the cable-net</mark></p>
 <p><mark style="color:blue;">if length larger than 3?</mark></p>
@@ -771,9 +771,8 @@ gridshell = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6
 </tr>
 </tbody>
 </table>
-<p>\</p>
 <h4 id="a1-draw-flowchart">A_1. Draw Flowchart</h4>
-<p><img src="img/week1/_ex2.png" alt="">\</p>
+<p><img src="../../.gitbook/assets/week1/_ex2.png" alt="">\</p>
 <h4 id="a2-write-pseudocode">A_2. Write pseudocode</h4>
 <p><mark style="color:blue;">pick one voussoir in the vault</mark></p>
 <p><mark style="color:blue;">if weight heavier than 25</mark></p>
@@ -810,14 +809,14 @@ print(<span class="hljs-string">&quot;Voussoir &quot;</span>, *problem_index, <s
 <p>Now you would optimize all the voussoirs that are too heavy by cutting them into two pieces while keeping the sequence of the voussoirs.</p>
 <h4 id="b1-draw-flowchart">B_1. Draw Flowchart</h4>
 <p>We can continue from the last example. When the voussoir is too heavy, we need to first cut it in half, then check the weight of the half one. If the new weight is still too heavy, keep cutting. After cutting, we need to add the new cut stones back, so the sequence of the original voussoirs will not change.</p>
-<p><img src="img/week1/_ex2/_2.png" alt="">\</p>
+<p><img src="../../.gitbook/assets/week1/_ex2/_2.png" alt=""></p>
 <h4 id="b2-write-pseudocode">B_2. Write pseudocode</h4>
-<h2 id="pick-one-voussoir-in-the-vault">pick one voussoir in the vault</h2>
-<h2 id="if-weight-heavier-than-25">if weight heavier than 25</h2>
-<h2 id="cut-it-the-voussoir-in-half-until-the-weight-is-below-25">cut it the voussoir in half until the weight is below 25</h2>
-<h2 id="replace-the-problematic-voussoir-with-the-new-ones">replace the problematic voussoir with the new ones</h2>
-<h2 id="repeat-until-all-the-voussoirs-are-checked">repeat until all the voussoirs are checked</h2>
-<h2 id="output-the-problmatic-voussoirs">output the problmatic voussoirs</h2>
+<p><mark style="color:blue;">pick one voussoir in the vault</mark></p>
+<p><mark style="color:blue;">if weight heavier than 25</mark></p>
+<p><mark style="color:blue;">cut it the voussoir in half until the weight is below 25</mark></p>
+<p><mark style="color:blue;">replace the problematic voussoir with the new ones</mark></p>
+<p><mark style="color:blue;">repeat until all the voussoirs are checked</mark></p>
+<p><mark style="color:blue;">output the problmatic voussoirs</mark></p>
 <h4 id="b3-write-your-code">B_3. Write your code</h4>
 <p>Here, we will use a <strong><code>while</code></strong> loop, which keeps executing the code inside if the condition is True. The loop will stop when the condition is not fulfilled any more. For example, here we pick a voussoir that is 54 kg and the count is 1. The weight is too heavy. In the first iteration of the while loop, the voussoir will be cut in half, so the weight is divided by 2 and the count is multiplied by 2. Now, the while loop checks the new voussoir weight, which is 54 / 2 = 27. 27 is still bigger than 25, so the loop will keep running. The 27 kg voussoir is further cut in half and the count is multiplied by 2. Now the new weight is 27 / 2 = 13.5, which is smaller than 25. Thus, the while loop stops. Inside the while loop, we redeclare the value of the variable voussoir, variable count in every iteration. So, we can print the final value.</p>
 <pre><code class="lang-python">voussoir = <span class="hljs-number">54</span>
@@ -852,34 +851,34 @@ print(new_voussoir_weights)
 </code></pre>
 <pre><code>[15, 20, 13.5, 13.5, 13.5, 13.5, 18, 13.0, 13.0, 18]
 </code></pre><hr>
-<h3 id="answer-to-cable-cost-exercise">Answer to Cable Cost Exercise:</h3>
+<h3 id="answer-to-bar-cost-exercise">Answer to bar Cost Exercise:</h3>
 <pre><code class="lang-python"><span class="hljs-comment"># Input</span>
-<span class="hljs-comment"># cable length of the cable-net</span>
-cablenet = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
+<span class="hljs-comment"># bar length of the bar-net</span>
+barnet = [<span class="hljs-number">1.6</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">2.7</span>, <span class="hljs-number">2.8</span>, <span class="hljs-number">3.3</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.7</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">1.8</span>, <span class="hljs-number">2.6</span>]
 
 
-<span class="hljs-comment"># initiate the cable class amount</span>
-long_cable_amount = <span class="hljs-number">0</span>
-mid_cable_amount = <span class="hljs-number">0</span>
-short_cable_amount = <span class="hljs-number">0</span>
+<span class="hljs-comment"># initiate the bar class amount</span>
+long_bar_amount = <span class="hljs-number">0</span>
+mid_bar_amount = <span class="hljs-number">0</span>
+short_bar_amount = <span class="hljs-number">0</span>
 
-<span class="hljs-comment"># price of cable</span>
-short_cable_price = <span class="hljs-number">2</span>
-mid_cable_price = <span class="hljs-number">3</span>
-long_cable_price = <span class="hljs-number">5</span>
+<span class="hljs-comment"># price of bar</span>
+short_bar_price = <span class="hljs-number">2</span>
+mid_bar_price = <span class="hljs-number">3</span>
+long_bar_price = <span class="hljs-number">5</span>
 
 
-<span class="hljs-comment"># check length of the cable</span>
-<span class="hljs-keyword">for</span> cable <span class="hljs-keyword">in</span> cablenet:
-    <span class="hljs-keyword">if</span> cable &lt; <span class="hljs-number">2</span>:
-        short_cable_amount += <span class="hljs-number">1</span>
-    <span class="hljs-keyword">elif</span> <span class="hljs-number">2</span> &lt;= cable &lt;= <span class="hljs-number">3</span>:
-        mid_cable_amount += <span class="hljs-number">1</span>
+<span class="hljs-comment"># check length of the bar</span>
+<span class="hljs-keyword">for</span> bar <span class="hljs-keyword">in</span> barnet:
+    <span class="hljs-keyword">if</span> bar &lt; <span class="hljs-number">2</span>:
+        short_bar_amount += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">elif</span> <span class="hljs-number">2</span> &lt;= bar &lt;= <span class="hljs-number">3</span>:
+        mid_bar_amount += <span class="hljs-number">1</span>
     <span class="hljs-keyword">else</span>:
-        long_cable_amount += <span class="hljs-number">1</span>
+        long_bar_amount += <span class="hljs-number">1</span>
 
 <span class="hljs-comment"># calculate total cost</span>
-total_cost = long_cable_amount * long_cable_price + mid_cable_amount * mid_cable_price + short_cable_amount * short_cable_price
+total_cost = long_bar_amount * long_bar_price + mid_bar_amount * mid_bar_price + short_bar_amount * short_bar_price
 
 <span class="hljs-comment"># Output</span>
 print(<span class="hljs-string">&quot;Total cost is&quot;</span>, total_cost, <span class="hljs-string">&quot;Fr.&quot;</span>)
@@ -928,7 +927,7 @@ print(<span class="hljs-string">&quot;Total cost is&quot;</span>, total_cost, <s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"Procedural thinking: logic diagram,  flow charts, pseudocode                                Introduction to the Python programming language","title":"Tutorial 2","level":"2.2.2","depth":2,"next":{"title":"Tutorial 3","level":"2.2.3","depth":2,"path":"course-material/ii.-geometry/tutorial-3.md","ref":"course-material/ii.-geometry/tutorial-3.md","articles":[]},"previous":{"title":"Introduction","level":"2.2.1","depth":2,"path":"course-material/ii.-geometry/introduction.md","ref":"course-material/ii.-geometry/introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"course-material/ii.-geometry/tutorial-2.md","mtime":"2022-02-15T14:25:47.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-15T14:35:35.307Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"Procedural thinking: logic diagram,  flow charts, pseudocode                                Introduction to the Python programming language","title":"Tutorial 2","level":"2.2.2","depth":2,"next":{"title":"Tutorial 3","level":"2.2.3","depth":2,"path":"course-material/ii.-geometry/tutorial-3.md","ref":"course-material/ii.-geometry/tutorial-3.md","articles":[]},"previous":{"title":"Introduction","level":"2.2.1","depth":2,"path":"course-material/ii.-geometry/introduction.md","ref":"course-material/ii.-geometry/introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"course-material/ii.-geometry/tutorial-2.md","mtime":"2022-02-17T11:53:04.777Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-17T12:45:59.814Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

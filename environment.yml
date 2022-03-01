@@ -2,7 +2,7 @@ name: csd2
 channels:
     - conda-forge
 dependencies:
-    - python
-    - compas
+    - python=3.8
+    - compas=1.14.0
     - pythreejs
-    - traitlets==4.3.3
+    # - traitlets==4.3.3

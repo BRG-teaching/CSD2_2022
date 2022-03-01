@@ -14,30 +14,30 @@ Intro to coding in Python and the Jupyter notebook II
 
 #### Content:
 
-* A. Strut Length
-  * A1. Find the Longest Cable
-  * A2. Sort the cables
+* A. bar Length
+  * A1. Find the Longest bar
+  * A2. Sort the bars
 * B. Data Management
-  * B1. Cable-net Data
+  * B1. bar-net Data
   * B2. Calculate Voussoir Volume
 
 #### Exercise:
 
 * Calculate Voussoir Weight
 
-A. Strut Length\
+A. bar Length\
 
 
 
-### A1. Find the Longest Cable
+### A1. Find the Longest bar
 
 #### Question:
 
-You are still working on your grid shell. You want to find the longest strut in your grid shell. How can you find it?
+You are still working on your grid shell. You want to find the longest bar in your grid shell. How can you find it?
 
 #### Answer:
 
-You can pick one cable, and suppose it is the longest cable. Then, pick the second one. If it is longer than the first one, then the longest one is the second one. Keep repeating this process until you have compared all the cables. Then you will find the longest cable.
+You can pick one bar, and suppose it is the longest bar. Then, pick the second one. If it is longer than the first one, then the longest one is the second one. Keep repeating this process until you have compared all the bars. Then you will find the longest bar.
 
 #### A1\_a. Flowchart
 
@@ -47,51 +47,51 @@ You can pick one cable, and suppose it is the longest cable. Then, pick the seco
 
 ```python
 # Input
-# cable length of the cable-net
-cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
+# bar length of the bar-net
+barnet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
 
-# initiate longest cable, suppose the first cable is the longest
-longest = cablenet[0]  
+# initiate longest bar, suppose the first bar is the longest
+longest = barnet[0]  
 index = 0  
 
-# Compare Cable Length
-# if the cable is longer than the longest cable
-# assign the longest cable the new cable length
-for i, cable in enumerate(cablenet):
-    if cable >= longest:
-        longest = cable
+# Compare bar Length
+# if the bar is longer than the longest bar
+# assign the longest bar the new bar length
+for i, bar in enumerate(barnet):
+    if bar >= longest:
+        longest = bar
         index = i
 
 # Output
-print("The longest cable is cable", index + 1, "and its length is", longest, "m.")
+print("The longest bar is bar", index + 1, "and its length is", longest, "m.")
 ```
 
 ```
-The longest cable is cable 9 and its length is 3.7 m.
+The longest bar is bar 9 and its length is 3.7 m.
 ```
 
-### A2. Sort the cables
+### A2. Sort the bars
 
 #### Question:
 
-Now you want to sort the cables from the longest to the shortest. How can you do it?
+Now you want to sort the bars from the longest to the shortest. How can you do it?
 
 #### Answer:
 
-One way to solve this problem is to go through all the cables, and find the longest one. Add the longest one to a new list.
+One way to solve this problem is to go through all the bars, and find the longest one. Add the longest one to a new list.
 
-| Sorted Cables | Length (m) |
+| Sorted bars | Length (m) |
 | :-----------: | :--------: |
 |       1       |     3.7    |
 
-Then do it again and find the next-longest cable.
+Then do it again and find the next-longest bar.
 
-| Sorted Cables | Length (m) |
+| Sorted bars | Length (m) |
 | :-----------: | :--------: |
 |       1       |     3.7    |
 |       2       |     3.6    |
 
-Keep doing and you would get the sorted cables from longest to shortest.
+Keep doing and you would get the sorted bars from longest to shortest.
 
 #### A2\_a. Flowchart
 
@@ -99,37 +99,37 @@ Keep doing and you would get the sorted cables from longest to shortest.
 
 #### A2\_b. Write the Function
 
-To find one element in the sorted cable list, we need to find the longest cable in the remaining cable list. We could turn this part of the statements into a function, which we could reuse when needed. When we write a function, it's suggested to write a short doc describing the function.
+To find one element in the sorted bar list, we need to find the longest bar in the remaining bar list. We could turn this part of the statements into a function, which we could reuse when needed. When we write a function, it's suggested to write a short doc describing the function.
 
 ```python
-def find_longest_cable(cablenet):
+def find_longest_bar(barnet):
     """
-    to find the longest cable in the cable list
+    to find the longest bar in the bar list
     Parameters
     ----------
-    cables : list
-        A list containing the cable length of the cable-net
+    bars : list
+        A list containing the bar length of the bar-net
 
     Returns
     -------
     index: int
-        Index of the longest cable in the cable list
+        Index of the longest bar in the bar list
     longest: float
-        Length of the longest cable in the cable list
+        Length of the longest bar in the bar list
     """
 
     # check the list is not empty
-    if cablenet == []:
+    if barnet == []:
         return
 
-    # initiate longest cable, suppose the first cable is the longest
-    longest = cablenet[0]  
+    # initiate longest bar, suppose the first bar is the longest
+    longest = barnet[0]  
     index = 0  
 
-    # compare every cable with the longest cable
-    for i, cable in enumerate(cablenet):
-        if cable >= longest:
-            longest = cable
+    # compare every bar with the longest bar
+    for i, bar in enumerate(barnet):
+        if bar >= longest:
+            longest = bar
             index = i
 
     return index, longest
@@ -137,30 +137,30 @@ def find_longest_cable(cablenet):
 
 #### A2\_c. Call the Function
 
-Now we could use `find_longest_cable` function to sort our cables from longest to shortest. Every time we find the longest cable, we will delete it from the cablenet list and add it to the sorted\_cables list.
+Now we could use `find_longest_bar` function to sort our bars from longest to shortest. Every time we find the longest bar, we will delete it from the barnet list and add it to the sorted\_bars list.
 
 ```python
 # Input
-# cable length of the cable-net
-cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
-# create empty cable list
-sorted_cables = []
+# bar length of the bar-net
+barnet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
+# create empty bar list
+sorted_bars = []
 
 # Program
-while cablenet != []:
-    # find the longest cable in the remaining of the cable list
-    i, longest = find_longest_cable(cablenet)
-    # remove the longest item from the cable list
-    cablenet.pop(i)
-    # add the longest item to the sorted cable list
-    sorted_cables.append(longest)
+while barnet != []:
+    # find the longest bar in the remaining of the bar list
+    i, longest = find_longest_bar(barnet)
+    # remove the longest item from the bar list
+    barnet.pop(i)
+    # add the longest item to the sorted bar list
+    sorted_bars.append(longest)
 
 # Output
-print("The sorted cable list is", sorted_cables)
+print("The sorted bar list is", sorted_bars)
 ```
 
 ```
-The sorted cable list is [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
+The sorted bar list is [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
 ```
 
 #### A2\_d. Turn Sorting into a Function
@@ -168,33 +168,33 @@ The sorted cable list is [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8,
 We could also turn the sorting into a function. We can call a function in another function. This sorting method is also called `selecting sorting` algorithm.
 
 ```python
-def sort_cable_length(cables):
+def sort_bar_length(bars):
     """
-    sort the cables in descending order
+    sort the bars in descending order
 
     Parameters
     ----------
-    cables: list
-        A list containing the cable length of the cable-net
+    bars: list
+        A list containing the bar length of the bar-net
 
     Returns
     -------
-    sorted_cables: list
-        A list containing the cable length of the cable-net in descending order
+    sorted_bars: list
+        A list containing the bar length of the bar-net in descending order
     
     """
-    # create empty cable list
-    sorted_cables = []
+    # create empty bar list
+    sorted_bars = []
 
-    while cables != []:
-        # find the longest cable in the remaining of the cable list
-        i, longest = find_longest_cable(cables)
-        # remove the longest item from the cable list
-        cables.pop(i)
-        # add the longest item to the sorted cable list
-        sorted_cables.append(longest)
+    while bars != []:
+        # find the longest bar in the remaining of the bar list
+        i, longest = find_longest_bar(bars)
+        # remove the longest item from the bar list
+        bars.pop(i)
+        # add the longest item to the sorted bar list
+        sorted_bars.append(longest)
 
-    return sorted_cables
+    return sorted_bars
 ```
 
 #### A2\_d. Python List Functions
@@ -202,21 +202,21 @@ def sort_cable_length(cables):
 Python has built-in method `sorted()` that could sort a list easily. `max()` and `min()` would find the largest and smallest item in the list.
 
 ```python
-cablenet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
+barnet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
 
-print("Longest cable is", max(cablenet), "m.")
-print("Shortest cable is", min(cablenet), "m.")
-print("Cables in ascending order:", sorted(cablenet))
-print("Cables in descending order:", sorted(cablenet, reverse=True))
-print("Total cable length is", sum(cablenet), "m.")
+print("Longest bar is", max(barnet), "m.")
+print("Shortest bar is", min(barnet), "m.")
+print("bars in ascending order:", sorted(barnet))
+print("bars in descending order:", sorted(barnet, reverse=True))
+print("Total bar length is", sum(barnet), "m.")
 ```
 
 ```
-Longest cable is 3.7 m.
-Shortest cable is 1.6 m.
-Cables in ascending order: [1.6, 1.8, 1.8, 1.8, 2.4, 2.6, 2.7, 2.8, 3.1, 3.3, 3.4, 3.6, 3.7]
-Cables in descending order: [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
-Total cable length is 34.6 m.
+Longest bar is 3.7 m.
+Shortest bar is 1.6 m.
+bars in ascending order: [1.6, 1.8, 1.8, 1.8, 2.4, 2.6, 2.7, 2.8, 3.1, 3.3, 3.4, 3.6, 3.7]
+bars in descending order: [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
+Total bar length is 34.6 m.
 ```
 
 ***
@@ -225,13 +225,13 @@ B. Data Management\
 
 
 
-### B1. Cable-net Data
+### B1. bar-net Data
 
 #### Question:
 
-While digging deep into the design and fabrication, you start to accumulating information about the cables, including the length, dimension, cable stress, etc. How would you hold your information?
+While digging deep into the design and fabrication, you start to accumulating information about the bars, including the length, dimension, bar stress, etc. How would you hold your information?
 
-| Cable No. | Length (m) | Dimension (mm) | Stress (N/mm2) |
+| bar No. | Length (m) | Dimension (mm) | Stress (N/mm2) |
 | :-------: | :--------: | :------------: | :------------: |
 |     1     |     1.6    |        2       |       275      |
 |     2     |     3.6    |        2       |       185      |
@@ -252,18 +252,18 @@ In this case, we can create three lists, containing information of length, dimen
 
 #### B1\_a. Create a Dictionary
 
-First, let's create a dictionary to save all the lengths of the cables. The key is the index of the cable, and the item is the length.
+First, let's create a dictionary to save all the lengths of the bars. The key is the index of the bar, and the item is the length.
 
 ```python
-cable_length_list = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+bar_length_list = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
 
 # create an empty dictionary
-cables_dict = {}
+bars_dict = {}
 
-for i in range(len(cable_length_list)):
-    cables_dict[i] = cable_length_list[i]
+for i in range(len(bar_length_list)):
+    bars_dict[i] = bar_length_list[i]
 
-print(cables_dict)
+print(bars_dict)
 ```
 
 ```
@@ -275,22 +275,22 @@ print(cables_dict)
 Now let's save more information.
 
 ```python
-cable_length_list = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
-cable_stress_list = [275, 185, 105, 134, 155, 265, 150, 185, 124, 234, 259, 201]
+bar_length_list = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
+bar_stress_list = [275, 185, 105, 134, 155, 265, 150, 185, 124, 234, 259, 201]
 
 # create an empty dictionary
-# key is index of the cable, item is infomation of the cable
-cables_dict = {}
+# key is index of the bar, item is infomation of the bar
+bars_dict = {}
 
-for i in range(len(cable_length_list)):
-    # for each cable, we create another dictionary
+for i in range(len(bar_length_list)):
+    # for each bar, we create another dictionary
     # key: category, item: value of the category
-    cables_dict[i] = {}
-    cables_dict[i]["length"] = cable_length_list[i]
-    cables_dict[i]["dimension"] = 2
-    cables_dict[i]["stress"] = cable_stress_list[i]
+    bars_dict[i] = {}
+    bars_dict[i]["length"] = bar_length_list[i]
+    bars_dict[i]["dimension"] = 2
+    bars_dict[i]["stress"] = bar_stress_list[i]
 
-print(cables_dict)
+print(bars_dict)
 ```
 
 ```
@@ -299,28 +299,28 @@ print(cables_dict)
 
 #### B1\_c. Access a Dictionary
 
-We could easily find the information on a specific cable. For example, let's find the information on cable `3`.
+We could easily find the information on a specific bar. For example, let's find the information on bar `3`.
 
 ```python
 index = 3
-print("cable", index, "information", cables_dict[index])
+print("bar", index, "information", bars_dict[index])
 ```
 
 ```
-cable 3 information {'length': 3.4, 'dimension': 2, 'stress': 134}
+bar 3 information {'length': 3.4, 'dimension': 2, 'stress': 134}
 ```
 
 #### B1\_d. Modify a Dictionary
 
-Similar to the list, we can modify information in the dictionary. If we find the stress of cable 3 is incorrect, we could modify it.
+Similar to the list, we can modify information in the dictionary. If we find the stress of bar 3 is incorrect, we could modify it.
 
 ```python
-cables_dict[index]["stress"] = 154
-print("cable", index, "information", cables_dict[index])
+bars_dict[index]["stress"] = 154
+print("bar", index, "information", bars_dict[index])
 ```
 
 ```
-cable 3 information {'length': 3.4, 'dimension': 2, 'stress': 154}
+bar 3 information {'length': 3.4, 'dimension': 2, 'stress': 154}
 ```
 
 ### B2. Calculate Voussoir Volume

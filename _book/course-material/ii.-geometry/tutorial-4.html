@@ -454,8 +454,8 @@
                                 <h1 id="computational-structural-design-ii---geometry-data-and-visualization">Computational Structural Design II - Geometry, Data and Visualization</h1>
 <h3 id="learning-goal">Learning Goal:</h3>
 <ul>
-<li>Geometries</li>
-<li>data</li>
+<li>Introduction to computational geometry in COMPAS</li>
+<li>Data, Geometry and Class in COMPAS</li>
 <li>visualization</li>
 </ul>
 <h3 id="content">Content:</h3>
@@ -468,14 +468,15 @@
 <hr>
 <p><a id="GeometryData"></a></p>
 <h1 id="a-geometry-data">A. Geometry Data</h1>
-<h2 id="a1-describe-a-point-in-rhinoceros-grasshopper">A1. Describe a point in Rhinoceros Grasshopper</h2>
-<p>A point in 3D Cartesian coordinate system is represented by 3 numbers, which represents values along x, y and z axis. If you are familiar with Rhino and Grasshopper, a point can be created numerically by inputing 3 values. </p>
+<h2 id="a1-describe-a-point-in-cad">A1. Describe a point in CAD</h2>
+<p>A point in a 3D Cartesian coordinate system can be represented by 3 numbers. Describing the values along x, y and z axes. For example, in Rhino and Grasshopper, a point can be created numerically by inputing 3 values in a &quot;Create Point&quot; container. </p>
 <p>&lt;/br&gt;
-<img src="img/geo_pt_gh.png" width="500" style="margin-left:auto; margin-right:auto"></p>
-<p><center>create a point in Rhinoceros Grasshopper 3D</center>
+<img src="../../2_Geometry/Tutorial4/img/geo_pt_gh.png" width="500" style="margin-left:auto; margin-right:auto"></p>
+<p><center>example of &quot;Create Point&quot; container in Rhinoceros Grasshopper 3D</center>
 &lt;/br&gt;</p>
+<p>We will do the same, utilizing our Jupyter Notebook interface.</p>
 <h2 id="a2-describe-a-point-by-python-list">A2. Describe a Point by Python list</h2>
-<p>Similarly the point can be referred to as a list <code>[x, y, z]</code> in Python. The three numbers represent the xyz coordinates of the point. Since a point is described as a list, the value in the list can be retrieved, modified, and updated by accessing the corresponding index of the list. 
+<p>Similarly a list <code>[x, y, z]</code> can describe a point in Python. The three numbers represent the xyz coordinates of the point. Since a point is described as a list, the value in the list can be retrieved, modified, and updated by accessing the corresponding index of the list. 
 Here we create a point <code>x=0, y=1, z=1</code> and change the coordinate <code>y=5</code>. </p>
 <pre><code class="lang-python"><span class="hljs-comment"># xyz coordinates of the point</span>
 my_point = [<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>]  
@@ -488,7 +489,7 @@ print(<span class="hljs-string">&quot;xyz coordinates of my_point are&quot;</spa
 <pre><code>y coordinate of my_point is 5
 xyz coordinates of my_point are [0, 5, 2]
 </code></pre><h2 id="a3-geometry-data-summary">A3. Geometry Data Summary</h2>
-<p>Besides point, basic geometry types - such as vector, line, plane - can be described numerically in Python by <strong>lists of values</strong>. The length of the list corresponds with the number of dimensions of the space the geometry resides in. In 3D space, the list contains 3 elements. The following table demonstrates the data used to describe 3D geometries numerically. </p>
+<p>Besides point, basic geometry types - such as vector, line, plane - can be described numerically in Python by <strong>lists of values</strong>. The length of the list corresponds to the number of dimensions of the space the geometry resides in. In 3D space, the list contains 3 elements. The following table illustrates the data used to describe 3D geometries numerically. </p>
 <table style="float:center;">
     <tr>
         <th style="text-align: center">Geometry</th>
@@ -541,7 +542,7 @@ xyz coordinates of my_point are [0, 5, 2]
 <hr>
 <p><a id="GeometryClass"></a></p>
 <h1 id="b-geometry-class">B. Geometry Class</h1>
-<p>A geometry type can be described by data. We can use a <strong>Class</strong> as a constructor, a template, or a &quot;blueprint&quot; to create <strong>Objects</strong> of a certain geometry type. An <strong>Object</strong> is an instance of a <strong>Class</strong> and it shares all attributes and the behavior of the Class. Classes are used frequently in Python scripting. A class can not only store data, but also define methods (a object-oriented programming term for functions) alongside the data that they operate on and produce. </p>
+<p>A geometry type can be described by data. We can use a <strong>Class</strong> as a constructor, a template, or a &quot;blueprint&quot; to create <strong>Objects</strong> of a certain geometry type. An <strong>Object</strong> is an instance of a <strong>Class</strong> and it shares all <strong>attributes</strong> and the behavior of the Class. Classes are used frequently in Python scripting. A class can not only store data, but also define methods (an object-oriented programming term for functions) alongside the data that they operate on and produce. </p>
 <p>In the following session, we will learn Python Class by creating our own <strong>Point class</strong>. Then we will use the class to create a <strong>Point object</strong>, which represents the point <code>x=0, y=1, z=1</code>. </p>
 <h2 id="b1-point-class">B1. Point Class</h2>
 <h3 id="b1a-create-a-class">B1_a. Create a Class</h3>
@@ -569,7 +570,7 @@ print(<span class="hljs-string">&quot;xyz coordinates are:&quot;</span>, pt.x, p
 </code></pre>
 <pre><code>xyz coordinates are: 1 1 0
 </code></pre><h3 id="b1c-object-method">B1_c. Object Method</h3>
-<p>Now let&apos;s add a method to Point class to translate the point. It modifies the object attribute <code>self.x</code>, <code>self.y</code>, <code>self.z</code> by adding the translation distance along the corresponding axis.  </p>
+<p>Now let&apos;s add a method to Point class to translate the point. What we want is to move or &quot;translate&quot; the point. The method modifies the object attribute <code>self.x</code>, <code>self.y</code>, <code>self.z</code> by adding the translation distance along the corresponding axis.  </p>
 <pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>:</span>
     <span class="hljs-string">&quot;&quot;&quot; Point class&quot;&quot;&quot;</span>
 
@@ -678,7 +679,10 @@ plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
 plotter.add(my_point)
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_17_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_17_0.png" width="500" style="margin-left:auto; margin-right:auto"></p>
+<p><center>visualize a point</center>
+&lt;/br&gt;</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point
 <span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
 <span class="hljs-keyword">from</span> compas_plotters.artists <span class="hljs-keyword">import</span> PointArtist
@@ -738,7 +742,10 @@ plotter.add(my_line, draw_points=<span class="hljs-keyword">False</span>, draw_a
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_22_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_22_0.png" width="500" style="margin-left:auto; margin-right:auto"></p>
+<p><center>visualize a point</center>
+&lt;/br&gt;</p>
 <h2 id="c3-vector">C3. Vector</h2>
 <p>A vector is a geometric object that has magnitude and direction. In Python, it could be represented through a list of XYZ components. </p>
 <h3 id="c3a-vector-data">C3_a. Vector Data</h3>
@@ -762,7 +769,7 @@ print(vector3)
 </code></pre>
 <pre><code>[1, 3, 0]
 </code></pre><h3 id="c3c-vector-class">C3_c. Vector Class</h3>
-<p>COMPAS Vector class which contains useful geometric properties and methods. Now let&apos;s create a Vector object and check its length. In Vector class, length is the attribute of the object.</p>
+<p>The COMPAS Vector class contains useful geometric properties and methods. Now let&apos;s create a Vector object and check its length. In Vector class, length is the attribute of the object.</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Vector
 my_vector = Vector(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>)
 print(my_vector)
@@ -792,7 +799,9 @@ True
 True
 </code></pre><h3 id="c3d-exercise-draw-vectors">C3_d: Exercise: Draw Vectors</h3>
 <p>Question: Given three points: pointA: [0, 0, 0], pointB: [0, 1, 0], pointC: [3, 2, 0]. You need to draw three vectors as shown in the following picture. </p>
-<p><img src="img/vectors.jpg" width="500" style="margin-left:auto; margin-right:auto">
+<p>&lt;/br&gt;
+<img src="../../2_Geometry/Tutorial4/img/vectors.jpg" width="500" style="margin-left:auto; margin-right:auto"></p>
+<p><center>three vectors</center>
 &lt;/br&gt;</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point
 <span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
@@ -802,7 +811,7 @@ point1 = Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</
 point2 = Point(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
 point3 = Point(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>)
 
-<span class="hljs-comment"># Plottor</span>
+<span class="hljs-comment"># Plotter</span>
 plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
 
 plotter.add(point1)
@@ -812,7 +821,9 @@ plotter.add(point3)
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_37_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_37_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Point
 <span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
 
@@ -825,7 +836,7 @@ vector1 = point2 - point1
 vector2 = point3 - point2
 vector3 = point3 - point1
 
-<span class="hljs-comment"># Plottor </span>
+<span class="hljs-comment"># Plotter</span>
 plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
 
 plotter.add(point1)
@@ -846,7 +857,9 @@ plotter.zoom_extents()
 
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_38_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_38_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <h2 id="c4-polygon">C4. Polygon</h2>
 <p>A Polygon represents an ordered collection of points in space connected by straight line segments forming a closed boundary around the interior space. It has a closed boundary that separates its interior from the exterior. </p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon
@@ -859,7 +872,9 @@ plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span cla
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_40_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_40_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon
 <span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
 
@@ -871,7 +886,9 @@ plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span cla
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_41_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_41_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <h2 id="c5-polyline">C5. Polyline</h2>
 <p>A Polyline is a sequence of points connected by line segments. Different from a Polygon, a Polyline doesn&apos;t have an interior and an exterior. </p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polyline
@@ -884,7 +901,9 @@ plotter.add(my_polyline, color=(<span class="hljs-number">1</span>, <span class=
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_43_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_43_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <h2 id="c6-circle">C6. Circle</h2>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Plane, Circle
 <span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
@@ -898,7 +917,9 @@ plotter.add(my_circle, edgecolor=(<span class="hljs-number">0</span>, <span clas
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_45_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_45_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <h2 id="c7-pointcloud">C7. PointCloud</h2>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> random
 
@@ -918,11 +939,13 @@ plotter = Plotter(show_axes=<span class="hljs-keyword">True</span>)
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_47_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_47_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <h2 id=""><a id="Operations"></a></h2>
 <h1 id="d-geometry-operations">D. Geometry Operations</h1>
 <h2 id="d1-transformation">D1. Transformation</h2>
-<p>Transformation means changes in geometric shape, which is represented by a 4x4 transformation matrix. Here we will learn 3 typical transformations in COMPAS: translation, rotation and scale. 
+<p>A Transformation is a change in geometric shape, which is represented by a 4x4 transformation matrix. Here we will learn 3 typical transformations in COMPAS: translation, rotation and scale. 
 A COMPAS geometry object can be transformed by calling the method .transform() or .transformed(). The former modifies the object in place, whereas the latter returns a new object.</p>
 <h3 id="d1a-translation">D1_a. Translation</h3>
 <p>Translation is to move the geometry, one of the most basic transformation types. The shape, size and orientation of the geometry remain the same.</p>
@@ -946,7 +969,9 @@ plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span cla
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_52_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_52_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <p>.transformed() creates a new polygon. </p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon, Translation
 <span class="hljs-keyword">from</span> compas_plotters <span class="hljs-keyword">import</span> Plotter
@@ -968,7 +993,9 @@ plotter.add(my_polygon2, edgecolor=(<span class="hljs-number">0</span>, <span cl
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_54_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_54_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <h3 id="d1b-rotation">D1_b. Rotation</h3>
 <p>Rotation is to rotate the geometry by a certain degree. </p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> math <span class="hljs-keyword">as</span> m
@@ -987,7 +1014,9 @@ plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span cla
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_56_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_56_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <h3 id="d1c-scale">D1_c. Scale</h3>
 <p>Scale is to enlarge or shrink the geometry by a scale factor.</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> compas.geometry <span class="hljs-keyword">import</span> Polygon, Scale
@@ -1005,7 +1034,9 @@ plotter.add(my_polygon, edgecolor=(<span class="hljs-number">0</span>, <span cla
 plotter.zoom_extents()
 plotter.show()
 </code></pre>
-<p><img src="week_4_files/week_4_58_0.png" alt="png"></p>
+<p>&lt;/br&gt;
+<img src="week_4_files/week_4_58_0.png" width="500" style="margin-left:auto; margin-right:auto">
+&lt;/br&gt;</p>
 <h3 id="d1d-frame">D1_d. Frame</h3>
 <p>Frame plays an important role in transformation, especially in 3D. A frame defines a local coordinate system and transformation can be created between different coordinate systems represented by frames. 
 Note that Frame is different from a Plane. A frame is defined by an origin and two axes, while a plane is defined by an origin and a normal vector.  </p>
@@ -1126,7 +1157,7 @@ display(fig)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tutorial 4","level":"2.2.4","depth":2,"next":{"title":"III. Materialization","level":"2.3","depth":1,"path":"course-material/iii.-materialization/README.md","ref":"course-material/iii.-materialization/README.md","articles":[{"title":"Lecture 2","level":"2.3.1","depth":2,"path":"course-material/iii.-materialization/lecture-2.md","ref":"course-material/iii.-materialization/lecture-2.md","articles":[]},{"title":"Tutorial 5","level":"2.3.2","depth":2,"path":"course-material/iii.-materialization/tutorial-5.md","ref":"course-material/iii.-materialization/tutorial-5.md","articles":[]},{"title":"Tutorial 6","level":"2.3.3","depth":2,"path":"course-material/iii.-materialization/tutorial-6.md","ref":"course-material/iii.-materialization/tutorial-6.md","articles":[]},{"title":"Tutorial 7","level":"2.3.4","depth":2,"path":"course-material/iii.-materialization/tutorial-7.md","ref":"course-material/iii.-materialization/tutorial-7.md","articles":[]}]},"previous":{"title":"Tutorial 3","level":"2.2.3","depth":2,"path":"course-material/ii.-geometry/tutorial-3.md","ref":"course-material/ii.-geometry/tutorial-3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"course-material/ii.-geometry/tutorial-4.md","mtime":"2022-02-15T13:16:08.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-15T14:35:35.307Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tutorial 4","level":"2.2.4","depth":2,"next":{"title":"III. Materialization","level":"2.3","depth":1,"path":"course-material/iii.-materialization/README.md","ref":"course-material/iii.-materialization/README.md","articles":[{"title":"Lecture 2","level":"2.3.1","depth":2,"path":"course-material/iii.-materialization/lecture-2.md","ref":"course-material/iii.-materialization/lecture-2.md","articles":[]},{"title":"Tutorial 5","level":"2.3.2","depth":2,"path":"course-material/iii.-materialization/tutorial-5.md","ref":"course-material/iii.-materialization/tutorial-5.md","articles":[]},{"title":"Tutorial 6","level":"2.3.3","depth":2,"path":"course-material/iii.-materialization/tutorial-6.md","ref":"course-material/iii.-materialization/tutorial-6.md","articles":[]},{"title":"Tutorial 7","level":"2.3.4","depth":2,"path":"course-material/iii.-materialization/tutorial-7.md","ref":"course-material/iii.-materialization/tutorial-7.md","articles":[]}]},"previous":{"title":"Tutorial 3","level":"2.2.3","depth":2,"path":"course-material/ii.-geometry/tutorial-3.md","ref":"course-material/ii.-geometry/tutorial-3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"course-material/ii.-geometry/tutorial-4.md","mtime":"2022-02-17T12:42:06.557Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-17T12:45:59.814Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
