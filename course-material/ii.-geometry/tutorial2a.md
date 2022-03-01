@@ -1,5 +1,7 @@
 # Tutorial 2
 
+!\[Binder]\([https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FTutorial2%2Fweek\_2\_lecture.ipynb](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FTutorial2%2Fweek\_2\_lecture.ipynb))
+
 Computational Structural Design II\
 Intro to coding in Python and the Jupyter notebook I
 ----------------------------------------------------
@@ -18,15 +20,12 @@ Intro to coding in Python and the Jupyter notebook I
 
 #### Exercise:
 
-* [Gridshell Cost II](tutorial2a.md#tut1\_ex)\
-
+* [Gridshell Cost II](tutorial2a.md#tut1\_ex)\\
 
 \
 \---
 
-gridshell Cost\
-
-
+gridshell Cost\\
 
 ### Question:
 
@@ -104,8 +103,7 @@ Let's complete the program. You need to repeat the whole process of checking the
 
 #### B\_1. Draw Flowchart
 
-![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex1\_2.jpg?raw=true)\
-
+![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex1\_2.jpg?raw=true)\\
 
 #### B\_2. Write pseudocode
 
@@ -280,9 +278,7 @@ gridshell = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
 
 ***
 
-Check Voussoir Weight\
-
-
+Check Voussoir Weight\\
 
 ### Question A:
 
@@ -297,13 +293,11 @@ You have designed a freeform masonry vault and all the stone pieces are unique. 
 |         5         |      26     |
 |         6         |      18     |
 
-\
-
+\\
 
 #### A\_1. Draw Flowchart
 
-![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex2.png?raw=true)\
-
+![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex2.png?raw=true)\\
 
 #### A\_2. Write pseudocode
 
@@ -365,8 +359,7 @@ Now you would optimize all the voussoirs that are too heavy by cutting them into
 
 We can continue from the last example. When the voussoir is too heavy, we need to first cut it in half, then check the weight of the half one. If the new weight is still too heavy, keep cutting. After cutting, we need to add the new cut stones back, so the sequence of the original voussoirs will not change.
 
-![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex2\_2.png?raw=true)\
-
+![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex2\_2.png?raw=true)\\
 
 #### B\_2. Write pseudocode
 
