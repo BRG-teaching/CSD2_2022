@@ -4,7 +4,7 @@ Throughout the CSD2 course, Jupyter notebooks will be used in all the next sessi
 
 The notebook is the perfect tool because it is built as an interactive web application that allows us to develop and run our code block by block and immediately see results without worrying constantly about software packages.
 
-Before this class, you have received an [Introduction to Jupyter](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/HEAD?labpath=%2F2\_Geometry%2FIntroduction%2FIntroductionToJupyterNotebook.ipynb) link to a Jupyter notebook that the CSD2 team has created and is running using your browser.
+Before this class, you have received an [Introduction to Jupyter link](https://hub.gke2.mybinder.org/user/blockresearchgroup-csd2\_2022-pvm8k8iu/doc/tree/2\_Geometry/Introduction/IntroductionToJupyterNotebook.ipynb) to a Jupyter notebook that the CSD2 team has created and is running using your browser.
 
 The reason it is called notebook is because it can contain live code, rich text elements such as equations, links, images, tables, and so on.
 
