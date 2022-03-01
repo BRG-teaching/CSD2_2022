@@ -317,7 +317,7 @@ You have designed a freeform masonry vault and all the stone pieces are unique. 
 
 Here, we will use the `enumerate` method of a list, which adds a counter when we iterate over the list.
 
-TODO: Explain the enumeration....
+
 
 ```python
 voussoir_weight_list = [15, 20, 34, 18, 26, 18]
