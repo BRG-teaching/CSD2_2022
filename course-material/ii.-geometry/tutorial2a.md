@@ -1,6 +1,8 @@
 # Tutorial 2
 
-!\[Binder]\([https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FTutorial2%2Fweek\_2\_lecture.ipynb](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FTutorial2%2Fweek\_2\_lecture.ipynb))
+
+
+{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/f057575?labpath=2_Geometry%2FTutorial2%2Fweek_2_lecture.ipynb" %}
 
 Computational Structural Design II\
 Intro to coding in Python and the Jupyter notebook I
