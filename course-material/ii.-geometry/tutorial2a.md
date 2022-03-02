@@ -1,3 +1,8 @@
+[**Introduction to Jupyter Notebook**](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/f057575?labpath=2_Geometry%2FIntroduction%2FJupyter_Notebook_Markdown_Guide.ipynb)
+
+[**Tutorial 2 Notebook**](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/f057575?labpath=2_Geometry%2FIntroduction%2FJupyter_Notebook_Markdown_Guide.ipynb)
+
+
 # Tutorial 2
 
 Computational Structural Design II\
