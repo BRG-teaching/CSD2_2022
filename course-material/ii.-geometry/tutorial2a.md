@@ -1,10 +1,13 @@
 # Tutorial 2
 
-[**Introduction to Jupyter Notebook**](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FIntroduction%2FJupyter\_Notebook\_Markdown\_Guide.ipynb)
-
-[**Tutorial 2 Notebook**](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FIntroduction%2FJupyter\_Notebook\_Markdown\_Guide.ipynb)
 
 ### Computational Structural Design II Intro to coding in Python and the Jupyter notebook I
+
+**Code Link**
+* [Introduction to Jupyter Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FIntroduction%2FJupyter\_Notebook\_Markdown\_Guide.ipynb)
+
+* [Tutorial 2 Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FIntroduction%2FJupyter\_Notebook\_Markdown\_Guide.ipynb)
+
 
 **Learning Goals:**
 
@@ -20,12 +23,13 @@
 
 **Exercise:**
 
-* [Gridshell Cost II](tutorial2a.md#tut1\_ex)\\
+* [Gridshell Cost II](tutorial2a.md#tut1\_ex)
 
-\
-\---
+**Reference:**
+* [Python Tutorial](https://docs.python.org/3/tutorial/)
 
-gridshell Cost\\
+---
+
 
 #### Question:
 
@@ -285,6 +289,7 @@ Suppose there are three different prices for the bars: 2 Fr. for bars shorter th
 
 Hint:\
 You need to classify 3 types of bars. When you run into a situation where you have several conditions, you can place as many elif conditions as necessary between the if condition and the else condition.
+If you don't know how to add more conditions to the ``if`` statement, try to use google to search for the answer or our reference material: https://docs.python.org/3/tutorial/controlflow.html#if-statements. 
 
 ```python
 # Input
