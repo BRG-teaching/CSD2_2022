@@ -1,15 +1,8 @@
 # Tutorial 2
 
-{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/f057575?labpath=%2F2_Geometry%2FIntroduction%2FIntroductionToJupyterNotebook.ipynb" %}
-Introduction to Jupyter Notebook
-{% endembed %}
 
-{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022/f057575?labpath=2_Geometry%2FIntroduction%2Fhello_world.ipynb" %}
-Hello World
-{% endembed %}
-
-{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/f057575?labpath=2_Geometry%2FTutorial2%2Fweek_2_lecture.ipynb" %}
-Tutorial 2 Work Session
+{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/ca2aada?labpath=2_Geometry%2FTutorial2%2Fweek_2_lecture.ipynb" %}
+Tutorial 2 Lecture
 {% endembed %}
 
 Computational Structural Design II\
@@ -61,6 +54,22 @@ Suppose you have designed a gridshell made from steel bars. You are going to fab
 ### Part A: Check Length of One Bar
 
 Let's first break this problem down into small steps. Firstly, you could pick one bar and check whether its length is larger than 3 m. Secondly, you could repeat the first step to check all the bars, and then multiply the number of bars with the cost.
+
+#### A\_0. Flowchart
+
+A flowchart is a step-by-step approach until you find the answer. Flowcharts help you to visualize the processes in small steps and they are very similar to how the computer executes your instructions. 
+
+</br> 
+<img src="https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M730QpQnbAMvz44bqhc%2F-MNht34RYVKlCmOCcR92%2F-MNiECpXmHCeJT14YSZs%2Fimage.png?alt=media&token=13c41acb-ddda-47f9-a01e-89861de8fc7c" style="margin-left:auto; margin-right:auto"/>
+</br> 
+
+| Function | Shape | Explanation |
+| :---: | :---: | :---: |
+| Start/End | rounded rectangles | Start is required of all flowcharts, while some flowcharts may not have an end.  |
+| Process | rectangle |  It involves the action, to do something. e.g. add 1  |
+| Input/Output | parallelogram |  It indicates that manual operation is needed. e.g. type in the number  |
+| Decision | rhombus |  e.g. Is the number bigger than 10?  |
+| Arrow | arrow |  It indicates the flow of the chart.   |
 
 #### A\_1. Draw Flowchart
 
