@@ -1,27 +1,26 @@
 # Tutorial 2
 
+[**Introduction to Jupyter Notebook**](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FIntroduction%2FJupyter\_Notebook\_Markdown\_Guide.ipynb)
 
-{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/ca2aada?labpath=2_Geometry%2FTutorial2%2Fweek_2_lecture.ipynb" %}
-Tutorial 2 Lecture
-{% endembed %}
+[**Tutorial 2 Notebook**](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FIntroduction%2FJupyter\_Notebook\_Markdown\_Guide.ipynb)
 
-Computational Structural Design II\
-Intro to coding in Python and the Jupyter notebook I
-----------------------------------------------------
 
-#### Learning Goals:
+
+### Computational Structural Design II Intro to coding in Python and the Jupyter notebook I
+
+**Learning Goals:**
 
 * develop your procedural thinking
 * draw a logic diagram or flowchart
 * translate the flowchart to pseudocode using comments in Python
 * write basic Python script including: variables, object types, conditionals,for loops, while loops, lists, mathematical operators, print statements
 
-#### Content:
+**Content:**
 
 * [Gridshell Cost I](tutorial2a.md#ex1)
 * [Voussoir Weight](tutorial2a.md#ex2)
 
-#### Exercise:
+**Exercise:**
 
 * [Gridshell Cost II](tutorial2a.md#tut1\_ex)\\
 
@@ -30,7 +29,7 @@ Intro to coding in Python and the Jupyter notebook I
 
 gridshell Cost\\
 
-### Question:
+#### Question:
 
 Suppose you have designed a gridshell made from steel bars. You are going to fabricate them and estimate the total cost. There are 2 different prices for bars longer than 3 meters and shorter than 3 meters, 5 Fr and 3 Fr correspondingly. Now you need to count how many bars are above 3 meters and how many are below, to calculate the cost.
 
@@ -51,7 +50,7 @@ Suppose you have designed a gridshell made from steel bars. You are going to fab
 |    11   |     1.8    |
 |    12   |     2.6    |
 
-### Part A: Check Length of One Bar
+#### Part A: Check Length of One Bar
 
 Let's first break this problem down into small steps. Firstly, you could pick one bar and check whether its length is larger than 3 m. Secondly, you could repeat the first step to check all the bars, and then multiply the number of bars with the cost.
 
@@ -77,7 +76,7 @@ Firstly, we can draw a [**flowchart**](https://app.gitbook.com/s/-M730QpQnbAMvz4
 
 ![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/5319ae679b8e41fbf62b45afee4b4c2794c35233/2\_Geometry/Tutorial2/img/week1\_ex1.png?raw=true)
 
-#### A\_2. Write pseudocode
+**A\_2. Write pseudocode**
 
 Firstly, we could convert our flowchart to [**pseudocode**](https://en.wikipedia.org/wiki/Pseudocode#:\~:text=In%20computer%20science%2C%20pseudocode%20is,reading%20rather%20than%20machine%20reading.), a plain-English version of the flowchart.
 
@@ -95,7 +94,7 @@ The pseudocode are written in Python [**comments**](https://www.w3schools.com/py
 
 <mark style="color:blue;">short bar</mark>
 
-#### A\_3. Write your code
+**A\_3. Write your code**
 
 We could turn the pseudocode line by line into code.
 
@@ -116,15 +115,15 @@ else:
 This is a short bar.
 ```
 
-### Part B: Check Length of All Bars
+#### Part B: Check Length of All Bars
 
 Let's complete the program. You need to repeat the whole process of checking the bar length until you have classified all the bars. You could use another condition in your flowchart for the repetition instructions. After you have checked all the bar in your gridshell, you could count the amount in two length types and calculate the total cost.
 
-#### B\_1. Draw Flowchart
+**B\_1. Draw Flowchart**
 
 ![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex1\_2.jpg?raw=true)\\
 
-#### B\_2. Write pseudocode
+**B\_2. Write pseudocode**
 
 <mark style="color:blue;">pick one bar in the gridshell</mark>
 
@@ -140,7 +139,7 @@ Let's complete the program. You need to repeat the whole process of checking the
 
 <mark style="color:blue;">calculate total cost</mark>
 
-#### B\_3. Write the code
+**B\_3. Write the code**
 
 Here we need to input all the lengths of our bars. Instead of multiple length variables, we could store them in a collection - a [**list**](https://app.gitbook.com/s/-M730QpQnbAMvz44bqhc/learn-to-code/i.-my-first-python-script/cheat-sheet#list). List items are ordered, or in other words, indexed, the first item has index `0`, the second item has index `1` etc.
 
@@ -211,7 +210,7 @@ print("Total cost is", total_cost, "CHF")
 Total cost is 46 CHF
 ```
 
-### Part C: Modify Bar Length
+#### Part C: Modify Bar Length
 
 Oh, No!... You realize that you have measured the length of a bars wrongly. Don't worry. The cabarble length list we use as input can be modified because list items are changeable. You could also modify a value in the `gridshell` list by referring to the item's **index**. Note that the index always starts from **`0`**!
 
@@ -280,7 +279,7 @@ print(gridshell)
 [1.6, 3.6, 2.5, 2.7, 2.8, 3.3, 3.7, 1.8, 1.8, 2.6, 4.0]
 ```
 
-### Exercise: Bars of 3 different Lengths
+#### Exercise: Bars of 3 different Lengths
 
 Suppose there are three different prices for the bars: 2 Fr. for bars shorter than 2 m; 3 Fr. for bars between 2 m and 3 m; 5 Fr. for bars longer than 3 m. Could you modify your code and calculate the total cost?
 
@@ -299,7 +298,7 @@ gridshell = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
 
 Check Voussoir Weight\\
 
-### Question A:
+#### Question A:
 
 You have designed a freeform masonry vault and all the stone pieces are unique. You want to assemble the vault manually. However, on the construction site, the manual handling weight limit is 25 kg. Thus, you have to find the pieces that are too heavy and export their index.
 
@@ -314,11 +313,11 @@ You have designed a freeform masonry vault and all the stone pieces are unique. 
 
 \\
 
-#### A\_1. Draw Flowchart
+**A\_1. Draw Flowchart**
 
 ![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex2.png?raw=true)\\
 
-#### A\_2. Write pseudocode
+**A\_2. Write pseudocode**
 
 <mark style="color:blue;">pick one voussoir in the vault</mark>
 
@@ -330,11 +329,9 @@ You have designed a freeform masonry vault and all the stone pieces are unique. 
 
 <mark style="color:blue;">output the problmatic voussoirs</mark>
 
-#### A\_3. Write your code
+**A\_3. Write your code**
 
 Here, we will use the `enumerate` method of a list, which adds a counter when we iterate over the list.
-
-
 
 ```python
 voussoir_weight_list = [15, 20, 34, 18, 26, 18]
@@ -370,17 +367,17 @@ print("Voussoir ", *problem_index, "are too heavy.")
 Voussoir  2 4 are too heavy.
 ```
 
-### Question B: Optimize Voussoir Weight
+#### Question B: Optimize Voussoir Weight
 
 Now you would optimize all the voussoirs that are too heavy by cutting them into two pieces while keeping the sequence of the voussoirs.
 
-#### B\_1. Draw Flowchart
+**B\_1. Draw Flowchart**
 
 We can continue from the last example. When the voussoir is too heavy, we need to first cut it in half, then check the weight of the half one. If the new weight is still too heavy, keep cutting. After cutting, we need to add the new cut stones back, so the sequence of the original voussoirs will not change.
 
 ![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/75a96a6722bcc51b90424947811f8bd725eb24b7/2\_Geometry/Tutorial2/img/week1\_ex2\_2.png?raw=true)\\
 
-#### B\_2. Write pseudocode
+**B\_2. Write pseudocode**
 
 <mark style="color:blue;">pick one voussoir in the vault</mark>
 
@@ -394,7 +391,7 @@ We can continue from the last example. When the voussoir is too heavy, we need t
 
 <mark style="color:blue;">output the problmatic voussoirs</mark>
 
-#### B\_3. Write your code
+**B\_3. Write your code**
 
 Here, we will use a **`while`** loop, which keeps executing the code inside if the condition is True. The loop will stop when the condition is not fulfilled any more. For example, here we pick a voussoir that is 54 kg and the count is 1. The weight is too heavy. In the first iteration of the while loop, the voussoir will be cut in half, so the weight is divided by 2 and the count is multiplied by 2. Now, the while loop checks the new voussoir weight, which is 54 / 2 = 27. 27 is still bigger than 25, so the loop will keep running. The 27 kg voussoir is further cut in half and the count is multiplied by 2. Now the new weight is 27 / 2 = 13.5, which is smaller than 25. Thus, the while loop stops. Inside the while loop, we redeclare the value of the variable voussoir, variable count in every iteration. So, we can print the final value.
 
@@ -440,7 +437,7 @@ print(new_voussoir_weights)
 [15, 20, 13.5, 13.5, 13.5, 13.5, 18, 13.0, 13.0, 18]
 ```
 
-#### Working with Functions
+**Working with Functions**
 
 In computer programming, a function is a named section of a code that performs a specific task. This typically involves taking some input, manipulating the input and returning an output. Next, we will define a simple python function and use it to extract some information from our fabrication data on the gridshell.
 
@@ -475,7 +472,7 @@ visualization = visualize_bar_lengths(voussoir_weight_list)
 
 ***
 
-### Answer to Bar Cost Exercise:
+#### Answer to Bar Cost Exercise:
 
 ```python
 # Input
