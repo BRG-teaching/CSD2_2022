@@ -4,6 +4,10 @@
 Introduction to Jupyter Notebook
 {% endembed %}
 
+{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022/f057575?labpath=2_Geometry%2FIntroduction%2Fhello_world.ipynb" %}
+Hello World
+{% endembed %}
+
 {% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/f057575?labpath=2_Geometry%2FTutorial2%2Fweek_2_lecture.ipynb" %}
 Tutorial 2 Work Session
 {% endembed %}
