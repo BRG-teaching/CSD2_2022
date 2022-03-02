@@ -27,7 +27,7 @@ A point in a 3D Cartesian coordinate system can be represented by 3 numbers. Des
 example of "Create Point" container in Rhinoceros Grasshopper 3D\
 
 
-![](../../\_book/2\_Geometry/Tutorial4/img/geo\_pt\_gh.png)
+![](../../2\_Geometry/Tutorial4/img/geo\_pt\_gh.png)
 
 We will do the same, utilizing our Jupyter Notebook interface.
 
@@ -240,7 +240,7 @@ plotter.show()
 visualize a point\
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_17\_0.png)
+![](week\_4\_files/week\_4\_17\_0.png)
 
 ```python
 from compas.geometry import Point
@@ -317,7 +317,7 @@ plotter.show()
 visualize a point\
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_22\_0.png)
+![](week\_4\_files/week\_4\_22\_0.png)
 
 ### C3. Vector
 
@@ -416,7 +416,7 @@ Question: Given three points: pointA: \[0, 0, 0], pointB: \[0, 1, 0], pointC: \[
 three vectors\
 
 
-![](../../\_book/2\_Geometry/Tutorial4/img/vectors.jpg)
+![](../../2\_Geometry/Tutorial4/img/vectors.jpg)
 
 ```python
 from compas.geometry import Point
@@ -439,7 +439,7 @@ plotter.show()
 ```
 
 \
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_37\_0.png)\
+![](week\_4\_files/week\_4\_37\_0.png)\
 
 
 ```python
@@ -481,7 +481,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_38\_0.png)
+![](week\_4\_files/week\_4\_38\_0.png)
 
 ### C4. Polygon
 
@@ -503,7 +503,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_40\_0.png)
+![](week\_4\_files/week\_4\_40\_0.png)
 
 ```python
 from compas.geometry import Polygon
@@ -522,7 +522,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_41\_0.png)
+![](week\_4\_files/week\_4\_41\_0.png)
 
 ### C5. Polyline
 
@@ -544,7 +544,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_43\_0.png)
+![](week\_4\_files/week\_4\_43\_0.png)
 
 ### C6. Circle
 
@@ -566,7 +566,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_45\_0.png)
+![](week\_4\_files/week\_4\_45\_0.png)
 
 ### C7. PointCloud
 
@@ -594,7 +594,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_47\_0.png)
+![](week\_4\_files/week\_4\_47\_0.png)
 
 ### &#x20;<a href="#operations" id="operations"></a>
 
@@ -639,7 +639,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_52\_0.png)
+![](week\_4\_files/week\_4\_52\_0.png)
 
 .transformed() creates a new polygon.
 
@@ -669,7 +669,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_54\_0.png)
+![](week\_4\_files/week\_4\_54\_0.png)
 
 #### D1\_b. Rotation
 
@@ -697,7 +697,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_56\_0.png)
+![](week\_4\_files/week\_4\_56\_0.png)
 
 #### D1\_c. Scale
 
@@ -724,7 +724,7 @@ plotter.show()
 \
 
 
-![](../../\_book/course-material/ii.-geometry/week\_4\_files/week\_4\_58\_0.png)
+![](week\_4\_files/week\_4\_58\_0.png)
 
 #### D1\_d. Frame
 
