@@ -1,48 +1,51 @@
 # Tutorial 3
 
+## Tutorial 3
 
+### Computational Structural Design II Intro to coding in Python and the Jupyter notebook II
 
-Computational Structural Design II\
-Intro to coding in Python and the Jupyter notebook II
------------------------------------------------------
-
-#### Learning Goal:
+**Learning Goal:**
 
 * understand how to write a function
 * understand how to use built-in functions in Python
 * understand `dictionary`s
 
-### Content:
-- A. bar Length
-    - A1. [Find the Longest Bar](#A1)
-    - A2. [Sort the Bars](#A2)
-- B. Data Management
-    - B1. [Gridshell Data](#B1)
-    - B2. [Calculate Voussoir Volume](#B2)
+#### Content:
 
-### Exercise:
-- [Calculate Voussoir Weight](#exB2)
+* A. bar Length
+  * A1. [Find the Longest Bar](tutorial-3.md#A1)
+  * A2. [Sort the Bars](tutorial-3.md#A2)
+* B. Data Management
+  * B1. [Gridshell Data](tutorial-3.md#B1)
+  * B2. [Calculate Voussoir Volume](tutorial-3.md#B2)
 
-### Assignment:
-- Calculate Transportation Turns
+#### Exercise:
 
-<a id='A1'></a>
+* [Calculate Voussoir Weight](tutorial-3.md#exB2)
 
-# A. bar Length <br/>
-## A1. Find the Longest Bar
-### Question: 
+#### Assignment:
+
+* Calculate Transportation Turns
+
+A. bar Length\
+
+
+
+### A1. Find the Longest Bar
+
+#### Question:
+
 You are still working on your grid-shell. You want to find the longest bar in your grid-shell. How can you find i
 
-### Answer:
-You can pick one bar, and suppose it is the longest bar. Then, pick the second one. If it is longer than the first one, then the longest one is the second one. Keep repeating this process until you have compared all the bars. Then you will find the longest bar. 
+#### Answer:
 
-### A1_a. Flowchart
+You can pick one bar, and suppose it is the longest bar. Then, pick the second one. If it is longer than the first one, then the longest one is the second one. Keep repeating this process until you have compared all the bars. Then you will find the longest bar.
 
-<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/main/2_Geometry/Tutorial3/img/A1_a.png?raw=true" style="margin-left:auto; margin-right:auto" width="300"/>
+#### A1\_a. Flowchart
 
+![](../../2\_Geometry/Tutorial3/img/A1\_a.png)
 
-### A1_b. Code
-
+#### A1\_b. Code
 
 ```python
 # Input
@@ -65,39 +68,38 @@ for i, bar in enumerate(gridshell):
 print("The longest bar is bar", index + 1, "and its length is", longest, "m.")
 ```
 
-    The longest bar is bar 9 and its length is 3.7 m.
+***
 
+### A2. Sort the bars
 
----
+#### Question:
 
-<a id='A2'></a>
-## A2. Sort the bars
-### Question:
 Now you want to sort the bars from the longest to the shortest. How can you do it?
 
-### Answer:
-One way to solve this problem is to go through all the bars, and find the longest one. Add the longest one to a new list. 
+#### Answer:
+
+One way to solve this problem is to go through all the bars, and find the longest one. Add the longest one to a new list.
 
 | Sorted bars | Length (m) |
-| :---: | :---: |
-| 1 | 3.7 |
+| :---------: | :--------: |
+|      1      |     3.7    |
 
-Then do it again and find the next-longest bar. 
+Then do it again and find the next-longest bar.
 
 | Sorted bars | Length (m) |
-| :---: | :---: |
-| 1 | 3.7 |
-| 2 | 3.6 |
+| :---------: | :--------: |
+|      1      |     3.7    |
+|      2      |     3.6    |
 
 Keep doing and you would get the sorted bars from longest to shortest.
 
-### A2_a. Flowchart
-<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/main/2_Geometry/Tutorial3/img/A1_b.png?raw=true" style="margin-left:auto; margin-right:auto" width="500"/>
+#### A2\_a. Flowchart
 
+![](../../2\_Geometry/Tutorial3/img/A1\_b.png)
 
-### A2_b. Write the Function
+#### A2\_b. Write the Function
+
 To find one element in the sorted bar list, we need to find the longest bar in the remaining bar list. We could turn this part of the statements into a [function](https://docs.python.org/3/tutorial/controlflow.html#defining-functions), which we could reuse when needed. A function always start with a keyword `def`, followed by the function name and the parameters. When we write a function, it's suggested to write a short doc describing the function.
-
 
 ```python
 def find_longest_bar(bars):
@@ -133,9 +135,9 @@ def find_longest_bar(bars):
     return index, longest
 ```
 
-### A2_c. Call the Function
-Now we could use `find_longest_bar` function to sort our bars from longest to shortest. Every time we find the longest bar, we will delete it from the gridshell list and add it to the sorted_bars list. 
+#### A2\_c. Call the Function
 
+Now we could use `find_longest_bar` function to sort our bars from longest to shortest. Every time we find the longest bar, we will delete it from the gridshell list and add it to the sorted\_bars list.
 
 ```python
 # Input
@@ -157,12 +159,9 @@ while gridshell != []:
 print("The sorted bar list is", sorted_bars)
 ```
 
-    The sorted bar list is [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
+#### A2\_d. Turn Sorting into a Function
 
-
-### A2_d. Turn Sorting into a Function
-We could also turn the sorting into a function `sort_bar_length`, which means the `sort_bar_length` function will include the `find_longest_bar` function. It is allowed in Python. This sorting method is also called [`selecting sorting` algorithm](https://en.wikipedia.org/wiki/Selection_sort).  
-
+We could also turn the sorting into a function `sort_bar_length`, which means the `sort_bar_length` function will include the `find_longest_bar` function. It is allowed in Python. This sorting method is also called [`selecting sorting` algorithm](https://en.wikipedia.org/wiki/Selection\_sort).
 
 ```python
 def sort_bar_length(bars):
@@ -194,10 +193,9 @@ def sort_bar_length(bars):
     return sorted_bars
 ```
 
-### A2_d. Python List Functions
+#### A2\_d. Python List Functions
 
-Python has built-in method `sorted()` that could sort a list easily. `max()` and `min()` would find the largest and smallest item in the list. 
-
+Python has built-in method `sorted()` that could sort a list easily. `max()` and `min()` would find the largest and smallest item in the list.
 
 ```python
 barnet = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 1.8, 2.6]
@@ -209,43 +207,48 @@ print("bars in descending order:", sorted(barnet, reverse=True))
 print("Total bar length is", sum(barnet), "m.")
 ```
 
-    Longest bar is 3.7 m.
-    Shortest bar is 1.6 m.
-    bars in ascending order: [1.6, 1.8, 1.8, 1.8, 2.4, 2.6, 2.7, 2.8, 3.1, 3.3, 3.4, 3.6, 3.7]
-    bars in descending order: [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
-    Total bar length is 34.6 m.
+```
+Longest bar is 3.7 m.
+Shortest bar is 1.6 m.
+bars in ascending order: [1.6, 1.8, 1.8, 1.8, 2.4, 2.6, 2.7, 2.8, 3.1, 3.3, 3.4, 3.6, 3.7]
+bars in descending order: [3.7, 3.6, 3.4, 3.3, 3.1, 2.8, 2.7, 2.6, 2.4, 1.8, 1.8, 1.8, 1.6]
+Total bar length is 34.6 m.
+```
+
+***
+
+B. Data Management\
 
 
----
 
-<a id='B1'></a>
+### B1. Gridshell Data
 
-# B. Data Management <br/>
-## B1. Gridshell Data
-### Question: 
+#### Question:
+
 While digging deep into the design and fabrication, you start to accumulating information about the bars, including the length, dimension, bar stress, etc. How would you hold your information?
 
-| bar No. | Length (m) | Dimension (mm) | Stress (N/mm<sup>2</sup>) |
-| :---: | :---: | :---: | :---: |
-| 1 | 1.6 | 2 | 275 |
-| 2 | 3.6 | 2 | 185 |
-| 3 | 2.4 | 2 | 105 |
-| 4 | 3.4 | 2 | 134 |
-| 5 | 2.7 | 2 | 155 |
-| 6 | 2.8 | 2 | 265 |
-| 7 | 3.3 | 2 | 150 |
-| 8 | 3.1 | 2 | 185 |
-| 9 | 3.7 | 2 | 124 |
-| 10 | 1.8 | 2 | 234 |
-| 11 | 1.8 | 2 | 259 |
-| 12 | 2.6 | 2 | 201 |
+| bar No. | Length (m) | Dimension (mm) | Stress (N/mm2) |
+| :-----: | :--------: | :------------: | :------------: |
+|    1    |     1.6    |        2       |       275      |
+|    2    |     3.6    |        2       |       185      |
+|    3    |     2.4    |        2       |       105      |
+|    4    |     3.4    |        2       |       134      |
+|    5    |     2.7    |        2       |       155      |
+|    6    |     2.8    |        2       |       265      |
+|    7    |     3.3    |        2       |       150      |
+|    8    |     3.1    |        2       |       185      |
+|    9    |     3.7    |        2       |       124      |
+|    10   |     1.8    |        2       |       234      |
+|    11   |     1.8    |        2       |       259      |
+|    12   |     2.6    |        2       |       201      |
 
-### Answer:
-In this case, we can create three lists, containing information of length, dimension, and stress respectively. However, this solution is not efficient nor clear, especially when our data set is big. Here we would introduce a new collection type - [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries). 
+#### Answer:
 
-### B1_a. Create a Dictionary
+In this case, we can create three lists, containing information of length, dimension, and stress respectively. However, this solution is not efficient nor clear, especially when our data set is big. Here we would introduce a new collection type - [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries).
+
+#### B1\_a. Create a Dictionary
+
 First, let's create a dictionary to save all the lengths of the bars. The key is the index of the bar, and the item is the length.
-
 
 ```python
 bar_length_list = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
@@ -259,11 +262,11 @@ for i in range(len(bar_length_list)):
 print(gridshell_dict)
 ```
 
-    {0: 1.6, 1: 3.6, 2: 2.4, 3: 3.4, 4: 2.7, 5: 2.8, 6: 3.3, 7: 3.1, 8: 3.7, 9: 1.8, 10: 1.8, 11: 2.6}
+```
+{0: 1.6, 1: 3.6, 2: 2.4, 3: 3.4, 4: 2.7, 5: 2.8, 6: 3.3, 7: 3.1, 8: 3.7, 9: 1.8, 10: 1.8, 11: 2.6}
+```
 
-
-Note that dictionaries are indexed by keys, which can be not only numbers, but also other immutable type, such as strings. 
-
+Note that dictionaries are indexed by keys, which can be not only numbers, but also other immutable type, such as strings.
 
 ```python
 bar_length_list = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
@@ -278,12 +281,9 @@ for i in range(len(bar_length_list)):
 print(gridshell_dict)
 ```
 
-    {'bar_0': 1.6, 'bar_1': 3.6, 'bar_2': 2.4, 'bar_3': 3.4, 'bar_4': 2.7, 'bar_5': 2.8, 'bar_6': 3.3, 'bar_7': 3.1, 'bar_8': 3.7, 'bar_9': 1.8, 'bar_10': 1.8, 'bar_11': 2.6}
+#### B1\_b. Add Values to Dictionary
 
-
-### B1_b. Add Values to Dictionary
 Now let's save more information.
-
 
 ```python
 bar_length_list = [1.6, 3.6, 2.4, 3.4, 2.7, 2.8, 3.3, 3.1, 3.7, 1.8, 1.8, 2.6]
@@ -304,46 +304,35 @@ for i in range(len(bar_length_list)):
 print(gridshell_dict)
 ```
 
-    {0: {'length': 1.6, 'dimension': 2, 'stress': 275}, 1: {'length': 3.6, 'dimension': 2, 'stress': 185}, 2: {'length': 2.4, 'dimension': 2, 'stress': 105}, 3: {'length': 3.4, 'dimension': 2, 'stress': 134}, 4: {'length': 2.7, 'dimension': 2, 'stress': 155}, 5: {'length': 2.8, 'dimension': 2, 'stress': 265}, 6: {'length': 3.3, 'dimension': 2, 'stress': 150}, 7: {'length': 3.1, 'dimension': 2, 'stress': 185}, 8: {'length': 3.7, 'dimension': 2, 'stress': 124}, 9: {'length': 1.8, 'dimension': 2, 'stress': 234}, 10: {'length': 1.8, 'dimension': 2, 'stress': 259}, 11: {'length': 2.6, 'dimension': 2, 'stress': 201}}
+#### B1\_c. Access a Dictionary
 
-
-### B1_c. Access a Dictionary
 We could easily find the information on a specific bar. For example, let's find the information on bar `3`.
-
 
 ```python
 index = 3
 print("bar", index, "information", gridshell_dict[index])
 ```
 
-    bar 3 information {'length': 3.4, 'dimension': 2, 'stress': 134}
+#### B1\_d. Modify a Dictionary
 
-
-### B1_d. Modify a Dictionary
 Similar to the list, we can modify information in the dictionary. If we find the stress of bar 3 is incorrect, we could modify it.
-
 
 ```python
 gridshell_dict[index]["stress"] = 154
 print("bar", index, "information", gridshell_dict[index])
 ```
 
-    bar 3 information {'length': 3.4, 'dimension': 2, 'stress': 154}
+***
 
+### B2. Calculate Voussoir Volume
 
----
+#### Question:
 
-<a id='B2'></a>
-
-## B2. Calculate Voussoir Volume
-### Question: 
-You have a dictionary containing the surface area and thickness of the voussoir. Now you want to calculate the volume of each piece, and add the number to the dictionary. 
+You have a dictionary containing the surface area and thickness of the voussoir. Now you want to calculate the volume of each piece, and add the number to the dictionary.
 
 $$
 volume = area * thickness
 $$
-
-
 
 ```python
 # vault dictionary
@@ -357,9 +346,7 @@ vault = {
 }
 ```
 
-### Answer:
-
-
+#### Answer:
 
 ```python
 # iterate through the dictionary
@@ -374,22 +361,13 @@ for key in vault.keys():
     vault[key]["volume"] = v_volume
 ```
 
-    Voussior 0 volume: 132090
-    Voussior 1 volume: 157320
-    Voussior 2 volume: 141120
-    Voussior 3 volume: 159980
-    Voussior 4 volume: 225620
-    Voussior 5 volume: 240000
+#### Exercise: Calculate Voussoir Weight
 
+Now you decide the voussoir would be cut from limestone, and its density is 2160 kg/m3, could you calculate the weight of each piece and add it to the dictionary?
 
-<a id='exB2'></a>
-
-### Exercise: Calculate Voussoir Weight
-Now you decide the voussoir would be cut from limestone, and its density is 2160 kg/m<sup>3</sup>, could you calculate the weight of each piece and add it to the dictionary?
 $$
 weight = volume * thickness
 $$
-
 
 ```python
 density = 2160  # kg/m3
@@ -399,17 +377,9 @@ for key in vault.keys():
     # please write down your answer here
 ```
 
+***
 
-      Input In [18]
-        # please write down your answer here
-                                            ^
-    SyntaxError: unexpected EOF while parsing
-
-
-
----
-### Answer:
-
+#### Answer:
 
 ```python
 density = 2160  # kg/m3
@@ -427,17 +397,4 @@ for key in vault.keys():
     # add the volume to the dictionary
     vault[key]["volume"] = v_volume
     vault[key]["weight"] = v_weight
-```
-
-    Voussior 0 volume: 132090 weight: 0.29
-    Voussior 1 volume: 157320 weight: 0.34
-    Voussior 2 volume: 141120 weight: 0.3
-    Voussior 3 volume: 159980 weight: 0.35
-    Voussior 4 volume: 225620 weight: 0.49
-    Voussior 5 volume: 240000 weight: 0.52
-
-
-
-```python
-
 ```
