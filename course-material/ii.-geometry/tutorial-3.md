@@ -13,19 +13,19 @@
 #### Content:
 
 * A. bar Length
-  * A1. [Find the Longest Bar](tutorial-3.md#A1)
-  * A2. [Sort the Bars](tutorial-3.md#A2)
+  * A1. [Find the Longest Bar](tutorial-3.md#a1.-find-the-longest-bar)
+  * A2. [Sort the Bars](tutorial-3.md#a2.-sort-the-bars)
 * B. Data Management
-  * B1. [Gridshell Data](tutorial-3.md#B1)
-  * B2. [Calculate Voussoir Volume](tutorial-3.md#B2)
+  * B1. [Gridshell Data](tutorial-3.md#b1.-gridshell-data)
+  * B2. [Calculate Voussoir Volume](tutorial-3.md#b2.-calculate-voussoir-volume)
 
 #### Exercise:
 
-* [Calculate Voussoir Weight](tutorial-3.md#exB2)
+* [Calculate Voussoir Weight](tutorial-3.md#b2.-calculate-voussoir-volume)
 
 #### Assignment:
 
-* Calculate Transportation Turns
+* [Calculate Transportation Turns](assignment-1.md)
 
 A. bar Length\
 
