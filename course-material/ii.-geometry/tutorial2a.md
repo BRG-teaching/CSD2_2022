@@ -6,7 +6,7 @@
 **Code Link**
 * [Introduction to Jupyter Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FIntroduction%2FJupyter\_Notebook\_Markdown\_Guide.ipynb)
 
-* [Tutorial 2 Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/f057575?labpath=2\_Geometry%2FIntroduction%2FJupyter\_Notebook\_Markdown\_Guide.ipynb)
+* [Tutorial 2 Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/ca2aada?labpath=2_Geometry%2FTutorial2%2Fweek_2_lecture.ipynb)
 
 
 **Learning Goals:**
