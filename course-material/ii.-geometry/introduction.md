@@ -1,5 +1,20 @@
 # Introduction
 
+{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/f057575?labpath=%2F2_Geometry%2FIntroduction%2FIntroductionToJupyterNotebook.ipynb" %}
+Introduction to Jupyter Notebook
+{% endembed %}
+
+
+{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/f057575?labpath=2_Geometry%2FIntroduction%2FJupyter_Notebook_Markdown_Guide.ipynb" %}
+Markdown
+{% endembed %}
+
+{% embed url="https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022/f057575?labpath=2_Geometry%2FIntroduction%2Fhello_world.ipynb" %}
+Hello World
+{% endembed %}
+
+---
+
 ## Introduction to Jupyter Notebook
 
 Some of you might be familiar with using an IPython shell to run the code line by line or creating custom Python Scripts in CAD applications. This is great, but for more elaborate use of coding in Architecture, and especially, for learning and sharing your coding knowlege we will introduce another tool: The Jupyter Notebook.
