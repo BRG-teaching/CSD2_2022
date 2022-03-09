@@ -4,6 +4,11 @@
 
 ### Computational Structural Design II Intro to coding in Python and the Jupyter notebook II
 
+**Code Link:**
+
+* [Tutorial 3 Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/21935a3?labpath=2\_Geometry%2FTutorial3%2Fweek\_3\_slides.ipynb)
+* [Assignment 1 Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/21935a3?labpath=2\_Geometry%2FTutorial3%2Fweek\_3\_assignment.ipynb)
+
 **Learning Goal:**
 
 * understand how to write a function
