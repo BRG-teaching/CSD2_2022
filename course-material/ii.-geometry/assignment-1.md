@@ -18,7 +18,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 Complete the following Assignment following the steps below:
 
-Use the [Assignment1 Jupyter Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/21935a3?labpath=2\_Geometry%2FTutorial3%2Fweek\_3\_assignment.ipynb) to develop your answer.
+Use the [Assignment1 Jupyter Notebook](https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/2\_Geometry/Tutorial3/week\_3\_assignment.ipynb) to develop your answer.
 
 Then answer the questions on the following document:
 
