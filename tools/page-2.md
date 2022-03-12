@@ -2,15 +2,13 @@
 
 Throughout the CSD2 course, Jupyter notebooks will be used in all the next sessions, for teaching and coding together.
 
-The notebook is the perfect tool because it is built as an interactive web application that allows us to develop and run our code block by block and immediately see results without worrying constantly about software packages.
+The notebook is the perfect tool because it is built as an interactive web application that allows us to develop and run our code block by block and immediately see results without worrying about installing additional software packages.
 
-Before this class, you have received an [Introduction to Jupyter](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/HEAD?labpath=%2F2\_Geometry%2FIntroduction%2FIntroductionToJupyterNotebook.ipynb) link to a Jupyter notebook that the CSD2 team has created and is running using your browser.
-
-The reason it is called notebook is because it can contain live code, rich text elements such as equations, links, images, tables, and so on.
+The reason it is called **notebook** is because it can contain live code, rich text elements such as equations, links, images, tables, and so on.
 
 ### Create a Jupyter Notebook
 
-When you navigate to the link you received, you will see a dashboard. In this dashboard, you can see some important features that are labeled in red: you can see all the files in the current folder, show all the running notebooks, and create a new notebook or others such as text file, folder and a terminal. Hovering your cursor to the toolbar shows you the function of the tool and if you press the menu, it will show you the drop down list.
+When you open a link to a Jupyter Notebook, you will see a dashboard. Here, you can see some important features that are labeled in red, for example, a Main Menu, a Folder Tree, a Tools Ribbon and a Canvas. Take a moment to explore the main functionalities of the Jupyter Notebook web interface.
 
 ![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/20676eaf165a73675433f284799f874a45835718/2\_Geometry/Introduction/Files/Introduction/IntroToJupyterNB\_Slide1.png?raw=true)
 
@@ -75,7 +73,5 @@ If you close the notebook browser tab, the notebook actually is not closed, it i
 [PythonNumericalMethods](https://pythonnumericalmethods.berkeley.edu/notebooks/chapter01.05-Logial-Expressions-and-Operators.html)
 
 [RealPython](https://realpython.com/jupyter-notebook-introduction/#adding-rich-content)
-
-
 
 Binder of everything [![Binder](https://mybinder.org/badge\_logo.svg)](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2\_2022.git/23e49aaa602262a80c66f25b32efa61b7fde50a8)
