@@ -17,7 +17,7 @@
   * [Introduction](course-material/ii.-geometry/IntroductionToJupyterNotebook.md)
   * [Tutorial 2](course-material/ii.-geometry/tutorial2a.md)
   * [Tutorial 3](course-material/ii.-geometry/tutorial-3.md)
-  * [Tutorial 4](course-material/ii.-geometry/tutorial-4.md)
+  * [Tutorial 4](course-material/ii.-geometry/week_4.md)
   * [Assignment 1](course-material/ii.-geometry/assignment-1.md)
   <!-- * [Recap](course-material/ii.-geometry/recap.md) -->
 * [III. Materialization](course-material/iii.-materialization/README.md)
