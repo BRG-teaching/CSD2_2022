@@ -21,7 +21,7 @@
 Inside a three-dimensional(3D) Cartesian coordinate system, a **point** is represented by 3 numbers, which represent the values along the X, Y and Z axis of the system. If you are familiar with Rhino and Grasshopper, a point can be created numerically by inputing 3 values. 
 
 </br>
-<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/53513ad8ffd913fba9f70609b0700eab24291594/2_Geometry/Introduction/Files/Introduction/IntroToJupyterNB_Comp4.png?raw=true" style="margin-left:auto; margin-right:auto"/>
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/6e83888362c6734355d5abf42e9e573c3afb3052/2_Geometry/Tutorial4/img/geo_pt_gh.png?raw=true" style="margin-left:auto; margin-right:auto"/>
 </br>
 
 ## A2. Describe a Point by Python list
@@ -426,8 +426,7 @@ print(my_vector == Vector(1, 2, 0) * 2)
 ### C3_d: Exercise: Draw Vectors
 Question: Given three points: pointA: [0, 0, 0], pointB: [0, 1, 0], pointC: [3, 2, 0]. You need to draw three vectors as shown in the following picture. 
 
-<img src="img/vectors.jpg" width="500" style="margin-left:auto; margin-right:auto"/>
-</br>
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/6e83888362c6734355d5abf42e9e573c3afb3052/2_Geometry/Tutorial4/img/vectors.jpg?raw=true" style="margin-left:auto; margin-right:auto"/>
 
 
 ```python
