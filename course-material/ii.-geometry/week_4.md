@@ -17,17 +17,17 @@
 * [C. Geometry and Visualization](week\_4.md#visualization)
 * [D. Geometry Operations](week\_4.md#Operations)
 
-
 ## A. Geometry Data
 
 ### A1. Describe a point in Rhinoceros Grasshopper
 
 Inside a three-dimensional(3D) Cartesian coordinate system, a **point** is represented by 3 numbers, which represent the values along the X, Y and Z axis of the system. If you are familiar with Rhino and Grasshopper, a point can be created numerically by inputing 3 values.
 
-</br>
-<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/6e83888362c6734355d5abf42e9e573c3afb3052/2_Geometry/Tutorial4/img/geo_pt_gh.png?raw=true" style="margin-left:auto; margin-right:auto"/>
-</br>
+\
+\
 
+
+![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/6e83888362c6734355d5abf42e9e573c3afb3052/2\_Geometry/Tutorial4/img/geo\_pt\_gh.png?raw=true)
 
 ### A2. Describe a Point by Python list
 
@@ -64,8 +64,7 @@ Besides **point**, basic geometry types - such as vector, line, plane - can be d
 | polygon  | (\[x1, y1, z1], \[x2, y2, z2], \[x3, y3, z3, ...]) | collection of points        |
 | frame    | (\[x0, y0, z0], \[x1, y1, z1], \[x2, y2, z2])      | \[origin, vector, vector]   |
 
-\
-
+\\
 
 ***
 
@@ -204,8 +203,7 @@ Point(0.000, 5.000, 1.000)
 
 COMPAS provides a number of ready-to-use primitive objects. Available primitive objects include `Point`, `Vector`, `Line`, `Plane`, `Polyline`, `Polygon`, `Circle`, `Frame`, etc. All COMPAS primitives can be used interchangeably with native Python objects as input for geometry functions and object methods. For a complete overview, you can visit the [API Reference](https://compas.dev/compas/latest/api/compas.geometry.html).
 
-\
-
+\\
 
 | Geometry Object | COMPAS Class                         |
 | --------------- | ------------------------------------ |
@@ -218,8 +216,7 @@ COMPAS provides a number of ready-to-use primitive objects. Available primitive 
 | polygon         | polygon = Polygon(points)            |
 | frame           | frame = Frame(point, vector, vector) |
 
-\
-
+\\
 
 ```python
 from compas.geometry import Point, Line
@@ -376,8 +373,7 @@ True
 
 Question: Given three points: pointA: \[0, 0, 0], pointB: \[0, 1, 0], pointC: \[3, 2, 0]. You need to draw three vectors as shown in the following picture.
 
-<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/6e83888362c6734355d5abf42e9e573c3afb3052/2_Geometry/Tutorial4/img/vectors.jpg?raw=true" style="margin-left:auto; margin-right:auto"/>
-
+![](https://github.com/BlockResearchGroup/CSD2\_2022/blob/6e83888362c6734355d5abf42e9e573c3afb3052/2\_Geometry/Tutorial4/img/vectors.jpg?raw=true)
 
 ```python
 from compas.geometry import Point
