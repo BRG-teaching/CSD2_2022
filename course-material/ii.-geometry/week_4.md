@@ -21,8 +21,7 @@
 Inside a three-dimensional(3D) Cartesian coordinate system, a **point** is represented by 3 numbers, which represent the values along the X, Y and Z axis of the system. If you are familiar with Rhino and Grasshopper, a point can be created numerically by inputing 3 values. 
 
 </br>
-<img src = "img/geo_pt_gh.png" width="500" style="margin-left:auto; margin-right:auto"/>
-<center>create a point in Rhinoceros Grasshopper 3D</center>
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/53513ad8ffd913fba9f70609b0700eab24291594/2_Geometry/Introduction/Files/Introduction/IntroToJupyterNB_Comp4.png?raw=true" style="margin-left:auto; margin-right:auto"/>
 </br>
 
 ## A2. Describe a Point by Python list
@@ -307,10 +306,8 @@ plotter = Plotter(show_axes=True)
 plotter.add(my_point)
 plotter.show()
 ```
-
-
     
-![png](week_4_files/week_4_19_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_19_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -332,12 +329,8 @@ plotter.add(my_line, draw_points=False, draw_as_segment=True)
 plotter.zoom_extents()
 plotter.show()
 ```
-
-
     
-![png](week_4_files/week_4_21_0.png)
-    
-
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_21_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
 
 ## C3. Vector
 A vector is a geometric object that has magnitude and direction. In Python, it can be represented through a list of x, y, z components.
@@ -457,12 +450,8 @@ plotter.zoom_extents()
 plotter.show()
 
 ```
-
-
     
-![png](week_4_files/week_4_35_0.png)
-    
-
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_35_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
 
 
 ```python
@@ -502,7 +491,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_36_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_36_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -526,7 +515,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_38_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_38_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -546,7 +535,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_39_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_39_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -570,7 +559,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_41_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_41_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -595,7 +584,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_43_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_43_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -626,7 +615,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_45_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_45_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -677,7 +666,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_50_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_50_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -708,7 +697,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_52_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_52_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -738,7 +727,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_54_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_54_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
@@ -767,7 +756,7 @@ plotter.show()
 
 
     
-![png](week_4_files/week_4_56_0.png)
+<img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/e80a3ce74fa5577abcca03c187181b1a9d446e55/2_Geometry/Tutorial4/week_4_files/week_4_56_0.png?raw=true" style="margin-left:auto; margin-right:auto"/>
     
 
 
