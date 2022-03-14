@@ -421,14 +421,7 @@ plotter.add(vector1, point=point1, color=(1, 0, 0))
 plotter.add(vector2, point=point2, color=(0, 1, 0))
 plotter.add(vector3, point=point1, color=(0, 0, 1))
 
-plotter.zoom_extents()
-
-# # save image
-# import os
-# HERE = os.getcwd()
-# path = os.path.join(HERE, 'img/vectors.jpg')
-# plotter.save(path) # call save before plotter.show; after plotter.show() is called, a new figure is created. 
-
+plotter.zoom_extents() 
 plotter.show()
 ```
 
@@ -686,30 +679,4 @@ print(f1 == f2)
 
 ```
 True
-```
-
-### D2. Intersections
-
-To compute intersections between primitives and/or shapes, use the intersection functions.
-
-```python
-from compas.geometry import intersection_line_plane
-line = [1, 1, 0], [1, 1, 1]
-plane = [0, 0, 0], [0, 0, 1]
-intersection_line_plane(line, plane)
-```
-
-```
-[1.0, 1.0, 0.0]
-```
-
-```python
-from compas.geometry import Plane, intersection_line_plane
-line = [1, 1, 0], [1, 1, 1]
-plane = Plane.worldXY()
-intersection_line_plane(line, plane)
-```
-
-```
-[1.0, 1.0, 0.0]
 ```
