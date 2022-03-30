@@ -66,8 +66,6 @@ Besides **point**, basic geometry types - such as vector, line, plane - can be d
 | polygon  | (\[x1, y1, z1], \[x2, y2, z2], \[x3, y3, z3, ...]) | collection of points        |
 | frame    | (\[x0, y0, z0], \[x1, y1, z1], \[x2, y2, z2])      | \[origin, vector, vector]   |
 
-\\
-
 ***
 
 #### Elements of argorithms - short recap
