@@ -1,42 +1,49 @@
-# Computational Structural Design II - Geometry, Data and Visualization
+# Tutorial 5
 
-### Learning Goal: 
-- Understand Mesh Datastructure
-- How to Construct a Mesh
-- Mehs Vertices, Faces, Edges
+## Computational Structural Design II - Geometry, Data and Visualization
 
-### Content:
-- [A. Mesh Introduction](#MeshIntro)
-- [B. Mesh Vertex, Edge, Face](#MeshB)
-- [C. Mesh Normals](#MeshC)
-- [D. Exercise: Geodesic Dome](#MeshD)
----
+#### Learning Goal:
+
+* Understand Mesh Datastructure
+* How to Construct a Mesh
+* Mehs Vertices, Faces, Edges
+
+#### Content:
+
+* [A. Mesh Introduction](tutorial-5.md#MeshIntro)
+* [B. Mesh Vertex, Edge, Face](tutorial-5.md#MeshB)
+* [C. Mesh Normals](tutorial-5.md#MeshC)
+* [D. Exercise: Geodesic Dome](tutorial-5.md#d.-exercise-geodesic-dome)
 
 
+
+***
+
+***
 
 ```python
 # ! pip install compas_notebook
 ```
 
-<a id='MeshIntro'></a>
-# A. Mesh
-## A1. Mesh in Form Finding
-Form finding a cable-net or generating a compression-only vault usually starts with a **2D mesh**, which represents the horizontal projection of the eventual structure. The line segments of this mesh is called **Pattern**. The following picture shows you an existing structure and its corresponding pattern. The form-found **Thrust** is also a mesh, but in 3D space. 
+## A. Mesh Introduction
 
-![img](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-M730QpQnbAMvz44bqhc%2F-MOff3g181Ib3KNlmKgc%2F-MOfhAWYJRaSfNZucLzL%2Fimage.png?alt=media&token=839252d4-a77e-42cb-81cf-4b6071a5c598)
-<center>Nave Vault of the Sherborne Abbey, Dorset, UK (photo by Lawrence Lew)</center>
-</br>
+### A1. Mesh in Form Finding
+
+Form finding a cable-net or generating a compression-only vault usually starts with a **2D mesh**, which represents the horizontal projection of the eventual structure. The line segments of this mesh is called **Pattern**. The following picture shows you an existing structure and its corresponding pattern. The form-found **Thrust** is also a mesh, but in 3D space.
+
+![img](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-M730QpQnbAMvz44bqhc%2F-MOff3g181Ib3KNlmKgc%2F-MOfhAWYJRaSfNZucLzL%2Fimage.png?alt=media\&token=839252d4-a77e-42cb-81cf-4b6071a5c598)
+
+Nave Vault of the Sherborne Abbey, Dorset, UK (photo by Lawrence Lew)\
 
 
+### A2. Generate Polygon - Geometry and Topology
 
-## A2. Generate Polygon - Geometry and Topology
-Firstly, let's create 4 polygons using `compas.geometry.Polygon` and visualize them in different colors. Make sure that the winding order (point order) of the polygons are either all clockwise or all counter-clockwise. 
+Firstly, let's create 4 polygons using `compas.geometry.Polygon` and visualize them in different colors. Make sure that the winding order (point order) of the polygons are either all clockwise or all counter-clockwise.
 
-<img src="img/week5_1.png" width="500" style="margin-left:auto; margin-right:auto"/>
-</br>
+![
+](../../.gitbook/assets/image.png)
 
-### A2_a. Generate Polygon from Points
-
+#### A2\_a. Generate Polygon from Points
 
 ```python
 from compas.geometry import Polygon
@@ -57,23 +64,25 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-### A2_b. Generate Polygon Using Connectivity
-If we change the xyz coordinates of one point in the polygon, the three other polygons will not be influenced. This is because no topological information between the polygons is stored. Another way to construct the polygons is to create a `list` collection contains points information. We can refer to this list to generate the polygons. In this way, we know which points are connected and which are not. 
+#### A2\_b. Generate Polygon Using Connectivity
 
-| Point Index | xyz |
-| :---: | :---: |
-| 0 | (0, 0, 0) |
-| 1 | (2.5, 0, 0) |
-| 2 | (4, 0, 0) |
-| 3 | (0, 2, 0) |
-| 4 | (1.5, 2, 0) |
-| 5 | (4, 2, 0) |
-| 6 | (0, 4, 0) |
-| 7 | (2.5, 4, 0) |
-| 8 | (4, 4, 0) |
+If we change the xyz coordinates of one point in the polygon, the three other polygons will not be influenced. This is because no topological information between the polygons is stored. Another way to construct the polygons is to create a `list` collection contains points information. We can refer to this list to generate the polygons. In this way, we know which points are connected and which are not.
 
-<img src="img/week5_2.png" width="500" style="margin-left:auto; margin-right:auto"/>
-</br>
+![](<../../.gitbook/assets/image (1).png>)
+
+| Point Index |     xyz     |
+| :---------: | :---------: |
+|      0      |  (0, 0, 0)  |
+|      1      | (2.5, 0, 0) |
+|      2      |  (4, 0, 0)  |
+|      3      |  (0, 2, 0)  |
+|      4      | (1.5, 2, 0) |
+|      5      |  (4, 2, 0)  |
+|      6      |  (0, 4, 0)  |
+|      7      | (2.5, 4, 0) |
+|      8      |  (4, 4, 0)  |
+
+\
 
 
 ```python
@@ -98,16 +107,13 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-## A3. Mesh and COMPAS Mesh
+### A3. Mesh and COMPAS Mesh
+
 A mesh is a collection of polygons arranged in a way that it can not only conserve geometric information but also topological information. Here is the API reference of COMPAS mesh: https://compas.dev/compas/latest/api/generated/compas.datastructures.Mesh.html#compas.datastructures.Mesh
 
 There are different ways to construct a mesh.
 
-### A3_a. COMPAS Mesh
-
-
-
-
+#### A3\_a. COMPAS Mesh
 
 ```python
 from compas.datastructures import Mesh
@@ -115,12 +121,13 @@ mesh = Mesh()
 print(mesh)
 ```
 
-    <Mesh with 0 vertices, 0 faces, 0 edges>
+```
+<Mesh with 0 vertices, 0 faces, 0 edges>
+```
 
+#### A3\_b. Build a COMPAS Mesh
 
-### A3_b. Build a COMPAS Mesh
 Meshes can be built from scratch by adding vertices and faces.
-
 
 ```python
 from compas.datastructures import Mesh
@@ -153,15 +160,11 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
+#### A3\_c. `Mesh.from_vertices_and_faces`
 
-![png](output_10_0.png)
-
-
-### A3_c. `Mesh.from_vertices_and_faces`
-`Mesh.from_vertices_and_faces` construct a mesh object from a list of vertices and faces. </br>
-API reference: https://compas.dev/compas/1.5.0/api/generated/compas.datastructures.Mesh.from_vertices_and_faces.html#compas.datastructures.Mesh.from_vertices_and_faces</br>
+`Mesh.from_vertices_and_faces` construct a mesh object from a list of vertices and faces.\
+API reference: https://compas.dev/compas/1.5.0/api/generated/compas.datastructures.Mesh.from\_vertices\_and\_faces.html#compas.datastructures.Mesh.from\_vertices\_and\_faces\
 Source code: https://github.com/compas-dev/compas/blob/81606f4580b5d4139e56b592f05354f965954388/src/compas/datastructures/mesh/mesh.py#L440
-
 
 ```python
 from compas.datastructures import Mesh
@@ -179,14 +182,13 @@ plotter = Plotter(show_axes=True)
 plotter.add(mesh, sizepolicy='absolute')
 plotter.zoom_extents()
 plotter.show()
-
 ```
 
-### A3_d. `Mesh.from_polygons`
-`Mesh.from_polygons` converts a series of polygons to a mesh. </br>
-API reference: https://compas.dev/compas/1.5.0/api/generated/compas.datastructures.Mesh.from_polygons.html</br>
-Github source code: https://github.com/compas-dev/compas/blob/main/src/compas/datastructures/mesh/mesh.py
+#### A3\_d. `Mesh.from_polygons`
 
+`Mesh.from_polygons` converts a series of polygons to a mesh.\
+API reference: https://compas.dev/compas/1.5.0/api/generated/compas.datastructures.Mesh.from\_polygons.html\
+Github source code: https://github.com/compas-dev/compas/blob/main/src/compas/datastructures/mesh/mesh.py
 
 ```python
 from compas.datastructures import Mesh
@@ -209,9 +211,9 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-## A4. Visualize Mesh in 3D Viewer
-Mesh is often used to represent 3D objects. We can use the 3D viewer to visualize the mesh. The following example visualize a thrust diagram that is exported from RhinoVault2.
+### A4. Visualize Mesh in 3D Viewer
 
+Mesh is often used to represent 3D objects. We can use the 3D viewer to visualize the mesh. The following example visualize a thrust diagram that is exported from RhinoVault2.
 
 ```python
 from compas.datastructures import Mesh
@@ -224,8 +226,7 @@ viewer.add(mesh)
 viewer.show()
 ```
 
-Let's pick up a random vertex in the mesh and move it 1 unit up along the z axis. 
-
+Let's pick up a random vertex in the mesh and move it 1 unit up along the z axis.
 
 ```python
 from compas.datastructures import Mesh
@@ -242,51 +243,49 @@ viewer.add(mesh)
 viewer.show()
 ```
 
----
-<a id='MeshB'></a>
-# B. Mesh Vertex, Edge, Face
+***
+
+## B. Mesh Vertex, Edge, Face
 
 Mesh has three main components: **Vertex**, **edge** and **face**.
 
-<img src="img/week5_3.png" width="1000" style="margin-left:auto; margin-right:auto"/>
-</br>
+![](<../../.gitbook/assets/image (2).png>)
 
-A vertex is a point in 3D space, represented by the [x, y, z] coordinate. 
+A vertex is a point in 3D space, represented by the \[x, y, z] coordinate.
 
 | Vertex Key | Coordinates |
-| :---: | :---: |
-| 0 | (0, 0, 0) |
-| 1 | (2, 0, 0) |
-| 2 | (2, 2, 0) |
-| 3 | (0, 2, 0) |
-| 4 | (1, 1, 2) |
+| :--------: | :---------: |
+|      0     |  (0, 0, 0)  |
+|      1     |  (2, 0, 0)  |
+|      2     |  (2, 2, 0)  |
+|      3     |  (0, 2, 0)  |
+|      4     |  (1, 1, 2)  |
 
-An edge connects two vertices together. 
+An edge connects two vertices together.
 
 | Edge Key | (u, v) |
-| :---: | :---: |
-| 0 | (0, 1) |
-| 1 | (1, 2) |
-| 2 | (2, 3) |
-| 3 | (0, 3) |
-| 4 | (1, 4) |
-| 5 | (2, 4) |
-| 6 | (3, 4) |
-| 7 | (0, 4) |
+| :------: | :----: |
+|     0    | (0, 1) |
+|     1    | (1, 2) |
+|     2    | (2, 3) |
+|     3    | (0, 3) |
+|     4    | (1, 4) |
+|     5    | (2, 4) |
+|     6    | (3, 4) |
+|     7    | (0, 4) |
 
-A face is constructed by connecting the edges together. A 3D geometry can be constructed by connecting faces together. 
+A face is constructed by connecting the edges together. A 3D geometry can be constructed by connecting faces together.
 
 | Face Key | Face Vertices |
-| :---: | :---: |
-| 0 | (0, 1, 4) |
-| 1 | (1, 2, 4) |
-| 2 | (2, 3, 4) |
-| 3 | (0, 3, 4) |
+| :------: | :-----------: |
+|     0    |   (0, 1, 4)   |
+|     1    |   (1, 2, 4)   |
+|     2    |   (2, 3, 4)   |
+|     3    |   (0, 3, 4)   |
 
+### B1. Access Mesh Vertices, Faces and Edges
 
-## B1. Access Mesh Vertices, Faces and Edges
 `mesh.vertices()`, `mesh.edges(`), `mesh.faces()` access the vertices, edges and faces of the mesh data structure. Note that these methods return generator objects that have to be consumed by iteration.
-
 
 ```python
 # generator objects
@@ -302,7 +301,6 @@ print(mesh.edges())
 print(mesh.faces())
 ```
 
-
 ```python
 print("Vertices")
 for vertex in mesh.vertices():
@@ -317,7 +315,6 @@ for face in mesh.faces():
      print(face, end=" ")        
 ```
 
-
 ```python
 vertices = list(mesh.vertices())
 print(vertices)
@@ -329,8 +326,7 @@ faces = list(mesh.faces())
 print(faces)
 ```
 
-## B2. Visualize the Points
-
+### B2. Visualize the Points
 
 ```python
 from compas.datastructures import Mesh
@@ -354,9 +350,7 @@ viewer.add(mesh)
 viewer.show()
 ```
 
-## B3. Visualize the Lines
-
-
+### B3. Visualize the Lines
 
 ```python
 from compas.datastructures import Mesh
@@ -376,8 +370,7 @@ for edge in mesh.edges():
 viewer.show()
 ```
 
-## B4. Visualize the Faces
-
+### B4. Visualize the Faces
 
 ```python
 from compas.datastructures import Mesh
@@ -397,17 +390,17 @@ for fkey in mesh.faces():
 viewer.show()
 ```
 
----
-<a id='MeshC'></a>
-# C. Mesh Normals
+***
+
+## C. Mesh Normals
+
 There are two kinds of normals that. Face normals are orthongal vectors to the faces of the mesh. Whereas vertex normals are orthongal to the vertices.
 
-<img src="img/week5_4.png" width="800" style="margin-left:auto; margin-right:auto"/>
-</br>
+![](<../../.gitbook/assets/image (4).png>)
 
-## C1. Face Normals
+### C1. Face Normals
+
 The face normal is a vector that describes the direction that the face polygon is facing. The winding of the vertices determines the direction of the face normal.
-
 
 ```python
 from compas.datastructures import Mesh
@@ -429,9 +422,9 @@ viewer.add(mesh)
 viewer.show()
 ```
 
-## C2. Vertex Normals
-The vertex normal is the weighted average of the normals of the neighboring faces.
+### C2. Vertex Normals
 
+The vertex normal is the weighted average of the normals of the neighboring faces.
 
 ```python
 from compas.datastructures import Mesh
@@ -453,16 +446,18 @@ viewer.add(mesh)
 viewer.show()
 ```
 
----
+***
 
-<a id='MeshD'></a>
-# D. Exercise: Geodesic Dome
-## D1. Load Mesh
-In the following example, we will try to materialize a geodesic dome. We will use spheres/cylinders, cylinders, polygons to represent joints, bars and facades.  
+## D. Exercise: Geodesic Dome
 
-<img src="https://i.pinimg.com/originals/0e/ce/2f/0ece2f10e2f7ef68e8603fc07d786bd6.jpg" width="400" style="margin-left:auto; margin-right:auto"/>
-</br>
+### D1. Load Mesh
 
+In the following example, we will try to materialize a geodesic dome. We will use spheres/cylinders, cylinders, polygons to represent joints, bars and facades.
+
+\
+
+
+![](https://i.pinimg.com/originals/0e/ce/2f/0ece2f10e2f7ef68e8603fc07d786bd6.jpg)
 
 ```python
 from compas.datastructures import Mesh
@@ -476,8 +471,7 @@ viewer.add(mesh)
 viewer.show()
 ```
 
-## D2. Draw Joints
-
+### D2. Draw Joints
 
 ```python
 from compas.geometry import Sphere
@@ -490,7 +484,6 @@ for vkey in mesh.vertices():
 # viewer.add(mesh)
 viewer.show()
 ```
-
 
 ```python
 from compas.geometry import Cylinder, Plane, Circle
@@ -511,8 +504,7 @@ for vkey in mesh.vertices():
 viewer.show()
 ```
 
-## D3. Draw Bars
-
+### D3. Draw Bars
 
 ```python
 from compas.geometry import Plane, Vector, Circle, Cylinder
@@ -549,8 +541,7 @@ for (u, v) in mesh.edges():
 viewer.show()
 ```
 
-## D4. Draw Facades
-
+### D4. Draw Facades
 
 ```python
 from compas.geometry import Polygon, Translation, scale_vector
@@ -595,7 +586,6 @@ for fkey in mesh.faces():
         
 viewer.show()
 ```
-
 
 ```python
 from compas.geometry import Polygon, Translation, scale_vector, Scale, Frame
@@ -648,57 +638,35 @@ for fkey in mesh.faces():
 viewer.show()
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```
 
-
 ```python
-
 ```

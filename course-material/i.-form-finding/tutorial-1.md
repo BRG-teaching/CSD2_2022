@@ -1,12 +1,12 @@
 # Tutorial 1
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (5).png>)
 
 In tutorial 1, we will learn the basics of compas-RV2 and workflow for designing compression-only shell structures in Rhino. If you have not done so already, please install compas-RV2 following the instructions [**here**](../../tools/rv2.md).
 
 For this tutorial, we will be using the following Rhino file:
 
-{% file src="../../.gitbook/assets/CSD2_2022_compas-RV2_tutorial.3dm" %}
+{% file src="../../.gitbook/assets/CSD2_2022_compas-RV2_tutorial (1).3dm" %}
 
 ## Learning goals
 
