@@ -1,6 +1,6 @@
 # Tutorial 5
 
-## Computational Structural Design II - Geometry, Data and Visualization
+## Computational Structural Design II - Mesh Datastructure I
 
 #### Learning Goal:
 
