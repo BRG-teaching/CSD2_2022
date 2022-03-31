@@ -394,7 +394,7 @@ viewer.show()
 
 ## C. Mesh Normals
 
-There are two kinds of normals that. Face normals are orthongal vectors to the faces of the mesh. Whereas vertex normals are orthongal to the vertices.
+There are two kinds of normals that. Face normals are orthogonal vectors to the faces of the mesh. Whereas vertex normals are orthogonal to the vertices.
 
 ![](<../../.gitbook/assets/image (4).png>)
 
@@ -424,7 +424,7 @@ viewer.show()
 
 ### C2. Vertex Normals
 
-The vertex normal is the weighted average of the normals of the neighboring faces.
+The vertex normal is the weighted average of the normals of the neighbouring faces.
 
 ```python
 from compas.datastructures import Mesh
@@ -452,9 +452,7 @@ viewer.show()
 
 ### D1. Load Mesh
 
-In the following example, we will try to materialize a geodesic dome. We will use spheres/cylinders, cylinders, polygons to represent joints, bars and facades.
-
-\
+In the following example, we will try to materialize a geodesic dome. We will use spheres/cylinders, cylinders, polygons to represent joints, bars and facades.\
 
 
 ![](https://i.pinimg.com/originals/0e/ce/2f/0ece2f10e2f7ef68e8603fc07d786bd6.jpg)
@@ -544,50 +542,6 @@ viewer.show()
 ### D4. Draw Facades
 
 ```python
-from compas.geometry import Polygon, Translation, scale_vector
-from compas_notebook.app import App
-viewer = App()
-
-for vkey in mesh.vertices():
-    xyz = mesh.vertex_coordinates(vkey)
-    normal = mesh.vertex_normal(vkey)
-    
-    plane = Plane(xyz, normal) # center, normal
-    circle = Circle(plane, 0.1)
-    
-    cylinder = Cylinder(circle, 0.1)
-    viewer.add(cylinder, color=(1, 0, 0))
-    
-    
-for (u, v) in mesh.edges():
-    u_xyz = mesh.vertex_coordinates(u)
-    v_xyz = mesh.vertex_coordinates(v)
-
-# pipe:   circle ([plane, radius] | Circle) – The circle of the cylinder.
-#         height (float) – The height of the cylinder.
-    center = [0.5 * (a + b) for a, b in zip(u_xyz, v_xyz)]
-    normal = Vector.from_start_end(v_xyz, u_xyz)
-    plane = Plane(center, normal) # center, normal
-    circle = Circle(plane, 0.03)
-    
-    cylinder = Cylinder(circle, normal.length - 0.1)
-    viewer.add(cylinder)
-    
-dis = 0.05
-for fkey in mesh.faces():
-    points = mesh.face_coordinates(fkey)
-    polygon = Polygon(points)
-    
-    f_normal = mesh.face_normal(fkey)
-    T = Translation.from_vector(scale_vector(f_normal, dis))
-    polygon.transform(T)
-    
-    viewer.add(polygon, facecolor=(0, 0, 0.7))
-        
-viewer.show()
-```
-
-```python
 from compas.geometry import Polygon, Translation, scale_vector, Scale, Frame
 from compas_notebook.app import App
 
@@ -638,35 +592,3 @@ for fkey in mesh.faces():
 viewer.show()
 ```
 
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
-
-```python
-```
