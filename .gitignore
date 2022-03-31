@@ -133,3 +133,6 @@ dmypy.json
 **.rhl
 archive/
 **cam/
+
+# Mac .DS_Store
+.DS_Store
