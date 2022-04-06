@@ -17,7 +17,7 @@
 
 Google Colab Link:&#x20;
 
-[https://github.com/BlockResearchGroup/CSD2\_2022/blob/main/3\_Materialization/Tutorial6/tutorial6\_slides.ipynb](../../3\_Materialization/Tutorial6/tutorial6\_slides.ipynb)
+[https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/3\_Materialization/Tutorial6/tutorial6\_slides.ipynb](https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/3\_Materialization/Tutorial6/tutorial6\_slides.ipynb)
 
 ***
 
