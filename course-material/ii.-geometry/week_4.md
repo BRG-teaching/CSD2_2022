@@ -17,7 +17,17 @@
 * [C. Geometry and Visualization](week\_4.md#visualization)
 * [D. Geometry Operations](week\_4.md#Operations)
 
-Tutorial 4 on Google Colab: [Tutorial4](https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/2\_Geometry/Tutorial4/week\_4\_lecture.ipynb)
+Tutorial 4 on Google Colab:&#x20;
+
+Template:
+
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/2_Geometry/Tutorial4/week_4_lecture.ipynb" %}
+
+Full:&#x20;
+
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/2_Geometry/Tutorial4/week_4.ipynb" %}
+
+
 
 ## A. Geometry Data
 
