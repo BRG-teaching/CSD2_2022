@@ -31,7 +31,7 @@ e.g. Which vertices are connected with vertex 4? Which faces are surrounding ver
 \
 
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 We will first generate the polygon mesh in the last tutorial.
 
@@ -326,11 +326,13 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](../../.gitbook/assets/output\_17\_0.png)
+![](../../.gitbook/assets/output\_17\_0.png)
 
 ***
 
 ## B. Topology: Vertex, Face, Edge
+
+Mesh API reference: [https://compas.dev/compas/latest/api/generated/compas.datastructures.Mesh.html#compas.datastructures.Mesh](https://compas.dev/compas/latest/api/generated/compas.datastructures.Mesh.html#compas.datastructures.Mesh)
 
 ### B1. Vertex
 
@@ -367,7 +369,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_19\_0.png)
+![](../../.gitbook/assets/output\_19\_0.png)
 
 #### B1\_b. Vertex Degree
 
@@ -381,10 +383,6 @@ mesh = Mesh.from_meshgrid(dx=5, nx=5)
 
 vkey = mesh.get_any_vertex()
 print("vertex", vkey, "degree", mesh.vertex_degree(vkey))
-```
-
-```
-vertex 13 degree 4
 ```
 
 Color the vertices based on its vertex degree. The vertex with the highest degree should be red, while the vertex with the lowest degree should be white.
@@ -417,7 +415,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_23\_0.png)
+![](../../.gitbook/assets/output\_23\_0.png)
 
 The vertex degrees can be used to find supports.
 
@@ -438,21 +436,7 @@ viewer.add(mesh)
 viewer.show()
 ```
 
-```
----------------------------------------------------------------------------
-
-ModuleNotFoundError                       Traceback (most recent call last)
-
-<ipython-input-33-40d0de2860a3> in <module>
-      1 from compas.datastructures import Mesh
-      2 from compas.geometry import Sphere
-----> 3 from compas_notebook.app import App
-      4 
-      5 mesh = Mesh.from_json("https://raw.githubusercontent.com/BlockResearchGroup/CSD2_2022/main/3_Materialization/Tutorial5/data/simple_dome.json")
-
-
-ModuleNotFoundError: No module named 'compas_notebook'
-```
+![](<../../.gitbook/assets/image (1).png>)
 
 #### B1\_c. Vertex Faces
 
@@ -481,7 +465,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_27\_0.png)
+![](<../../.gitbook/assets/output\_27\_0 (1).png>)
 
 #### B1\_d. Vertex Area
 
@@ -496,10 +480,6 @@ mesh = Mesh.from_meshgrid(dx=5, nx=5)
 # find vertex tributary area
 vkey = mesh.get_any_vertex()
 print("vertex", vkey, "area", mesh.vertex_area(vkey))
-```
-
-```
-vertex 33 area 0.5
 ```
 
 ### B2. Face
@@ -533,7 +513,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_31\_0.png)
+![](../../.gitbook/assets/output\_31\_0.png)
 
 #### B2\_b. Face Degree
 
@@ -567,7 +547,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_33\_0.png)
+![](../../.gitbook/assets/output\_33\_0.png)
 
 ### B3. Edges
 
