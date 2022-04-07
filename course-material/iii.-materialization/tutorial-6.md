@@ -958,7 +958,7 @@ viewer.add(mesh)
 viewer.show()
 ```
 
-### D1\_a. Find Short Boundary
+### D1. Find Short Boundary
 
 ```python
 from compas.datastructures import Mesh
@@ -994,6 +994,8 @@ for edge in short_bdr_loop:
 
 viewer.show()
 ```
+
+### D2. Color Bricks
 
 ```python
 from compas.datastructures import Mesh
@@ -1046,6 +1048,8 @@ for fkey in mesh.faces():
 viewer.add(mesh, facecolor=face_color)
 viewer.show()
 ```
+
+### D3. Color Running Bond Bricks
 
 ```python
 from compas.datastructures import Mesh
