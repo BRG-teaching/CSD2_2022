@@ -942,6 +942,10 @@ plotter.show()
 
 ## D. Exercise: Running Bund Barrel Vault
 
+
+
+![](<../../.gitbook/assets/image (4).png>)
+
 ```python
 from compas.datastructures import Mesh
 from compas_notebook.app import App
@@ -1104,5 +1108,3 @@ for fkey in mesh.faces():
 viewer.add(mesh, facecolor=face_color)
 viewer.show()
 ```
-
-![](<../../.gitbook/assets/image (4).png>)
