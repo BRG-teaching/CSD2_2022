@@ -60,7 +60,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_2\_0.png)
+![png](../../.gitbook/assets/mesh\_info.png)
 
 In COMPAS, meshes are presented using a half-edge data structure. In a half-edge data structure, each **edge** is composed of **a pair of half-edge twins** that point at opposite orientations.
 
@@ -90,7 +90,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_4\_0.png)
+![png](../../.gitbook/assets/mesh\_halfedges.png)
 
 `mesh.half_edge` tells the half edge information. A vertex stores a reference to a half-edge that originates from that vertex, and the face that half-edge belongs to. For an edge on the boundary, one of the half-edge pairs belongs to an non-existing `None` face.
 
