@@ -596,7 +596,7 @@ from compas.geometry import Point, Line
 from compas.datastructures import Mesh
 from compas_notebook.app import App
 
-mesh = Mesh.from_obj('dhttps://raw.githubusercontent.com/BlockResearchGroup/CSD2_2022/main/3_Materialization/Tutorial6/data/tubemesh.obj')
+mesh = Mesh.from_obj('https://raw.githubusercontent.com/BlockResearchGroup/CSD2_2022/main/3_Materialization/Tutorial6/data/tubemesh.obj')
 mesh.flip_cycles()
 
 viewer = App()
