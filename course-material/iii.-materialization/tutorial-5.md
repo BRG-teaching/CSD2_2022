@@ -19,11 +19,13 @@
 
 ***
 
-***
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/3_Materialization/Tutorial5/week_6_notebook_lecture.ipynb" %}
 
-```python
-# ! pip install compas_notebook
-```
+**Code File (full):**
+
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/3_Materialization/Tutorial5/week_6_notebook.ipynb" %}
+
+
 
 ## A. Mesh Introduction
 
