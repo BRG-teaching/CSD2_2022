@@ -28,8 +28,10 @@ Google Colab Link:&#x20;
 A mesh can be constructed from vertex and face information. However, how can we answer the **topological questions**?\
 e.g. Which vertices are connected with vertex 4? Which faces are surrounding vertex 4?
 
-![](../Tutorial5/img/week5\_2.png)\
+\
 
+
+![](<../../.gitbook/assets/image (1).png>)
 
 We will first generate the polygon mesh in the last tutorial.
 
