@@ -436,7 +436,7 @@ viewer.add(mesh)
 viewer.show()
 ```
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (5).png>)
 
 #### B1\_c. Vertex Faces
 
@@ -589,7 +589,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_36\_0.png)
+![](../../.gitbook/assets/output\_36\_0.png)
 
 ```python
 from compas.geometry import Point, Line
@@ -651,7 +651,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_39\_0.png)
+![](../../.gitbook/assets/output\_39\_0.png)
 
 ```python
 from compas.geometry import Point, Line
@@ -715,7 +715,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_42\_0.png)
+![](../../.gitbook/assets/output\_42\_0.png)
 
 #### B3\_d. Color Quadmesh Stripes
 
@@ -766,7 +766,7 @@ viewer.add(mesh, facecolor=facecolors)
 viewer.show()
 ```
 
-***
+![](<../../.gitbook/assets/image (1).png>)
 
 ## C. Mesh Attributes
 
@@ -797,34 +797,6 @@ for edge, attr in mesh.edges(data=True):
     print(edge, attr)
 ```
 
-```
-0 {'z': 0, 'x': 0, 'y': 0}
-1 {'z': 0, 'x': 2.5, 'y': 0}
-2 {'z': 0, 'x': 4, 'y': 0}
-3 {'z': 0, 'x': 0, 'y': 2}
-4 {'z': 0, 'x': 1.5, 'y': 2}
-5 {'z': 0, 'x': 4, 'y': 2}
-6 {'z': 0, 'x': 0, 'y': 4}
-7 {'z': 0, 'x': 2.5, 'y': 4}
-8 {'z': 0, 'x': 4, 'y': 4}
-0 {}
-1 {}
-2 {}
-3 {}
-(0, 1) {}
-(0, 3) {}
-(1, 4) {}
-(1, 2) {}
-(2, 5) {}
-(3, 4) {}
-(3, 6) {}
-(4, 5) {}
-(4, 7) {}
-(5, 8) {}
-(6, 7) {}
-(7, 8) {}
-```
-
 If we want to know specific attributes, we can use the following methods.
 
 ```python
@@ -834,12 +806,6 @@ print(mesh.vertices_attributes('x'))
 
 # attribute
 print(mesh.vertices_attribute('x'))
-```
-
-```
-[[0, 0, 0], [2.5, 0, 0], [4, 0, 0], [0, 2, 0], [1.5, 2, 0], [4, 2, 0], [0, 4, 0], [2.5, 4, 0], [4, 4, 0]]
-[[0], [2.5], [4], [0], [1.5], [4], [0], [2.5], [4]]
-[0, 2.5, 4, 0, 1.5, 4, 0, 2.5, 4]
 ```
 
 `Mesh.vertices_where`, `Mesh.faces_where` and `Mesh.edges_where` can find elements of the mesh under a specific or a set of conditions.
@@ -870,7 +836,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_50\_0.png)
+![](../../.gitbook/assets/output\_50\_0.png)
 
 ### C\_2. Modify Attributes
 
@@ -906,7 +872,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_52\_0.png)
+![png](../../.gitbook/assets/output\_52\_0.png)
 
 ### C3. Update Attributes
 
@@ -933,34 +899,6 @@ for fkey, attr in mesh.faces(data=True):
     
 for edge, attr in mesh.edges(data=True):
     print(edge, attr)
-```
-
-```
-0 {'z': 0, 'x': 0, 'y': 0, 'fixed': False}
-1 {'z': 0, 'x': 2.5, 'y': 0, 'fixed': False}
-2 {'z': 0, 'x': 4, 'y': 0, 'fixed': False}
-3 {'z': 0, 'x': 0, 'y': 2, 'fixed': False}
-4 {'z': 0, 'x': 1.5, 'y': 2, 'fixed': False}
-5 {'z': 0, 'x': 4, 'y': 2, 'fixed': False}
-6 {'z': 0, 'x': 0, 'y': 4, 'fixed': False}
-7 {'z': 0, 'x': 2.5, 'y': 4, 'fixed': False}
-8 {'z': 0, 'x': 4, 'y': 4, 'fixed': False}
-0 {'colored': False}
-1 {'colored': False}
-2 {'colored': False}
-3 {'colored': False}
-(0, 1) {'q': 1.0}
-(0, 3) {'q': 1.0}
-(1, 4) {'q': 1.0}
-(1, 2) {'q': 1.0}
-(2, 5) {'q': 1.0}
-(3, 4) {'q': 1.0}
-(3, 6) {'q': 1.0}
-(4, 5) {'q': 1.0}
-(4, 7) {'q': 1.0}
-(5, 8) {'q': 1.0}
-(6, 7) {'q': 1.0}
-(7, 8) {'q': 1.0}
 ```
 
 ```python
@@ -998,7 +936,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_55\_0.png)
+![](../../.gitbook/assets/output\_55\_0.png)
 
 ***
 
@@ -1051,19 +989,6 @@ for edge in short_bdr_loop:
     viewer.add(line, linecolor=(0, 1.0, 0))
 
 viewer.show()
-```
-
-```
-[0.0, 0.0, 43.738919459629614] [4.8959101562499825, 0.0, 30.021464381504614]
-[4.8959101562499825, 0.0, 30.021464381504614] [9.791820312499965, 0.0, 16.304009303379615]
-[9.791820312499965, 0.0, 16.304009303379615] [12.941578124999978, 0.0, 3.2709883072858474]
-[12.941578124999978, 0.0, 3.2709883072858474] [16.09133593749999, 0.0, -9.76203268880792]
-[16.09133593749999, 0.0, -9.76203268880792] [16.078269531249987, 0.0, -22.483270970057887]
-[16.078269531249987, 0.0, -22.483270970057887] [16.065203124999982, 0.0, -35.204509251307854]
-[16.065203124999982, 0.0, -35.204509251307854] [12.917707031249961, 0.0, -48.18323630208914]
-[12.917707031249961, 0.0, -48.18323630208914] [9.77021093749994, 0.0, -61.16196335287043]
-[9.77021093749994, 0.0, -61.16196335287043] [4.88510546874997, 0.0, -74.8420141341204]
-[4.88510546874997, 0.0, -74.8420141341204] [0.0, 0.0, -88.52206491537038]
 ```
 
 ```python
@@ -1180,5 +1105,4 @@ viewer.add(mesh, facecolor=face_color)
 viewer.show()
 ```
 
-```python
-```
+![](<../../.gitbook/assets/image (4).png>)

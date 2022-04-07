@@ -396,7 +396,7 @@ viewer.show()
 
 There are two kinds of normals that. Face normals are orthogonal vectors to the faces of the mesh. Whereas vertex normals are orthogonal to the vertices.
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 ### C1. Face Normals
 
