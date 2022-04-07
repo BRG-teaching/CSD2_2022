@@ -125,10 +125,6 @@ plotter.show()
 print(mesh.halfedge) # get halfedge information
 ```
 
-```
-{0: {1: 0, 3: None}, 1: {0: None, 4: 0, 2: 1}, 2: {1: None, 5: 1}, 3: {4: 2, 0: 0, 6: None}, 4: {1: 1, 3: 0, 5: 3, 7: 2}, 5: {2: None, 4: 1, 8: 3}, 6: {7: None, 3: 2}, 7: {4: 3, 6: 2, 8: None}, 8: {5: None, 7: 3}}
-```
-
 The face which the half-edge belongs to can be found in the following ways.
 
 ```python
@@ -136,12 +132,6 @@ u, v = 3, 2
 print(mesh.halfedge_face(3, 4))
 print(mesh.halfedge[3][4])
 print(mesh.halfedge_face(3, 4) == mesh.halfedge[3][4])
-```
-
-```
-2
-2
-True
 ```
 
 Find the half-edges whose corresponding faces are `None` and not `None`. Assign different colors to them.
@@ -187,14 +177,16 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_10\_0.png)
+![png](../../.gitbook/assets/mesh\_halfedges2.png)
 
 ### A\_2. Twin, Next, and Previous Half-edges
 
 In the Polygon, the line segments form a continuous cycle, connecting the vertices in order. These directed line segments are called half-edge. If an edge is shared by two faces, it can be decomposed into 2 twin half-edges, which have the opposite directions and each face can have a half-edge. The half-edge adjacencies define the connectivity of faces.
 
-![](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-M730QpQnbAMvz44bqhc%2F-MOH3yDnBEO8NEXs8leP%2F-MOHIkRqhipSVWxsGy4m%2Fimage.png?alt=media\&token=b585d605-e4c7-4689-935d-5b6623fe679d)\
+\
 
+
+![](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-M730QpQnbAMvz44bqhc%2F-MOH3yDnBEO8NEXs8leP%2F-MOHIkRqhipSVWxsGy4m%2Fimage.png?alt=media\&token=b585d605-e4c7-4689-935d-5b6623fe679d)
 
 #### A\_2a. Twin Half-Edges
 
@@ -238,7 +230,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_14\_0.png)
+![png](../../.gitbook/assets/output\_14\_0.png)
 
 #### A\_2a. Next Half-Edges
 
@@ -282,16 +274,9 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-```
-1
-3
-5
-7
+![](../../.gitbook/assets/output\_16\_1.png)
 
-
-```
-
-![png](output\_16\_1.png)
+We can use the half-edge datastructure to find the ordered neighbouring vertices.&#x20;
 
 ```python
 from compas.datastructures import Mesh
@@ -341,7 +326,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](output\_17\_0.png)
+![png](../../.gitbook/assets/output\_17\_0.png)
 
 ***
 
