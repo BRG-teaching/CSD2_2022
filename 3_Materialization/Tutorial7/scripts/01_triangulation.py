@@ -5,26 +5,36 @@ from compas.datastructures  import Mesh
 from compas_view2.app import App
 
 
-# 1. load thrust_mesh from step 0
-dirname = os.path.dirname(__file__)
-filename = '00_thrust_mesh.json'
-filepath = os.path.join(dirname, filename)
+# folder location
+dirname = os.path.dirname(__file__) + "/data"
 
-thrust_mesh = compas.json_load(filepath)
+
+# 1. load thrust_mesh from step 0
+file_in_name = '00_thrust_mesh.json'
+file_in_path = os.path.join(dirname, file_in_name)
+thrust_mesh: Mesh = compas.json_load(file_in_path)
 
 
 # 2. triangulate the quad faces of the thrust_mesh
-thrust_mesh.quads_to_triangles()
+tri_mesh = thrust_mesh.copy()
+tri_mesh.quads_to_triangles()
+
 
 
 # 3. export triangulated mesh data to a new file
-dirname = os.path.dirname(__file__)
-filename = '01_triangulated_mesh.json'
-filepath = os.path.join(dirname, filename)
-compas.json_dump(thrust_mesh, filepath, pretty=True)
+file_out_name = '01_triangulated_mesh.json'
+file_out_path = os.path.join(dirname, file_out_name)
+compas.json_dump(tri_mesh, file_out_path, pretty=True)
 
 
 # 4. visualise the mesh
 viewer = App()
-viewer.add(thrust_mesh)
+
+viewer.add(
+    thrust_mesh,
+    show_faces=False,
+    show_edges=True,
+    linecolor=(1, 0, 0))
+
+viewer.add(tri_mesh)
 viewer.show()
