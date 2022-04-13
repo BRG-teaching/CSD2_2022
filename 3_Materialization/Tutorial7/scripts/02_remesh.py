@@ -6,6 +6,8 @@ from compas_cgal.meshing import remesh
 from compas_cgal.subdivision import catmull_clark
 from compas_view2.app import App
 
+from compas.datastructures import trimesh_remesh
+
 
 # 1. load triangulated mesh from step 1
 dirname = os.path.dirname(__file__)
