@@ -5,13 +5,18 @@ from compas.datastructures  import Mesh
 from compas_view2.app import App
 
 
-# 1. load thrust json from rv2
-thrust_from_rv2 = open('3_Materialization/Tutorial7/scripts/square_base_thrust.json')
-thrustdiagram_from_rv2 = compas.json_load(thrust_from_rv2)
+# folder location
+dirname = os.path.dirname(__file__) + "/data"
 
 
-# 2. extract thrustdiagram data
-thrust_data = thrustdiagram_from_rv2['data']['thrust']
+# 1. load thrust file from RV2
+file_in_name = 'square_base_thrust.json'
+file_in_path = os.path.join(dirname, file_in_name)
+rv2_data = compas.json_load(file_in_path)
+
+
+# 2. extract thrustdiagram data only
+thrust_data = rv2_data['data']['thrust']
 
 
 # 3. recreate thrustdiagram as a mesh from thrustdiagram data
@@ -19,10 +24,9 @@ thrust_mesh = Mesh.from_data(thrust_data)
 
 
 # 4. export mesh data to a new file
-dirname = os.path.dirname(__file__)
-filename = '00_thrust_mesh.json'
-filepath = os.path.join(dirname, filename)
-compas.json_dump(thrust_mesh, filepath, pretty=True)
+file_out_name = '00_thrust_mesh.json'
+file_out_path = os.path.join(dirname, file_out_name)
+compas.json_dump(thrust_mesh, file_out_path, pretty=True)
 
 
 # 5. visualise the mesh

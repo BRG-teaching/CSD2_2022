@@ -2,23 +2,28 @@ import os
 import compas
 
 from compas.datastructures  import Mesh
-from compas_cgal.meshing import remesh
-from compas_cgal.subdivision import catmull_clark
 from compas_view2.app import App
 
 
-# 1. load triangulated mesh from step 2
-dirname = os.path.dirname(__file__)
-filename = '05_idos.json'
-filepath = os.path.join(dirname, filename)
-idos = compas.json_load(filepath)
+# folder location
+dirname = os.path.dirname(__file__) + "/data"
 
-filename = '05_edos.json'
-filepath = os.path.join(dirname, filename)
-edos = compas.json_load(filepath)
 
-blocks = []
+# 1. load idos from step 5
+idos_in_name = '05_idos.json'
+idos_in_path = os.path.join(dirname, idos_in_name)
+idos: Mesh = compas.json_load(idos_in_path)
 
+
+# 2. load edos from step 5
+edos_in_name = '05_edos.json'
+edos_in_path = os.path.join(dirname, edos_in_name)
+edos: Mesh = compas.json_load(edos_in_path)
+
+
+# 3. make blocks
+
+blocks = []  # a list of meshes
 
 for face in idos.faces():
     bottom = idos.face_coordinates(face)
@@ -38,16 +43,13 @@ for face in idos.faces():
     blocks.append(block)
 
 
-
-data = [block.to_data() for block in blocks]
-dirname = os.path.dirname(__file__)
-filename = '06_blocks.json'
-filepath = os.path.join(dirname, filename)
-compas.json_dump(blocks, filepath, pretty=True)
+# 4. export blocks to a new file
+blocks_out_name = '06_blocks.json'
+blocks_out_path = os.path.join(dirname, blocks_out_name)
+compas.json_dump(blocks, blocks_out_path, pretty=True)
 
 
-
-# 4. visualise the mesh
+# 5. visualise the blocks
 viewer = App()
 
 for block in blocks:

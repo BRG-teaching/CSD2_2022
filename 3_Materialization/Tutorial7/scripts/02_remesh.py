@@ -7,32 +7,63 @@ from compas_cgal.subdivision import catmull_clark
 from compas_view2.app import App
 
 from compas.datastructures import trimesh_remesh
+from compas.datastructures import trimesh_pull_points_numpy
+
+
+# folder location
+dirname = os.path.dirname(__file__) + "/data"
 
 
 # 1. load triangulated mesh from step 1
-dirname = os.path.dirname(__file__)
-filename = '01_triangulated_mesh.json'
-filepath = os.path.join(dirname, filename)
-
-tri_mesh = compas.json_load(filepath)
+file_in_name = '01_triangulated_mesh.json'
+file_in_path = os.path.join(dirname, file_in_name)
+trimesh: Mesh = compas.json_load(file_in_path)
 
 
-# 2. remesh
-lengths = [tri_mesh.edge_length(*edge) for edge in tri_mesh.edges()]
-length = sum(lengths) / tri_mesh.number_of_edges()
+# 2. remesh the triangulated mesh
 
-V, F = remesh(tri_mesh.to_vertices_and_faces(), target_edge_length=0.75 * length, number_of_iterations=100)
-remeshed_mesh = Mesh.from_vertices_and_faces(V, F)
+# function for projecting back to the original mesh
+def project(k, callback_args=None):
+    xyz = remeshed.vertices_attributes("xyz")
+    xyz = trimesh_pull_points_numpy(trimesh, xyz)
+    for index, vertex in enumerate(remeshed.vertices()):
+        remeshed.vertex_attributes(vertex, "xyz", xyz[index])
+
+# remeshing
+remeshed = trimesh.copy()
+lengths = [trimesh.edge_length(*edge) for edge in trimesh.edges()]
+length = sum(lengths) / trimesh.number_of_edges()
+
+for i in range(5):
+    trimesh_remesh(
+        remeshed,
+        kmax=30,
+        target=0.3 * length,
+        allow_boundary_split=True,
+        allow_boundary_swap=True,
+        allow_boundary_collapse=True,
+    )
+    project(i)
 
 
-# 3. export mesh data to a new file
-dirname = os.path.dirname(__file__)
-filename = '02_remeshed_mesh.json'
-filepath = os.path.join(dirname, filename)
-compas.json_dump(remeshed_mesh, filepath, pretty=True)
+# 3. smooth and project to original triangulated mesh
+remeshed.smooth_area(fixed=remeshed.vertices_on_boundary(), kmax=50, callback=project)
+
+
+# 4. export remshed mesh data to a new file
+file_out_name = '02_remeshed_mesh.json'
+file_out_path = os.path.join(dirname, file_out_name)
+compas.json_dump(remeshed, file_out_path, pretty=True)
 
 
 # 4. visualise the mesh
 viewer = App()
-viewer.add(remeshed_mesh)
+
+viewer.add(
+    trimesh,
+    show_faces=False,
+    show_edges=True,
+    linecolor=(1, 0, 0))
+
+viewer.add(remeshed)
 viewer.show()
