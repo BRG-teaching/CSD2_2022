@@ -10,7 +10,7 @@ dirname = os.path.dirname(__file__) + "/data"
 
 
 # 1. load thrust file from RV2
-file_in_name = 'hole_vault_thrust.json'
+file_in_name = 'square_base_thrust.json'
 file_in_path = os.path.join(dirname, file_in_name)
 rv2_data = compas.json_load(file_in_path)
 
