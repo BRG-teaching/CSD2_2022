@@ -1,37 +1,36 @@
 # Tutorial 7
-# Computational Structural Design II - Materialization of Thrust Networks
 
+## Computational Structural Design II - Materialization of Thrust Networks
 
-### Learning Goal: 
-- 
+#### Learning Goal:
 
+*
 
-### Content:
-0. Load Thrustdiagram
-1. Triangulation
-2. Remesh
-3. Dual
-4. Boundary Dual Faces
-5. Offsets
-6. Blocks
-7. Flat Top
+#### Content:
 
-### Google Colab: 
+1. Load Thrustdiagram
+2. Triangulation
+3. Remesh
+4. Dual
+5. Boundary Dual Faces
+6. Offsets
+7. Blocks
+8. Flat Top
+
+#### Google Colab:
+
 [https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/3\_Materialization/Tutorial7/tutorial7.ipynb](https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/3\_Materialization/Tutorial7/tutorial7.ipynb)
 
-
----
-
-
+***
 
 ```python
 # % pip install compas_notebook
 # % pip install requests
 ```
 
----
-# 0. Load Thrustdiagram
+***
 
+## 0. Load Thrustdiagram
 
 ```python
 import os
@@ -77,9 +76,9 @@ viewer.add(thrust_mesh)
 viewer.show()
 ```
 
----
-# 1. Triangulation
+***
 
+## 1. Triangulation
 
 ```python
 import os
@@ -118,9 +117,9 @@ viewer.add(tri_mesh)
 viewer.show()
 ```
 
----
-# 2. Remesh
+***
 
+## 2. Remesh
 
 ```python
 import os
@@ -195,9 +194,9 @@ viewer.add(remeshed)
 viewer.show()
 ```
 
----
-# 3. Dual
+***
 
+## 3. Dual
 
 ```python
 import os
@@ -241,9 +240,9 @@ viewer.add(dual_mesh)
 viewer.show()
 ```
 
---- 
-# 4. Boundary Dual Faces
+***
 
+## 4. Boundary Dual Faces
 
 ```python
 import os
@@ -319,9 +318,9 @@ viewer.add(dual_mesh)
 viewer.show()
 ```
 
----
-# 5. Offsets 
+***
 
+## 5. Offsets
 
 ```python
 import os
@@ -380,9 +379,9 @@ viewer.add(edos)
 viewer.show()
 ```
 
----
-# 6. Blocks
+***
 
+## 6. Blocks
 
 ```python
 import os
@@ -443,9 +442,9 @@ for block in blocks:
 viewer.show()
 ```
 
----
-# 7. Flat Tops
+***
 
+## 7. Flat Tops
 
 ```python
 import os
