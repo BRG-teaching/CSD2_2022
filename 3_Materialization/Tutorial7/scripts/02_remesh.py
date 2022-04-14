@@ -6,7 +6,7 @@ from compas_cgal.meshing import remesh
 from compas_cgal.subdivision import catmull_clark
 from compas_view2.app import App
 
-from compas.datastructures import trimesh_remesh
+from trimesh_remesh import trimesh_remesh
 from compas.datastructures import trimesh_pull_points_numpy
 
 
@@ -34,20 +34,23 @@ remeshed = trimesh.copy()
 lengths = [trimesh.edge_length(*edge) for edge in trimesh.edges()]
 length = sum(lengths) / trimesh.number_of_edges()
 
+boundary_vertices = [vertex for boundary in remeshed.vertices_on_boundaries() for vertex in boundary]
+
 for i in range(5):
     trimesh_remesh(
         remeshed,
         kmax=30,
-        target=0.3 * length,
+        target=0.75 * length,
         allow_boundary_split=True,
         allow_boundary_swap=True,
         allow_boundary_collapse=True,
+        fixed=boundary_vertices
     )
     project(i)
 
 
 # 3. smooth and project to original triangulated mesh
-remeshed.smooth_area(fixed=remeshed.vertices_on_boundary(), kmax=50, callback=project)
+remeshed.smooth_area(fixed=boundary_vertices, kmax=50, callback=project)
 
 
 # 4. export remshed mesh data to a new file
@@ -59,11 +62,11 @@ compas.json_dump(remeshed, file_out_path, pretty=True)
 # 4. visualise the mesh
 viewer = App()
 
-viewer.add(
-    trimesh,
-    show_faces=False,
-    show_edges=True,
-    linecolor=(1, 0, 0))
+# viewer.add(
+#     trimesh,
+#     show_faces=False,
+#     show_edges=True,
+#     linecolor=(1, 0, 0))
 
 viewer.add(remeshed)
 viewer.show()
