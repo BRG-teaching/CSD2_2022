@@ -15,7 +15,7 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 #### [Submit assignment 2 here.](https://www.dropbox.com/request/TxQvRLXEvjDv2CkKQOZp)
 {% endhint %}
 
-
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/3_Materialization/Tutorial7/assignment2.ipynb" %}
 
 In this assignment, we will generate polygon blocks for the form-found barrel vault**.**
 
