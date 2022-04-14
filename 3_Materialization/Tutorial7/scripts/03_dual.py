@@ -4,6 +4,8 @@ import compas
 from compas.datastructures  import Mesh
 from compas_view2.app import App
 
+from mesh_dual import mesh_dual
+
 
 # folder location
 dirname = os.path.dirname(__file__) + "/data"
@@ -16,7 +18,7 @@ remeshed: Mesh = compas.json_load(file_in_path)
 
 
 # 2. make dual mesh
-dual_mesh: Mesh = remeshed.dual()
+dual_mesh: Mesh = mesh_dual(remeshed)
 
 
 # 3. export dual mesh data to a new file

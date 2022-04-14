@@ -20,7 +20,6 @@ tri_mesh = thrust_mesh.copy()
 tri_mesh.quads_to_triangles()
 
 
-
 # 3. export triangulated mesh data to a new file
 file_out_name = '01_triangulated_mesh.json'
 file_out_path = os.path.join(dirname, file_out_name)
