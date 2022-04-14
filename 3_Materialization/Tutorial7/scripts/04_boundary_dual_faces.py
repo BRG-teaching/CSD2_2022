@@ -41,7 +41,7 @@ for vertex in boundary_vertices:
     x, y, z = remeshed.vertex_coordinates(vertex)
     vertices = [dual_mesh.add_vertex(x=x, y=y, z=z)]
     nbrs = remeshed.vertex_neighbors(vertex, ordered=True)[::-1]
-    # vertices.append(edge_vertex[vertex, nbrs[0]])
+    vertices.append(edge_vertex[vertex, nbrs[0]])
 
     for nbr in nbrs:
         if remeshed.is_edge_on_boundary(vertex, nbr):
@@ -52,7 +52,7 @@ for vertex in boundary_vertices:
             if face in dual_mesh_vertices:
                 vertices.append(face)
 
-    dual_mesh.add_face(vertices)
+    dual_mesh.add_face(vertices, fkey=vertex)
 
 
 # 5. export complete dual mesh data to a new file
