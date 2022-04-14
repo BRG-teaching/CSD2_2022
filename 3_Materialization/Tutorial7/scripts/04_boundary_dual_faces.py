@@ -37,7 +37,6 @@ for u, v in boundary_edges:
 boundary_vertices = [vertex for boundary in remeshed.vertices_on_boundaries() for vertex in boundary]
 dual_mesh_vertices = list(dual_mesh.vertices())
 
-
 for vertex in boundary_vertices:
     x, y, z = remeshed.vertex_coordinates(vertex)
     vertices = [dual_mesh.add_vertex(x=x, y=y, z=z)]
@@ -53,7 +52,6 @@ for vertex in boundary_vertices:
             if face in dual_mesh_vertices:
                 vertices.append(face)
 
-    print(vertices)
     dual_mesh.add_face(vertices)
 
 

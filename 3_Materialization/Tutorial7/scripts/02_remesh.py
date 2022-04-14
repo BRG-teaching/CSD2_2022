@@ -2,8 +2,6 @@ import os
 import compas
 
 from compas.datastructures  import Mesh
-from compas_cgal.meshing import remesh
-from compas_cgal.subdivision import catmull_clark
 from compas_view2.app import App
 
 from trimesh_remesh import trimesh_remesh
