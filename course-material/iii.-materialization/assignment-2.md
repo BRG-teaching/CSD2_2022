@@ -1,60 +1,50 @@
 # Assignment 2
 
+## Assignment II: Convex Polygon Blocks&#x20;
+
 {% hint style="warning" %}
-Complete the tasks below, and submit a zipped folder that includes&#x20;
+Complete the tasks below, and submit a zipped folder that includes
 
-1. the completed files or other deliverables&#x20;
-2. and the PDF&#x20;
+1. the completed files or other deliverables
+2. and the PDF
 
-by **15:00 on Thursday, April 28th**.&#x20;
+by **15:00 on Thursday, April 28th**.
 
-Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md).  \
+Please follow the file naming convention as shown in the [**Syllabus**](../../syllabus.md). \\
 
-
-### [Submit assignment 2 here.](https://www.dropbox.com/request/TxQvRLXEvjDv2CkKQOZp)
+#### [Submit assignment 2 here.](https://www.dropbox.com/request/TxQvRLXEvjDv2CkKQOZp)
 {% endhint %}
-  # Computational Structural Design II <br/> Assignment II: Convex Polygon Blocks
 
-In this assignment, we will generate polygon blocks for the form-found barrel vault. 
 
-<table>
-    <tr>
-    <td style='text-align:center;'>
-    <img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/main/3_Materialization/Tutorial7/img/brick3.png?raw=true" width="570" style="margin-left:auto; margin-right:auto"/><b> Barrel Vault Quad Mesh </b><img>
-    </td>
-    <td> 
-    <img src="https://github.com/BlockResearchGroup/CSD2_2022/blob/main/3_Materialization/Tutorial7/img/hex0.png?raw=true" width="500" style="margin-left:auto; margin-right:auto"/><b> Tessellation Pattern </b><img>
-    </td>
-    </tr>
-</table>
-<br>
+
+In this assignment, we will generate polygon blocks for the form-found barrel vault**.**
+
+****
+
+![Barrel Vault Quad Mesh ](../../3\_Materialization/Tutorial7/img/brick3.png)
+
+![Tessellation Pattern ](../../3\_Materialization/Tutorial7/img/hex0.png)
 
 ### Steps:
-- **A. Load Mesh**
-- **B. Compute Tessellation Pattern** </br>
-    The input mesh is a quad mesh, A hexagonal polygon can be generated with the vertices around two adjacent quad faces. You can modify the vertex coordinates in the quadmesh. Serialize the modified quad mesh. </br>
-    Secondly, find the correct vertices in each block. Create a list,`block_faces`, and save the vertices on each block as a list in `block_faces`. Serialize the `block_faces`. </br>
-    Visualize the blocks as `Polygon` in the viewer. </br>
-    
-- **C. Generate Blocks** </br>
-    Create a function `generate_block`. The input parameter is **the modified quad mesh**, **vertices on one block**, and **thickness of the block**. The function should return a 3D block, which has a planar top surface.  </br>
-    Call the function to generate all the blocks for the barrel vault. Serialize the blocks and visualize them in the viewer.
-    
-    
-<br> 
 
----
-<br><br>
+* **A. Load Mesh**
+* **B. Compute Tessellation Pattern**\
+  The input mesh is a quad mesh, A hexagonal polygon can be generated with the vertices around two adjacent quad faces. You can modify the vertex coordinates in the quadmesh. Serialize the modified quad mesh.\
+  Secondly, find the correct vertices in each block. Create a list,`block_faces`, and save the vertices on each block as a list in `block_faces`. Serialize the `block_faces`.\
+  Visualize the blocks as `Polygon` in the viewer.\
+
+* **C. Generate Blocks**\
+  Create a function `generate_block`. The input parameter is **the modified quad mesh**, **vertices on one block**, and **thickness of the block**. The function should return a 3D block, which has a planar top surface.\
+  Call the function to generate all the blocks for the barrel vault. Serialize the blocks and visualize them in the viewer.\
 
 
 ```python
 # % pip install compas_notebook
 ```
 
-## A. Load Mesh
+### A. Load Mesh
 
-
-```python
+````python
 from compas.datastructures import Mesh
 from compas_notebook.app import App
 
@@ -93,10 +83,9 @@ compas.json_dump(mesh, file_out_path, pretty=True)
 viewer = App()
 viewer.add(mesh)
 viewer.show()
-```
+````
 
-## B2. 2D Block
-
+### B2. 2D Block
 
 ```python
 import os
@@ -131,15 +120,13 @@ for block_face in block_faces:
 viewer.show()
 ```
 
-# C. Generate Blocks
-
+## C. Generate Blocks
 
 ```python
 def generate_block(mesh, block_face, thickness):
     # your code here...
     pass
 ```
-
 
 ```python
 import os
