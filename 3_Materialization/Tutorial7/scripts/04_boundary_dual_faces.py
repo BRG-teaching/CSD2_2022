@@ -32,7 +32,7 @@ for u, v in boundary_edges:
     edge_vertex[u, v] = edge_vertex[v, u] = dual_mesh.add_vertex(x=x, y=y, z=z)
 
 
-# # 4. add boundary faces
+# 4. add boundary faces
 
 boundary_vertices = [vertex for boundary in remeshed.vertices_on_boundaries() for vertex in boundary]
 dual_mesh_vertices = list(dual_mesh.vertices())
@@ -61,7 +61,7 @@ file_out_path = os.path.join(dirname, file_out_name)
 compas.json_dump(dual_mesh, file_out_path, pretty=True)
 
 
-# 4. visualise the mesh
+# 6. visualise the mesh
 viewer = App()
 
 # show remeshed mesh in red
