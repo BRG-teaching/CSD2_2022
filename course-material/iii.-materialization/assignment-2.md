@@ -17,6 +17,18 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 
 {% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/3_Materialization/Tutorial7/assignment2.ipynb" %}
 
+## Tasks
+
+Complete the following Assignment following the steps below:
+
+Use the [Assignment 2 Jupyter Notebook](https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/2\_Geometry/Tutorial3/week\_3\_assignment.ipynb) to develop your answer.
+
+Then answer the questions on the following document:
+
+{% file src="../../.gitbook/assets/CSD2_2022_Assignment-2_template.docx" %}
+
+## Assignment
+
 In this assignment, we will generate polygon blocks for the form-found barrel vault**.**
 
 ****
