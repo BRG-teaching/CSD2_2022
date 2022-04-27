@@ -19,11 +19,13 @@
 
 ***
 
-***
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/3_Materialization/Tutorial5/week_6_notebook_lecture.ipynb" %}
 
-```python
-# ! pip install compas_notebook
-```
+**Code File (full):**
+
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/3_Materialization/Tutorial5/week_6_notebook.ipynb" %}
+
+
 
 ## A. Mesh Introduction
 
@@ -68,7 +70,7 @@ plotter.show()
 
 If we change the xyz coordinates of one point in the polygon, the three other polygons will not be influenced. This is because no topological information between the polygons is stored. Another way to construct the polygons is to create a `list` collection contains points information. We can refer to this list to generate the polygons. In this way, we know which points are connected and which are not.
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (3).png>)
 
 | Point Index |     xyz     |
 | :---------: | :---------: |
@@ -396,7 +398,7 @@ viewer.show()
 
 There are two kinds of normals that. Face normals are orthogonal vectors to the faces of the mesh. Whereas vertex normals are orthogonal to the vertices.
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 ### C1. Face Normals
 
