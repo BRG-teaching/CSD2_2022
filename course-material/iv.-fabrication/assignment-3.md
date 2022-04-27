@@ -123,8 +123,8 @@ On the last CSD2 Course session, on May 19th, you will be asked to present your 
 
 ### 2. Presentation board
 
-* Presentation board (16x9 format, 1920x1080 resolution min.) summarising the the design project
-* This board can be an organized compilation or a collage of the 8-10 images from above
+* Presentation board (16x9 format, 1920x1080 resolution min.) summarising the design project
+* This board can be an organized compilation or a collage of the 10-12 images from above
 * Your\_Group\_Name\_board.pdf (or jpg/png)
 
 ### 3. .rv2 session file (s)
@@ -137,7 +137,7 @@ On the last CSD2 Course session, on May 19th, you will be asked to present your 
 Include Rhino files of the final design, including the shell geometry as well as any materialisation and fabrication developments.
 
 * The Rhino file may be used interactively in your presentation
-* To give an overview of materialization and fabrication developments
+* The Rhino file may be used to give an overview of materialization and fabrication developments
 
 ### <mark style="color:blue;">5. .txt file with the Name\_Surname of the Group members</mark>
 
