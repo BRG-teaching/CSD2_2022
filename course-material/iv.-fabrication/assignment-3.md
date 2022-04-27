@@ -1,3 +1,7 @@
+---
+description: CSD2 - 2022
+---
+
 # Assignment 3
 
 {% hint style="warning" %}
@@ -14,17 +18,33 @@ Please follow the file naming convention as shown in the [**Syllabus**](../../sy
 ### [Submit assignment 3 here.](https://www.dropbox.com/request/8eLJIcF0pSEq9rELs0FT)
 {% endhint %}
 
+### Tasks
+
+Assignment 3 is organized in three interrelated tasks:
+
+1. Design Task - Formfinding of a funicular shell in RV2
+2. Rationalization and materialization utilizing the COMPAS framework in JupyterNotebook / Google Colab
+3. Fabrication Workflow for WireCutting (HWC or DWC) in the COMPAS framework in JupyterNotebook / Google Colab
+
+The work is designed to be carried out in groups of 3-5.
+
+The work will be carried out in class throughout 2 workshop-style worksessions under the supervision of the CSD2 Tutor team. The planned dates for the work are (Week 11 - 5May - 3Hours and Week 12 - 12 May 3Hours)
+
+Group presentations 19 May 2022, in class, after guest lecture&#x20;
+
+
+
 ## 1.Design Brief
 
-![© Roland Fischer](<../../.gitbook/assets/image (1).png>)
+![The Sechseläutenplatz Site in Zurich © Roland Fischer](<../../.gitbook/assets/image (1).png>)
 
 In order to apply the knowlege acquire throughout the CSD2  in a realistic design scenario, you will be asked to use all the techniques we will have presented throughout the course to design a shell structure in the public space of the Sechseläutenplatz in Zurich, Switzerland.&#x20;
 
-![](../../.gitbook/assets/Opera4.jpeg)
+![3D View of the Site](../../.gitbook/assets/Opera4.jpeg)
 
 Design a free-form shell for [Sechseläutenplatz in Zurich](https://goo.gl/maps/JaMvwPPMruYewLMFA). The surface of the shell may have a maximum area of 200 square meters and a maximum 16 meter span. The shell may land around, but not in or on the existing site obstacles (umbrellas, trees and dark grey areas). The shell must be inside the red area shown in the second image below. The height of the shell should be at least 2.5 meters, so that it can be used as a passageway as well as a covering for the plaza.
 
-![](../../.gitbook/assets/Opera2.jpeg)
+![Top View of the Site](../../.gitbook/assets/Opera2.jpeg)
 
 Tips and design considerations
 
@@ -66,11 +86,11 @@ In this part of the assignment, we will generate polygon blocks for the form-fou
 
 ## 3. Fabrication Brief
 
-### 4a. Deliverables for the Form finding and Geometry, Rationalisation, and Materialisation
+## 4a. Deliverables for Group Presentations
 
 On the last CSD2 Course session, on May 19th, you will be asked to present your design proposals to the instructors . Before the start of Friday's 1st session, please compile the material below into a zip file (Your\_GroupName.zip), and upload it using the link in the header of this page.
 
-### 1. Images(5-7)
+### 1. Images(10-12)
 
 * 16x9 format, 1920x1080 resolution min
 * These images may include but are not limited to:
@@ -80,6 +100,8 @@ On the last CSD2 Course session, on May 19th, you will be asked to present your 
   * evolution and refinement of form and force diagrams
   * block generation, rationalization, and materialisation snapshots
   * fabrication strategies and development
+  * block cutting sequence and explanation
+  * points of improvement/outlook
   * perspectives/renderings
 * Your\_Group\_Name\_\_##.png
 
@@ -100,3 +122,11 @@ Include Rhino files of the final design, including the shell geometry as well as
 
 * The Rhino file may be used interactively in your presentation
 * To give an overview of materialization and fabrication developments
+
+## 4b.Deliverables for the Fabrication Task
+
+Use the Assignment 3 Jupyter Notebook to develop your answer.
+
+Then answer the questions on the following document:
+
+Placeholder Assignment 3 Template
