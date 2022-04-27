@@ -42,7 +42,21 @@ In order to apply the knowlege acquire throughout the CSD2  in a realistic desig
 
 ![3D View of the Site](../../.gitbook/assets/Opera4.jpeg)
 
-Design a free-form shell for [Sechseläutenplatz in Zurich](https://goo.gl/maps/JaMvwPPMruYewLMFA). The surface of the shell may have a maximum area of 200 square meters and a maximum 16 meter span. The shell may land around, but not in or on the existing site obstacles (umbrellas, trees and dark grey areas). The shell must be inside the red area shown in the second image below. The height of the shell should be at least 2.5 meters, so that it can be used as a passageway as well as a covering for the plaza.
+Design a free-form shell for [Sechseläutenplatz in Zurich](https://goo.gl/maps/JaMvwPPMruYewLMFA).&#x20;
+
+The surface of the shell may have a maximum area of approx. **200-250 square meters** and a maximum **16 meter span**.&#x20;
+
+The shell may land around, but not in or on the existing site obstacles (umbrellas, trees and dark grey areas).&#x20;
+
+The shell must be inside the red area shown in the image below.&#x20;
+
+The height of the shell should be at least **2.5 meters**, so that it can be used as a passageway as well as a covering for the plaza.
+
+Use the RV2 commands for creating Patterns from geometric features. You are free to add features and customise your shell.
+
+The segmentation of the shell must be coordinated with the constraints of your chosen fabrication technology and the proper machine size and parameters.
+
+The shell must be in horizontal and vertical equilibrium.
 
 ![Top View of the Site](../../.gitbook/assets/Opera2.jpeg)
 
