@@ -102,6 +102,26 @@ In this part of the assignment, we will generate polygon blocks for the form-fou
 
 ## 3. Fabrication Brief
 
+Use the assignment 3 jupyter notebook along with tutorial 9. The intent is for you to now take your own generate blocks and develop a workflow to wirecut two of them out of blank material.&#x20;
+
+### Steps:
+
+* **A. Load your** **generated blocks into the notebook**
+*   **B. Determine the largest bounding box needed for a block**
+
+    The current workflow finds a bounding box for the block and generates a blank material of that same box scaled up by a factor of `1.10`. Draw a flow diagram, then write the pseudocode, and finally implement a loop that `for block in blocks` finds the largest required bounding box dimensions.&#x20;
+*   **C.  Generate two standard blank material boxes**
+
+    After finding the dimensions of the largest bounding box, use those dimensions to generate a blank block from which to cut your two blocks, and then scale up that blank by `1.10`. The location of these blocks should be `1.5`m and `-1.5`m along the `x-axis` from the base of the wirecutting arm (see plan drawing). The base of the blank should be vertically aligned with the base of the wirecutting arm (see elevation drawing).
+
+![](../../.gitbook/assets/fabrication\_assignment\_diagram-01.png)
+
+![](../../.gitbook/assets/fabrication\_assignment\_diagram-02.png)
+
+*   **D.  Implement the rest of the workflow on both blocks**
+
+    The code from tutorial 9 performs the wirecutting workflow on a singular block. While the rest of the steps remain the same, import the code and edit it to implement the workflow on both of your blocks.
+
 ## 4a. Deliverables for Group Presentations
 
 On the last CSD2 Course session, on May 19th, you will be asked to present your design proposals to the instructors . Before the start of Friday's 1st session, please compile the material below into a zip file (Your\_GroupName.zip), and upload it using the link in the header of this page.
