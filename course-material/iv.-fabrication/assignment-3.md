@@ -34,7 +34,7 @@ Tips and design considerations
 * How can I control and modify the geometry of the force diagram to refine the shape of the Thrust Diagram?
 * Have I considered how the landings and openings of the Thrust Diagram relate to the program and the intended use of the space underneath?
 
-Use the following 3Dmodel to develop your design.
+**Use the following 3Dmodel to develop your design.**
 
 ### Geometry, Rationalisation, and Materialisation
 
@@ -44,7 +44,7 @@ Use the following 3Dmodel to develop your design.
 
 ### Deliverables for the Form finding and Geometry, Rationalisation, and Materialisation
 
-On the last day of the workshop on Friday, July 3rd, you will be asked to present your design proposals to the instructors and invited guests. Before the start of Friday's 1st session, please compile the material below into a zip file (YourLastName\_YourFirstName.zip), and upload it using the link in the header of this page.
+On the last CSD2 Course session, on May 19th, you will be asked to present your design proposals to the instructors . Before the start of Friday's 1st session, please compile the material below into a zip file (Your\_GroupName.zip), and upload it using the link in the header of this page.
 
 ### 1. Images(5-7)
 
