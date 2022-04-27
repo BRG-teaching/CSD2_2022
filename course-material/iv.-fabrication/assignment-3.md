@@ -25,6 +25,8 @@ Assignment 3 is organized in three interrelated tasks:
 1. Design Task - Formfinding of a funicular shell in RV2
 2. Rationalization and materialization utilizing the COMPAS framework in JupyterNotebook / Google Colab
 3. Fabrication Workflow for WireCutting (HWC or DWC) in the COMPAS framework in JupyterNotebook / Google Colab
+4. Documentation and Communication of Design Results
+5. Documentation and Communication workflows and Code&#x20;
 
 The work is designed to be carried out in groups of 3-5.
 
