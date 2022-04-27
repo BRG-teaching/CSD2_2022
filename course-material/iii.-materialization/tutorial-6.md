@@ -31,7 +31,7 @@ e.g. Which vertices are connected with vertex 4? Which faces are surrounding ver
 \
 
 
-![](<../../.gitbook/assets/image (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1).png>)
 
 We will first generate the polygon mesh in the last tutorial.
 
@@ -766,7 +766,7 @@ viewer.add(mesh, facecolor=facecolors)
 viewer.show()
 ```
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 ## C. Mesh Attributes
 
