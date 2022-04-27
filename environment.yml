@@ -4,5 +4,6 @@ channels:
 dependencies:
     - python=3.8
     - compas=1.14.0
-    - pythreejs
-    # - traitlets==4.3.3
+    - pip
+    - pip:
+      - compas_notebook

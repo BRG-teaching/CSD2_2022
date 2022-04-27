@@ -8,6 +8,8 @@
 
 * [Tutorial 2 Notebook](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/ca2aada?labpath=2_Geometry%2FTutorial2%2Fweek_2_lecture.ipynb)
 
+* [Tutorial 2 Notebook (full)](https://mybinder.org/v2/gh/BlockResearchGroup/CSD2_2022.git/ca2aada?labpath=2_Geometry%2FTutorial2%2Fweek_2.ipynb)
+
 
 **Learning Goals:**
 

@@ -1,6 +1,6 @@
 # Tutorial 1
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (5) (1).png>)
 
 In tutorial 1, we will learn the basics of compas-RV2 and workflow for designing compression-only shell structures in Rhino. If you have not done so already, please install compas-RV2 following the instructions [**here**](../../tools/rv2.md).
 
