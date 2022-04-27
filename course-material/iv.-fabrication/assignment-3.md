@@ -123,6 +123,8 @@ Include Rhino files of the final design, including the shell geometry as well as
 * The Rhino file may be used interactively in your presentation
 * To give an overview of materialization and fabrication developments
 
+### <mark style="color:blue;">5. .txt file with the Name\_Surname of the Group members</mark>
+
 ## 4b.Deliverables for the Fabrication Task
 
 Use the Assignment 3 Jupyter Notebook to develop your answer.
