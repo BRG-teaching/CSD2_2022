@@ -70,7 +70,7 @@ plotter.show()
 
 If we change the xyz coordinates of one point in the polygon, the three other polygons will not be influenced. This is because no topological information between the polygons is stored. Another way to construct the polygons is to create a `list` collection contains points information. We can refer to this list to generate the polygons. In this way, we know which points are connected and which are not.
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (1) (1) (1).png>)
 
 | Point Index |     xyz     |
 | :---------: | :---------: |
