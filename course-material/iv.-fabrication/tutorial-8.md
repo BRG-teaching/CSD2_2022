@@ -14,7 +14,7 @@ Wire Cutting Workflow
 
 #### Step One is to Plan
 
-![](img/wirecutting\_flowchart.png)
+![](https://github.com/BlockResearchGroup/CSD2\_2022/raw/717f04e0081f8d346ebc79bf80227ada8bbb9f0d/4\_Fabrication/Tutorial9/img/wirecutting\_flowchart.png)
 
 #### Content:
 
