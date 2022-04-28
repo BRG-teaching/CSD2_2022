@@ -60,7 +60,7 @@ The exercises are short problems that the student will be asked to work on durin
 
 ## 4. Schedule
 
-![](<.gitbook/assets/2022\_CSD2\_syllabus - Copy of Sylabus\_for\_CSD2-Gitbook-4.png>)
+![](<.gitbook/assets/220428\_CSD2\_syllabus - Sylabus\_for\_CSD2-Gitbook.png>)
 
 ## 5. Evaluation
 
