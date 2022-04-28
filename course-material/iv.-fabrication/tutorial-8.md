@@ -1,7 +1,5 @@
 # Tutorial 8
 
-## Tutorial 8
-
 Computational Structural Design II\
 Wire Cutting Workflow
 ---------------------
@@ -10,7 +8,11 @@ Wire Cutting Workflow
 
 * Orient a block on a machine bed
 * Generate the required blank material
-* Determine wire cutting paths
+* Determine wire cutting path
+
+**Code:**&#x20;
+
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/4_Fabrication/Tutorial9/week_9_lecture.ipynb" %}
 
 #### Step One is to Plan
 
