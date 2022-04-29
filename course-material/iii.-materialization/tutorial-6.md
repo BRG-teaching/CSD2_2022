@@ -31,7 +31,7 @@ e.g. Which vertices are connected with vertex 4? Which faces are surrounding ver
 \
 
 
-![](<../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 We will first generate the polygon mesh in the last tutorial.
 
@@ -60,7 +60,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](../../.gitbook/assets/mesh\_info.png)
+![png](output\_2\_0.png)
 
 In COMPAS, meshes are presented using a half-edge data structure. In a half-edge data structure, each **edge** is composed of **a pair of half-edge twins** that point at opposite orientations.
 
@@ -90,7 +90,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](../../.gitbook/assets/mesh\_halfedges.png)
+![png](../../3\_Materialization/Tutorial6/img/mesh\_halfedges.png)
 
 `mesh.half_edge` tells the half edge information. A vertex stores a reference to a half-edge that originates from that vertex, and the face that half-edge belongs to. For an edge on the boundary, one of the half-edge pairs belongs to an non-existing `None` face.
 
@@ -177,7 +177,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](../../.gitbook/assets/mesh\_halfedges2.png)
+![png](output\_10\_0.png)
 
 ### A\_2. Twin, Next, and Previous Half-edges
 
@@ -230,7 +230,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](../../.gitbook/assets/output\_14\_0.png)
+![png](output\_14\_0.png)
 
 #### A\_2a. Next Half-Edges
 
@@ -274,7 +274,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_16\_1.png)
+![](output\_16\_1.png)
 
 We can use the half-edge datastructure to find the ordered neighbouring vertices.&#x20;
 
@@ -326,7 +326,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_17\_0.png)
+![](output\_17\_0.png)
 
 ***
 
@@ -369,7 +369,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_19\_0.png)
+![](output\_19\_0.png)
 
 #### B1\_b. Vertex Degree
 
@@ -415,7 +415,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_23\_0.png)
+![](output\_23\_0.png)
 
 The vertex degrees can be used to find supports.
 
@@ -465,7 +465,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](<../../.gitbook/assets/output\_27\_0 (1).png>)
+![](../../.gitbook/assets/output\_27\_0.png)
 
 #### B1\_d. Vertex Area
 
@@ -513,7 +513,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_31\_0.png)
+![](output\_31\_0.png)
 
 #### B2\_b. Face Degree
 
@@ -547,7 +547,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_33\_0.png)
+![](output\_33\_0.png)
 
 ### B3. Edges
 
@@ -589,7 +589,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_36\_0.png)
+![](output\_36\_0.png)
 
 ```python
 from compas.geometry import Point, Line
@@ -651,7 +651,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_39\_0.png)
+![](output\_39\_0.png)
 
 ```python
 from compas.geometry import Point, Line
@@ -715,7 +715,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_42\_0.png)
+![](output\_42\_0.png)
 
 #### B3\_d. Color Quadmesh Stripes
 
@@ -836,7 +836,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_50\_0.png)
+![](<../../.gitbook/assets/output\_50\_0 (1).png>)
 
 ### C\_2. Modify Attributes
 
@@ -872,7 +872,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![png](../../.gitbook/assets/output\_52\_0.png)
+![png](output\_52\_0.png)
 
 ### C3. Update Attributes
 
@@ -936,7 +936,7 @@ plotter.zoom_extents()
 plotter.show()
 ```
 
-![](../../.gitbook/assets/output\_55\_0.png)
+![](output\_55\_0.png)
 
 ***
 
