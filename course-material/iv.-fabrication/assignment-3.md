@@ -78,11 +78,7 @@ Tips and design considerations
 
 ## 2.Geometry, Rationalisation, and Materialisation Brief
 
-Use the Tutorial 7  / Assignment 2 workflow on the form-found resulting mesh.
-
-Hint: Follow a similar workflow as in  [Assignment 2 Jupyter Notebook](https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/2\_Geometry/Tutorial3/week\_3\_assignment.ipynb) to develop your answer.
-
-In this part of the assignment, we will generate polygon blocks for the form-found funicular shell**.**
+In this part of the assignment, we will generate polygon blocks for the form-found funicular shell**.** Use the Tutorial 7  / Assignment 2 workflow on the form-found resulting mesh to materialise your design. If you are working with triangle mesh, you can refer to Tutorial 7. If you are working with triangle mesh, you can refer to Assignment 2.&#x20;
 
 ****
 
