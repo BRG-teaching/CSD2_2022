@@ -78,7 +78,7 @@ Tips and design considerations
 
 ## 2.Geometry, Rationalisation, and Materialisation Brief
 
-Use the Tutorial 7 workflow on the form-found resulting mesh.
+Use the Tutorial 7  / Assignment 2 workflow on the form-found resulting mesh.
 
 Hint: Follow a similar workflow as in  [Assignment 2 Jupyter Notebook](https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/2\_Geometry/Tutorial3/week\_3\_assignment.ipynb) to develop your answer.
 
@@ -114,9 +114,9 @@ Use the assignment 3 jupyter notebook along with tutorial 9. The intent is for y
 
     After finding the dimensions of the largest bounding box, use those dimensions to generate a blank block from which to cut your two blocks, and then scale up that blank by `1.10`. The location of these blocks should be `1.5`m and `-1.5`m along the `x-axis` from the base of the wirecutting arm (see plan drawing). The base of the blank should be vertically aligned with the base of the wirecutting arm (see elevation drawing).
 
-![](../../.gitbook/assets/fabrication\_assignment\_diagram-01.png)
+![](../../4\_Fabrication/Tutorial9/img/diagrams/fabrication\_assignment\_diagram-01.png)
 
-![](../../.gitbook/assets/fabrication\_assignment\_diagram-02.png)
+![](../../4\_Fabrication/Tutorial9/img/diagrams/fabrication\_assignment\_diagram-02.png)
 
 *   **D.  Implement the rest of the workflow on both blocks**
 
