@@ -4,7 +4,7 @@
 
 {% file src="../../.gitbook/assets/220410-CSD2-2022-BRG-DigitalFabricationLecture-ISB-sf.pdf" %}
 
-Lecture 3 introduces the Digital fabrication in AEC topic of Module4 Fabrication. Students will be introduced to:
+Lecture 3 is focused on Digital fabrication in AEC, the topic of Module4 Fabrication. Students will be introduced to:
 
 *   Pioneers in Form-Finding and Materialization
 
