@@ -100,6 +100,8 @@ In this part of the assignment, we will generate polygon blocks for the form-fou
 
 Use the assignment 3 jupyter notebook along with tutorial 9. The intent is for you to now take your own generate blocks and develop a workflow to wirecut two of them out of blank material.&#x20;
 
+{% embed url="https://colab.research.google.com/github/BlockResearchGroup/CSD2_2022/blob/main/4_Fabrication/Assignment3/assignment3.ipynb" %}
+
 ### Steps:
 
 * **A. Load your** **generated blocks into the notebook**
