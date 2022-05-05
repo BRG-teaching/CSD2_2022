@@ -94,6 +94,16 @@ In this part of the assignment, we will generate polygon blocks for the form-fou
   Create a function `generate_block`. The input parameter is **the modified quad mesh**, **vertices on one block**, and **thickness of the block**. The function should return a 3D block, which has a planar top surface.\
   Call the function to generate all the blocks for the barrel vault. Serialize the blocks and visualize them in the viewer.
 
+**C. Generate Blocks**
+
+* **D. Fabrication Constraints**
+
+For the chosen geometry, consider material and fabrication constraints. Throughout the course,  hotwire cutting(HWC) and diamond wire cutting(DWC) for EPS foam and stone have been suggested as possible fabrication technology. Dimension the components of your shell with material, fabrication, handling, and sustainability in mind. Motivate your choice. The suggested maximum bounding box size for your stone components is 500 x 500 x 500  mm. The suggested maximum bounding box size for your stone components is 1500 x 1500 x 1500  mm.
+
+
+
+
+
 
 
 ## 3. Fabrication Brief
@@ -105,10 +115,12 @@ Use the assignment 3 jupyter notebook along with tutorial 9. The intent is for y
 ### Steps:
 
 * **A. Load your** **generated blocks into the notebook**
-*   **B. Determine the largest bounding box needed for a block**
+* **B. Determine the largest bounding box needed for a block**
+* Dimension the components of your shell with material, fabrication, handling, and sustainability in mind. Motivate your choice. The suggested maximum bounding box size for your stone components is 500 x 500 x 500  mm. The suggested maximum bounding box size for your stone components is 1500 x 1500 x 1500  mm. Implement the fabrication  workflow on the voussoirs modeled according to your chosen material. Motitivate your choice. For the purpose of this assignment a generic fabrication setup matching the general constraints of point D below are considered for both Hot Wire Cutting and Diamond Wire Cutting.
+*   **C. Fabrication constraints**
 
     The current workflow finds a bounding box for the block and generates a blank material of that same box scaled up by a factor of `1.10`. Draw a flow diagram, then write the pseudocode, and finally implement a loop that `for block in blocks` finds the largest required bounding box dimensions.&#x20;
-*   **C.  Generate two standard blank material boxes**
+*   **D.  Generate two standard blank material boxes**
 
     After finding the dimensions of the largest bounding box, use those dimensions to generate a blank block from which to cut your two blocks, and then scale up that blank by `1.10`. The location of these blocks should be `1.5`m and `-1.5`m along the `x-axis` from the base of the wirecutting arm (see plan drawing). The base of the blank should be vertically aligned with the base of the wirecutting arm (see elevation drawing).
 
@@ -116,7 +128,7 @@ Use the assignment 3 jupyter notebook along with tutorial 9. The intent is for y
 
 ![](../../4\_Fabrication/Tutorial9/img/diagrams/fabrication\_assignment\_diagram-02.png)
 
-*   **D.  Implement the rest of the workflow on both blocks**
+*   **E.  Implement the rest of the workflow on both blocks**
 
     The code from tutorial 9 performs the wirecutting workflow on a singular block. While the rest of the steps remain the same, import the code and edit it to implement the workflow on both of your blocks.
 
