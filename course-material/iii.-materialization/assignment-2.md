@@ -54,7 +54,9 @@ In this assignment, we will generate polygon blocks for the form-found barrel va
 # % pip install compas_notebook
 ```
 
-## **Answers:**&#x20;
+## **Answers 1:**&#x20;
+
+**This method keeps the original quad mesh data structure.**&#x20;
 
 ### A. Load Mesh
 
@@ -307,6 +309,151 @@ thickness = 5
 for block_face in block_faces:
    block = generate_block(mesh, block_face, thickness)
    blocks.append(block)
+
+# visualization
+viewer = App()
+for block in blocks:
+    viewer.add(block)
+viewer.show()
+```
+
+## **Answers 2:**&#x20;
+
+**This method merges the faces in the original mesh. To avoid constantly changing the datastructure, it's recommended to copy the orignal mesh and modify the copy.**&#x20;
+
+### **B2. 2D Block**
+
+```python
+import os
+import compas
+from compas.geometry import Polygon
+from compas.datastructures import Mesh
+from compas_notebook.app import App
+from random import random
+from compas.utilities import i_to_rgb
+
+# folder location
+dirname = '/content/drive/My Drive/Colab Notebooks'
+
+# load modified mesh from step B1
+file_in_name = '01_modified_barrel_vault.json'
+file_in_path = os.path.join(dirname, file_in_name)
+mesh: Mesh = compas.json_load(file_in_path)
+
+# your code here...
+new_mesh = mesh.copy()
+for i, (u, v) in enumerate(short_bdr_loop):
+    if mesh.halfedge_face(u, v) is None:
+        u, v = v, u
+    strips = mesh.edge_strip((u,v))
+    for j, strip in enumerate(strips): 
+        a, b = mesh.edge_coordinates(*strip)
+        if i % 2 == 0:
+            if j % 2 == 0:
+              fkey1 = mesh.halfedge_face(*strip)
+              fkey2 = mesh.halfedge_face(*strip[::-1])
+
+              if fkey1 != None and fkey2 != None:
+                # check both faces still exist in the modified mesh
+                if mesh.has_face(fkey1) and mesh.has_face(fkey2):
+                  new_mesh.merge_faces([fkey1, fkey2])
+        else:
+            if j % 2 != 0:
+              fkey1 = mesh.halfedge_face(*strip)
+              fkey2 = mesh.halfedge_face(*strip[::-1])
+
+              if fkey1 != None and fkey2 != None:
+                # check both faces still exist in the modified mesh
+                if mesh.has_face(fkey1) and mesh.has_face(fkey2):
+                  new_mesh.merge_faces([fkey1, fkey2])
+
+# export block_faces
+compas.json_dump(new_mesh, os.path.join(dirname, "02_modified_barrel_vault.json"))
+
+# visualization
+viewer = App()
+# visualize the blocks
+for fkey in new_mesh.faces():
+  vkeys = new_mesh.face_vertices(fkey)
+  v_xyz = [new_mesh.vertex_coordinates(vkey) for vkey in vkeys]
+  viewer.add(Polygon(v_xyz), facecolor = i_to_rgb(random(), normalize=True))
+viewer.show()
+```
+
+### C. Generate Blocks
+
+```python
+def generate_block(mesh, thickness):
+  # make two meshes for intrados and extrados
+  idos = mesh.copy()
+  edos = mesh.copy()
+  # offset intrados and extrados
+
+  for vertex in mesh.vertices():
+      point = mesh.vertex_coordinates(vertex)
+      normal = mesh.vertex_normal(vertex)
+
+      idos.vertex_attributes(vertex, 'xyz', add_vectors(point, scale_vector(normal, -0.5 * thickness)))
+      edos.vertex_attributes(vertex, 'xyz', add_vectors(point, scale_vector(normal, 0.5 * thickness)))
+
+  blocks = []  # a list of meshes
+
+  for face in idos.faces():
+      bottom = idos.face_coordinates(face)
+      top = edos.face_coordinates(face)
+
+      f = len(bottom)
+
+      faces = [
+          list(range(f)),
+          list(range(f + f - 1, f - 1, -1))]
+
+      for i in range(f - 1):
+          faces.append([i, i + f, i + f + 1, i + 1])
+      faces.append([f - 1, f + f - 1, f, 0])
+
+      block = Mesh.from_vertices_and_faces(bottom + top, faces)
+      blocks.append(block)
+
+  for block in blocks:
+      top = block.face_vertices(0)
+      bottom = block.face_vertices(1)[::-1]
+
+      bottom_points = block.vertices_attributes('xyz', keys=bottom)
+      top_points = block.vertices_attributes('xyz', keys=top)
+
+      plane = bestfit_plane(top_points)
+
+      top_new = []
+      for a, b in zip(bottom_points, top_points):
+          b = intersection_line_plane((a, b), plane)
+          top_new.append(b)
+
+      for vertex, point in zip(top, top_new):
+          block.vertex_attributes(vertex, 'xyz', point)
+  return blocks
+```
+
+
+
+```python
+import os
+import compas
+
+from compas.datastructures import Mesh
+from compas_notebook.app import App
+
+# folder location
+dirname = '/content/drive/My Drive/Colab Notebooks'
+
+# load modified mesh from step B1
+file_in_name = '02_modified_barrel_vault.json'
+file_in_path = os.path.join(dirname, file_in_name)
+mesh: Mesh = compas.json_load(file_in_path)
+
+# generate blocks...
+thickness = 3
+blocks = generate_block(mesh, thickness)
 
 # visualization
 viewer = App()
