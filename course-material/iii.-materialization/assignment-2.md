@@ -125,15 +125,9 @@ for i, (u, v) in enumerate(short_bdr_loop):
                     ed = b_off
                 else:
                     ed = b
-                
-            else:
-                pass
-                # viewer.add(Line(a, b), linecolor=(1.0, 0.0, 0))
+            
         else:
-            if j  % 2 == 0:
-                pass
-                # viewer.add(Line(a, b), linecolor=(1.0, 0.0, 0))
-            else:
+            if j  % 2 != 0:
                 v_ab = subtract_vectors(a, b)
                 a_off = add_vectors(a, scale_vector(v_ab, s_f))
                 if mesh.is_vertex_on_boundary(strip[0]) == False:
@@ -193,21 +187,6 @@ for i, (u, v) in enumerate(short_bdr_loop):
         a, b = mesh.edge_coordinates(*strip)
         if i % 2 == 0:
             if j  % 2 == 0:
-                v_ab = subtract_vectors(a, b)
-                a_off = add_vectors(a, scale_vector(v_ab, s_f))
-                if mesh.is_vertex_on_boundary(strip[0]) == False:
-                    mesh.vertex_attributes(strip[0], "xyz", a_off)
-                    st = a_off
-                else:
-                    st = a
-                v_ba = subtract_vectors(b, a)
-                b_off = add_vectors(b, scale_vector(v_ba, s_f))
-                if mesh.is_vertex_on_boundary(strip[1]) == False:
-                    mesh.vertex_attributes(strip[1], "xyz", b_off)
-                    ed = b_off
-                else:
-                    ed = b
-
                 if mesh.is_edge_on_boundary(*strip) == False:
                     fkey1 = mesh.halfedge_face(*strip)
                     fkey2 = mesh.halfedge_face(*strip[::-1])
