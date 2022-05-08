@@ -54,6 +54,8 @@ In this assignment, we will generate polygon blocks for the form-found barrel va
 # % pip install compas_notebook
 ```
 
+## **Answers:**&#x20;
+
 ### A. Load Mesh
 
 ```python
