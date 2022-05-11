@@ -175,6 +175,4 @@ Include Rhino files of the final design, including the shell geometry as well as
 
 Use the Assignment 3 Jupyter Notebook to develop your answer.
 
-Then answer the questions on the following document:
-
-Placeholder Assignment 3 Template
+[Assignment 3 Notebook](https://colab.research.google.com/github/BlockResearchGroup/CSD2\_2022/blob/main/4\_Fabrication/Assignment3/assignment3.ipynb)
