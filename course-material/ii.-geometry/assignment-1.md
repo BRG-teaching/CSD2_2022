@@ -24,7 +24,7 @@ Then answer the questions on the following document:
 
 {% file src="../../.gitbook/assets/CSD2_2022_Assignment-1_template.docx" %}
 
-## Question: <a href="#question" id="question"></a>
+## Answers: <a href="#question" id="question"></a>
 
 Now you have fabricated all your voussoirs. You have a cargo van which can carry a maximum of 900 kg in one turn. It is your task to transport all your pieces from the factory to the site. How many transportation turns do you need?
 
