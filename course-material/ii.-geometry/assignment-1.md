@@ -24,7 +24,7 @@ Then answer the questions on the following document:
 
 {% file src="../../.gitbook/assets/CSD2_2022_Assignment-1_template.docx" %}
 
-## Answers: <a href="#question" id="question"></a>
+## Question: <a href="#question" id="question"></a>
 
 Now you have fabricated all your voussoirs. You have a cargo van which can carry a maximum of 900 kg in one turn. It is your task to transport all your pieces from the factory to the site. How many transportation turns do you need?
 
@@ -32,7 +32,7 @@ Now you have fabricated all your voussoirs. You have a cargo van which can carry
 
 
 
-## Steps: <a href="#steps" id="steps"></a>
+## Answers: <a href="#steps" id="steps"></a>
 
 1. Let's break the question down by initially checking the first turn. You want to put as many voussoirs as possible on the truck, for maximum efficiency. Pick one voussoir. If the truck's load capacity is not filled, the voussoir can be placed in the truck. You can repeat the process until the truck is full **or** you have checked all the voussoirs and no one fits the truck anymore.
 2. You can create a function that checks how many voussoirs can be loaded in one turn.
