@@ -14,7 +14,7 @@
 **Learning Goals:**
 
 * develop your procedural thinking
-* draw a logic diagram or flowchart
+* draw a logic diagram / flowchart
 * translate the flowchart to pseudocode using comments in Python
 * write basic Python script including: variables, object types, conditionals,for loops, while loops, lists, mathematical operators, print statements
 
