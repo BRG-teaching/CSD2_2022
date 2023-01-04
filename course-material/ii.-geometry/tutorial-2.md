@@ -16,7 +16,7 @@ Introduction to coding in Python Jupyter notebook I
 #### Learning Goals:
 
 * develop your procedural thinking
-* draw a logic diagram or flowchart
+* draw a logic diagram or a flowchart
 * translate the flowchart to pseudocode using **comments** in Python
 * write basic Python script including: variables, object types, conditionals,`for` loops, `while` loops, lists, mathematical operators, `print statements`
 
