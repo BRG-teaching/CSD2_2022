@@ -41,10 +41,10 @@ A. bar Length\
 #### Question:
 
 You are still working on your grid-shell. You want to find the longest bar in your grid-shell. How can you find i
-
+<!-- 
 #### Answer:
 
-You can pick one bar, and suppose it is the longest bar. Then, pick the second one. If it is longer than the first one, then the longest one is the second one. Keep repeating this process until you have compared all the bars. Then you will find the longest bar.
+You can pick one bar, and suppose it is the longest bar. Then, pick the second one. If it is longer than the first one, then the longest one is the second one. Keep repeating this process until you have compared all the bars. Then you will find the longest bar. -->
 
 #### A1\_a. Flowchart
 
@@ -80,7 +80,7 @@ print("The longest bar is bar", index + 1, "and its length is", longest, "m.")
 #### Question:
 
 Now you want to sort the bars from the longest to the shortest. How can you do it?
-
+<!-- 
 #### Answer:
 
 One way to solve this problem is to go through all the bars, and find the longest one. Add the longest one to a new list.
@@ -96,7 +96,7 @@ Then do it again and find the next-longest bar.
 |      1      |     3.7    |
 |      2      |     3.6    |
 
-Keep doing and you would get the sorted bars from longest to shortest.
+Keep doing and you would get the sorted bars from longest to shortest. -->
 
 #### A2\_a. Flowchart
 
@@ -247,9 +247,9 @@ While digging deep into the design and fabrication, you start to accumulating in
 |    11   |     1.8    |        2       |       259      |
 |    12   |     2.6    |        2       |       201      |
 
-#### Answer:
+<!-- #### Answer:
 
-In this case, we can create three lists, containing information of length, dimension, and stress respectively. However, this solution is not efficient nor clear, especially when our data set is big. Here we would introduce a new collection type - [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries).
+In this case, we can create three lists, containing information of length, dimension, and stress respectively. However, this solution is not efficient nor clear, especially when our data set is big. Here we would introduce a new collection type - [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries). -->
 
 #### B1\_a. Create a Dictionary
 
@@ -350,7 +350,7 @@ vault = {
     5: {"area": 4000, "thickness": 60}
 }
 ```
-
+<!-- 
 #### Answer:
 
 ```python
@@ -364,7 +364,7 @@ for key in vault.keys():
     print("Voussior", key, "volume:", v_volume)
     # add the volume to the dictionary
     vault[key]["volume"] = v_volume
-```
+``` -->
 
 #### Exercise: Calculate Voussoir Weight
 
@@ -383,7 +383,7 @@ for key in vault.keys():
 ```
 
 ***
-
+<!-- 
 #### Answer:
 
 ```python
@@ -402,4 +402,4 @@ for key in vault.keys():
     # add the volume to the dictionary
     vault[key]["volume"] = v_volume
     vault[key]["weight"] = v_weight
-```
+``` -->

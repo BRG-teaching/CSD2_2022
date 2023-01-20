@@ -478,7 +478,7 @@ visualization = visualize_bar_lengths(voussoir_weight_list)
 ```
 
 ***
-
+<!-- 
 #### Answer to Bar Cost Exercise:
 
 ```python
@@ -516,4 +516,4 @@ print("Total cost of the gridshell is", total_cost, "CHF")
 
 ```
 Total cost of the gridshell is 43 CHF
-```
+``` -->

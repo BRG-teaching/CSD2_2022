@@ -31,7 +31,7 @@ Now you have fabricated all your voussoirs. You have a cargo van which can carry
 
 
 
-
+<!-- 
 ## Answers: <a href="#steps" id="steps"></a>
 
 1. Let's break the question down by initially checking the first turn. You want to put as many voussoirs as possible on the truck, for maximum efficiency. Pick one voussoir. If the truck's load capacity is not filled, the voussoir can be placed in the truck. You can repeat the process until the truck is full **or** you have checked all the voussoirs and no one fits the truck anymore.
@@ -150,4 +150,4 @@ while voussoirs:
 
 print("The truck needs", turns, "turns.")
 ```
-
+ -->
