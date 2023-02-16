@@ -24,8 +24,8 @@
   * [Tutorial 5](course-material/iii.-materialization/tutorial-5.md)
   * [Tutorial 6](course-material/iii.-materialization/tutorial-6.md)
   * [Tutorial 7](course-material/iii.-materialization/tutorial-7.md)
-  * [Assignment 2](course-material/iii.-materialization/assignment-2.md)
+  <!-- * [Assignment 2](course-material/iii.-materialization/assignment-2.md) -->
 * [IV. Fabrication](course-material/iv.-fabrication/README.md)
   * [Lecture 3](course-material/iv.-fabrication/lecture-3.md)
   * [Tutorial 8](course-material/iv.-fabrication/tutorial-8.md)
-  * [Assignment 3](course-material/iv.-fabrication/assignment-3.md)
+  <!-- * [Assignment 3](course-material/iv.-fabrication/assignment-3.md) -->
